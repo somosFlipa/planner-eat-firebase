@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../firebase/dbConfig";
 
-
-
-
 const CookingRecipe = () => {
   const [user, setUser] = useState({})
 
