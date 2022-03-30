@@ -3,23 +3,47 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
 const CookingRecipe = () => {
-  const [user, setUser] = useState({})
+  const [recipe, setRecipe] = useState({})
 
  useEffect(() => {
     const obtenerDatos = async () => {
       const data = await getDocs(collection(db, "cookingRecipe"));
-      setUser(data.docs[0].data())
+      setRecipe(data.docs[0].data())
     };
   obtenerDatos();
   }, []);
+
+// Hacer un array y luego guardar en use state
 return(
 <>
-<h1>{user.name}</h1>
-<h2>{user.category}</h2>
-<h2>{user.stepOne}</h2>
-<h2>{user.stepTwo}</h2>
-<h2>{user.stepThree}</h2>
-<h2>{user.stepFour}</h2>
+{/* <p>Name</p>
+<h1>{recipe.Nombre}</h1>
+<p>Acompañantes</p>
+<p>{recipe.Acompañantes}</p>
+<p>Bebifa</p>
+<p>{recipe.Bebidas}</p>
+<p>Comida</p>
+<p>{recipe.Comida}</p>
+<p>Dificultad</p>
+<p>{recipe.Dificultad}</p>
+<p>Nacionalidad</p>
+<p>{recipe.Nacionalidad}</p>
+<p>Pasos</p>
+<p>{recipe.Pasos[0]}</p>
+<p>{recipe.Pasos[1]}</p>
+<p>{recipe.Pasos[2]}</p>
+<p>{recipe.Pasos[3]}</p>
+<p>{recipe.Pasos[4]}</p>
+<p>Subcategoria</p>
+<p>{recipe.SubCategoria}</p>
+<p>Tiempo de Cocción</p>
+<p>{recipe.TiempoCoccion}</p>
+<p>Tiempo de Preparacion</p>
+<p>{recipe.TiempoPreparacion}</p>
+<p>Tiempo total</p>
+<p>{recipe.TiempoCoccion + recipe.TiempoPreparacion}</p>
+<p>tips</p>
+<p>{recipe.Tips}</p> */}
 </>
 )
 };
