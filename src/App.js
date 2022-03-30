@@ -1,11 +1,10 @@
 import React from "react";
 import { Routes, Route} from "react-router-dom";
-import CookingRecipe from "./components/cookingRecipe";
+import CookingRecipe from "./components/CookingRecipe/cookingRecipe";
 import Home from "./components/Home/Home";
-import Welcome from "./components/Welcome";
+import Welcome from "./components/Welcome/Welcome";
 
 const App = () => {
-
 return(
 <>
     <Routes>

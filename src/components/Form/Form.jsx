@@ -1,9 +1,14 @@
 import React from 'react';
-
+import './Form.css'
 const Form = () =>{
   return (
     <div>
-        <h1>Form</h1>
+         <form className='FormContainer'>
+          <label>Email</label>
+          <input type="email"/>
+          <label>Password</label>
+          <input type="text" />
+        </form>
     </div>
   )
 }
