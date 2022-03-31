@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-const BtnNext = () =>{
+const BtnNext = (prop) =>{
+
+  console.log(prop)
   return (
-<>
-<button>Siguiente</button>
-</>
+    <>
+      <Link to={prop.to}>Siguiente</Link>
+      {/* <Link to="/CookingRecipe"><button>Siguiente</button></Link> */}
+    </>
   )
 }
 

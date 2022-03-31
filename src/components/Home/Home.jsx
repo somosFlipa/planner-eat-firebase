@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Form from '../Form/Form'
+import BtnNext from '../btnNext/btnNext'
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
         <h2>Por favor, completá tus datos.</h2>
       <Form/>
       </div>
-        <Link to="/Welcome"><button>Continuar</button></Link>
+        {/* <Link to="/Welcome"><button>Continuar</button></Link> */}
+        <BtnNext to="/Welcome"/>
     </>
   )
 }
