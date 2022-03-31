@@ -3,16 +3,17 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
 const CookingRecipe = () => {
-  const [recipe, setRecipe] = useState({})
-
+  const [recipe, setRecipe] = useState([])
+const listRecipe = []
  useEffect(() => {
     const obtenerDatos = async () => {
       const data = await getDocs(collection(db, "cookingRecipe"));
-      setRecipe(data.docs[0].data())
+ data.docs.map(i => { listRecipe.push(i.data())})
+ setRecipe(listRecipe)
     };
   obtenerDatos();
   }, []);
-
+console.log(recipe)
 // Hacer un array y luego guardar en use state
 return(
 <>
