@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Form from '../Form/Form'
 import BtnNext from '../btnNext/btnNext'
 
 const Welcome = () => {
   return (
-    <div>
+    <div className="WelcomeDiv">
         <h1>Welcome</h1>
-        {/* <Link to="/CookingRecipe">Cooking Recipe</Link> */}
+        <Form/>
         <BtnNext to="/CookingRecipe"/>
     </div>
   )
