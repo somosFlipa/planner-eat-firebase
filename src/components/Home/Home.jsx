@@ -32,9 +32,7 @@ className="HomeSvg"
   );
 };
 
-<<<<<<< HEAD
-export default Home
 
-=======
+
 export default Home;
->>>>>>> main
+
