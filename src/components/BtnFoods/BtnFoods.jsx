@@ -19,65 +19,65 @@ function BtnFoods({recipe}) {
     //   })
 
     // fuencion para los botones
-    function btn1 () {
+    function btn1 (food) {
         recipe.map(i =>{
             i.Comida.filter(z => {
               // console.log(i.Nombre)
               // console.log(z == "CENA")
-                if ((z === "DESAYUNO") === true) {
-                    console.log("Desayuno: ",i.Nombre)
+                if ((z === food) === true) {
+                    console.log( food , i.Nombre)
                     
                 }
             })
         })
 
     }
-    function btn2 () {
-        recipe.map(i =>{
-            i.Comida.filter(z => {
-              // console.log(i.Nombre)
-              // console.log(z == "CENA")
-                if ((z === "ALMUERZO") === true) {
-                    console.log("Almuerzo: ", i.Nombre)
+    // function btn2 () {
+    //     recipe.map(i =>{
+    //         i.Comida.filter(z => {
+    //           // console.log(i.Nombre)
+    //           // console.log(z == "CENA")
+    //             if ((z === "ALMUERZO") === true) {
+    //                 console.log("Almuerzo: ", i.Nombre)
                     
-                }
-            })
-        })
+    //             }
+    //         })
+    //     })
 
-    }
-    function btn3 () {
-        recipe.map(i =>{
-            i.Comida.filter(z => {
-              // console.log(i.Nombre)
-              // console.log(z == "CENA")
-                if ((z === "MERIENDA") === true) {
-                    console.log("Merienda: ",i.Nombre)
+    // }
+    // function btn3 () {
+    //     recipe.map(i =>{
+    //         i.Comida.filter(z => {
+    //           // console.log(i.Nombre)
+    //           // console.log(z == "CENA")
+    //             if ((z === "MERIENDA") === true) {
+    //                 console.log("Merienda: ",i.Nombre)
                     
-                }
-            })
-        })
+    //             }
+    //         })
+    //     })
 
-    }
-    function btn4 () {
-        recipe.map(i =>{
-            i.Comida.filter(z => {
-                // console.log(i.Nombre)
-                // console.log(z == "CENA")
-                if ((z === "CENA") === true) {
-                    console.log("Cena: ", i.Nombre)
+    // }
+    // function btn4 () {
+    //     recipe.map(i =>{
+    //         i.Comida.filter(z => {
+    //             // console.log(i.Nombre)
+    //             // console.log(z == "CENA")
+    //             if ((z === "CENA") === true) {
+    //                 console.log("Cena: ", i.Nombre)
                     
-                }
-            })
-        })
+    //             }
+    //         })
+    //     })
 
-    }
+    // }
 
     return (
         <>
-            <button id="breakfast"  onClick={btn1}><img src={breakfast} alt="" /></button>
-            <button id="lunch" onClick={btn2}><img src={lunch} alt="" /></button>
-            <button id="afternoon" onClick={btn3}><img src={afternoon} alt="" /></button>
-            <button id="dinner" onClick={btn4}><img src={dinner} alt="" /></button>
+            <button id="breakfast"  onClick={()=>{btn1("DESAYUNO")}}><img src={breakfast} alt="" /></button>
+            <button id="lunch" onClick={()=>{btn1("ALMUERZO")}}><img src={lunch} alt="" /></button>
+            <button id="afternoon" onClick={()=>{btn1("MERIENDA")}}><img src={afternoon} alt="" /></button>
+            <button id="dinner" onClick={()=>{btn1("CENA")}}><img src={dinner} alt="" /></button>
         </>
 
         

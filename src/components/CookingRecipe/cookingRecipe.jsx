@@ -22,22 +22,6 @@ const CookingRecipe = () => {
     obtenerDatos();
   }, []);
 
-
-  useEffect( () =>{
-
-    // recipe.map(i =>{
-    //   i.Comida.filter(z => {
-    //     // console.log(i.Nombre)
-    //     // console.log(z == "CENA")
-    //     if ((z === "CENA") === true) {
-    //       console.log(i.Nombre)
-    //     }
-    //   })
-    // })
-    
-
-  }, [recipe])
-
   return (
     <>
       <h2>Seleccioná los platos que quieres en tu menú.</h2>
