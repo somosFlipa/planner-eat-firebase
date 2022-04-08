@@ -2,22 +2,35 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
+
 const CookingRecipe = () => {
-  const [recipe, setRecipe] = useState([])
-const listRecipe = []
- useEffect(() => {
+  const [recipe, setRecipe] = useState([]);
+  const listRecipe = [];
+  
+
+  useEffect(() => {
     const obtenerDatos = async () => {
       const data = await getDocs(collection(db, "cookingRecipe"));
- data.docs.map(i => { listRecipe.push(i.data())})
- setRecipe(listRecipe)
+      data.docs.map((i) => {
+        listRecipe.push(i.data());
+      });
+      setRecipe(listRecipe);
     };
-  obtenerDatos();
+    obtenerDatos();
   }, []);
-console.log(recipe)
-// Hacer un array y luego guardar en use state
-return(
-<>
-{/* <p>Name</p>
+
+
+// useEffect( () =>{
+
+
+//    let search = ()=>{ return (recipe.filter( (i) => (i.Comida = "CENA")))}
+    
+// }, [])
+
+
+  return (
+    <>
+      {/* <p>Name</p>
 <h1>{recipe.Nombre}</h1>
 <p>Acompañantes</p>
 <p>{recipe.Acompañantes}</p>
@@ -45,8 +58,8 @@ return(
 <p>{recipe.TiempoCoccion + recipe.TiempoPreparacion}</p>
 <p>tips</p>
 <p>{recipe.Tips}</p> */}
-</>
-)
+    </>
+  );
 };
 
-export default CookingRecipe
+export default CookingRecipe;
