@@ -27,6 +27,7 @@ const CookingRecipe = () => {
       <h2>Seleccioná los platos que quieres en tu menú.</h2>
       <BtnFoods recipe={recipe}/>
       
+      
       {/* <Foods recipe={recipe}/> */}
 
       
