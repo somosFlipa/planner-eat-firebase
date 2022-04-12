@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
-//  import Foods from "../Foods/Foods";
 import BtnFoods from "../BtnFoods/BtnFoods";
-
-
 
 const CookingRecipe = () => {
   const [recipe, setRecipe] = useState([]);
   const listRecipe = [];
-  
 
   useEffect(() => {
     const obtenerDatos = async () => {
@@ -21,15 +17,12 @@ const CookingRecipe = () => {
     };
     obtenerDatos();
   }, []);
+ // console.log(recipe)
 
   return (
     <>
       <h2>Seleccioná los platos que quieres en tu menú.</h2>
       <BtnFoods recipe={recipe}/>
-      
-      
-      {/* <Foods recipe={recipe}/> */}
-
       
       {/* <p>Name</p>
         <h1>{recipe.Nombre}</h1>
