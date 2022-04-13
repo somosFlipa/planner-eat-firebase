@@ -4,8 +4,8 @@ import breakfast from "../../assets/Desayunos.svg";
 import lunch from "../../assets/Almuerzos.jpg";
 import afternoon from "../../assets/Meriendas.svg";
 import dinner from "../../assets/Cenas.svg";
-import ViewFood from '../ViewFood/ViewFood';
-import Foods from '../Foods/Foods';
+
+import Card from '../Card/Card';
 
 function BtnFoods({recipe}) {
 
@@ -29,7 +29,7 @@ function BtnFoods({recipe}) {
             })
         })
     }
-    console.log("comida: ",comida)
+    
     // ListItems
 
     return (
@@ -40,27 +40,24 @@ function BtnFoods({recipe}) {
             <button id="dinner" onClick={()=>{btn1("CENA")}}><img src={dinner} alt="" /></button>
 
             {
-                recipe.map(r => {
-                    return(
-                        <>
-                            <p>Nombre: {r.Nombre}</p>
-                            <p>Tiempo: {r.TiempoCoccion + r.TiempoPreparacion}</p>
-                            <p>Dificultad: {r.Dificultad}</p>
-                        </>
-                    ) 
-                }) ? 
+                comida.length === 0 ? 
+                <>
+                    <p>Eliga su menu para cada día:</p>
+                    <p>Nombre: JUGO NARANJA CON ZANAHORIA</p>
+                    <p>Tiempo: 10</p>
+                    <p>Dificultad: FÁCIL</p>
+                </>
+                :
                 comida.map(c => {
                     return(
                         <>
-                            <p>Nombre: {c.nombre}</p>
-                            <p>Tiempo: {c.Tiempo}</p>
-                            <p>Dificultad: {c.Dificultad}</p>
+                            <Card nombre={c.Nombre} tiempo= {c.Tiempo} dificultad={c.Dificultad}/>
                         </>
                     ) 
-                }) :
-                <p>no ahi nada</p>
+                }) 
+
             }
-            {/* <Foods recipe={recipe} comida={comida}/> */}
+            
         </>
 
 
