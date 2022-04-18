@@ -22,15 +22,18 @@ function BtnFoods({recipe}) {
                     arrayFilter.filter(s => s.foodTime === food)
                     if (!arrayFilter.includes(i.Nombre)) { 
                         arrayFilter.push({FoodTime: food, Nombre:i.Nombre,
-                            Dificultad: i.Dificultad, Tiempo: i.TiempoCoccion + i.TiempoPreparacion})
+                            Dificultad: i.Dificultad, Tiempo: i.TiempoCoccion + i.TiempoPreparacion,
+                            Ingredientes: i.Ingredients
+                        })
                         setComida(arrayFilter)
                         }
                 }
             })
         })
     }
-    
+    // console.log("comida: ",recipe[2].Ingredients[0]._key.path.segments[6])
     // ListItems
+
 
     return (
         <>
@@ -51,7 +54,7 @@ function BtnFoods({recipe}) {
                 comida.map(c => {
                     return(
                         <>
-                            <Card nombre={c.Nombre} tiempo= {c.Tiempo} dificultad={c.Dificultad}/>
+                            <Card nombre={c.Nombre} tiempo= {c.Tiempo} dificultad={c.Dificultad} ingredientes={c.Ingredientes} />
                         </>
                     ) 
                 }) 
