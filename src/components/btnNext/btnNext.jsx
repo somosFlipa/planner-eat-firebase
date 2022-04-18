@@ -7,7 +7,6 @@ const BtnNext = (prop) =>{
   return (
     <>
       <Link to={prop.to}>Siguiente</Link>
-      {/* <Link to="/CookingRecipe"><button>Siguiente</button></Link> */}
     </>
   )
 }
