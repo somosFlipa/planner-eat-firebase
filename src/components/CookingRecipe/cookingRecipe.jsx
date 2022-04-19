@@ -13,13 +13,14 @@ const CookingRecipe = () => {
       const data = await getDocs(collection(db, "cookingRecipe"));
       data.docs.map((i) => {
         listRecipe.push(i.data());
+        // console.log(i.data())
       });
       setRecipe(listRecipe);
     };
     obtenerDatos();
   }, []);
   
-
+  
   return (
     <>
       <h2>Seleccioná los platos que quieres en tu menú.</h2>
