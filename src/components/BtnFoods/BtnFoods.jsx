@@ -39,8 +39,8 @@ function BtnFoods({recipe}) {
         <>
 
     {
-                comida.length < 1 ? 
-                  btnFood("DESAYUNO") :
+                // comida.length < 1 ? 
+                //   btnFood("DESAYUNO") :
        
                    <>
                         <button id="breakfast"  onClick={()=>{btnFood("DESAYUNO")}}><img src={breakfast} alt="" /></button>
@@ -48,21 +48,16 @@ function BtnFoods({recipe}) {
                          <button id="afternoon" onClick={()=>{btnFood("MERIENDA")}}><img src={afternoon} alt="" /></button>
                        <button id="dinner" onClick={()=>{btnFood("CENA")}}><img src={dinner} alt="" /></button>
                     </>
-                 
+}{
+               comida.map(c => {
 
-            }
-           
-
-            {
-              
-                comida.map(c => {
                     return(
                         <>
                             <Card nombre={c.Nombre} tiempo= {c.Tiempo} dificultad={c.Dificultad} ingredientes={c.Ingredientes} />
                         </>
                     ) 
-                }) 
-
+               }) 
+               
             }
             
         </>
