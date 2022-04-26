@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 
 const BtnPrevious = (prop) =>{
 
-     return (
-         <>
+
+    return (
+        <>
+
             <Link to={prop.to}>Anterior</Link>
         </>
 
