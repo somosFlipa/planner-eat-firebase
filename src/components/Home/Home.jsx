@@ -1,11 +1,12 @@
 import React from "react";
-// import Form from '../Form/Form';
+import Form from '../Form/Form';
 import { Link } from "react-router-dom";
 import "./Home.css";
+import BtnNext from '../btnNext/btnNext'
 
 const Home = () => {
   return (
-    <Link to='/Welcome'>
+  
     <div className="Home" >
       <div className="HomeText">
         <svg
@@ -13,7 +14,7 @@ const Home = () => {
           enable-background="new 0 0 24 24"
           viewBox="0 0 24 24"
           fill="#63E5DF"
-className="HomeSvg"
+          className="HomeSvg"
         >
           <g>
             <rect fill="none" height="24" width="24" />
@@ -25,10 +26,14 @@ className="HomeSvg"
         <h1 >¡Hola!</h1>
         <p>Bienvenido a tu planificador </p>
         <p>PlannerEat</p>
+        <Form/>
+        <BtnNext to='/Welcome'/>
       </div>
+
+     
      
     </div>
-</Link>
+
   );
 };
 

@@ -1,13 +1,27 @@
 import React from 'react';
-import Form from '../Form/Form'
+
 import BtnNext from '../btnNext/btnNext'
 
 const Welcome = () => {
   return (
     <div className="WelcomeDiv">
-        <h1>Welcome</h1>
-        <Form/>
-        <BtnNext to="/CookingRecipe"/>
+      <div>
+        <h2> ¡Empecemos!</h2>
+        <h3>Lee con atención los pasos a seguir.</h3>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <p>Navega entre las distintas comidas</p>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <p>Selecciona las que más te gustan y cuánta cantidad quieres.</p>
+      </div>
+      <div>
+        <img src="" alt="" />
+        <p>Listo! Ya tienes armado tu planner :")"</p>
+      </div>
+      <BtnNext to="/CookingRecipe"/>
     </div>
   )
 }

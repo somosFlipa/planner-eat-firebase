@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const BtnNext = (prop) =>{
 
-  console.log(prop)
   return (
     <>
       <Link to={prop.to}>Siguiente</Link>

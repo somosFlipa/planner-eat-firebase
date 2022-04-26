@@ -22,6 +22,8 @@ function Card(props) {
   }, []);
 
   console.log(props.ingredientes)
+
+  // ingredients.filter()
   
   function btn (id) {
     // console.log("comida: ",recipe[2].Ingredients[0]._key.path.segments[6])

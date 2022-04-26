@@ -6,6 +6,7 @@ import afternoon from "../../assets/Meriendas.svg";
 import dinner from "../../assets/Cenas.svg";
 
 import Card from '../Card/Card';
+import BtnPrevious from '../BtnPrevious/BtnPrevious';
 
 function BtnFoods({recipe}) {
 
@@ -37,33 +38,38 @@ function BtnFoods({recipe}) {
 
     return (
         <>
+        <p>Comensales: </p>
 
-    {
-                // comida.length < 1 ? 
-                //   btnFood("DESAYUNO") :
-       
-                   <>
-                        <button id="breakfast"  onClick={()=>{btnFood("DESAYUNO")}}><img src={breakfast} alt="" /></button>
-                        <button id="lunch" onClick={()=>{btnFood("ALMUERZO")}}><img src={lunch} alt="" /></button>
-                         <button id="afternoon" onClick={()=>{btnFood("MERIENDA")}}><img src={afternoon} alt="" /></button>
-                       <button id="dinner" onClick={()=>{btnFood("CENA")}}><img src={dinner} alt="" /></button>
+        {
+            // comida.length < 1 ? 
+            //   btnFood("DESAYUNO") :
+        
+            <>
+                <button id="breakfast"  onClick={()=>{btnFood("DESAYUNO")}}><img src={breakfast} alt="" /></button>
+                <button id="lunch" onClick={()=>{btnFood("ALMUERZO")}}><img src={lunch} alt="" /></button>
+                <button id="afternoon" onClick={()=>{btnFood("MERIENDA")}}><img src={afternoon} alt="" /></button>
+                <button id="dinner" onClick={()=>{btnFood("CENA")}}><img src={dinner} alt="" /></button>
+            </>
+        }{
+            comida.map(c => {
+
+                return(
+                    <>
+                        <Card nombre={c.Nombre} tiempo= {c.Tiempo} dificultad={c.Dificultad} ingredientes={c.Ingredientes} />
                     </>
-}{
-               comida.map(c => {
+                ) 
+            }) 
 
-                    return(
-                        <>
-                            <Card nombre={c.Nombre} tiempo= {c.Tiempo} dificultad={c.Dificultad} ingredientes={c.Ingredientes} />
-                        </>
-                    ) 
-               }) 
-               
-            }
-            
+        }
+        <div>
+            <BtnPrevious  to='/Welcome'/>
+        </div>
+        
+
         </>
 
 
-        
+
     )
 }
 
