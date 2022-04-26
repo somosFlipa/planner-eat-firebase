@@ -21,13 +21,12 @@ function Card(props) {
     obtenerDatos();
   }, []);
 
-  // console.log(ingredients)
- 
+  console.log(props.ingredientes)
   
   function btn (id) {
     // console.log("comida: ",recipe[2].Ingredients[0]._key.path.segments[6])
-    console.log(props.ingredientes[0]._key.path.segments[6] === ingredients[0].id)
-    // console.log(ingredients[0].id)
+    // console.log(props.ingredientes[0]._key.path.segments[6] === ingredients[0].id)
+    // console.log(ingredients[0].id)  
 
     
     // ingredients.map((i) => {
