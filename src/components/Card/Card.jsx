@@ -20,19 +20,31 @@ function Card(props) {
     };
     obtenerDatos();
   }, []);
-
+  // console.log(ingredients)
   // console.log(props.ingredientes)
-// if (idCategory) {
-//   q = query(collection(db, "productos"), where('categoryId', '==', idCategory));
-// }
+  // if (idCategory) {
+  //   q = query(collection(db, "productos"), where('categoryId', '==', idCategory));
+  // }
+  // if (id) {
+  //   const q = query(collection(db, "Ingresients"), where('Ingresients', '==', id));
+  //   console.log(q)
+  // }
   
   function btn (id) {
 
     // console.log(props.ingredientes)
-    props.ingredientes.map(i => {
-      console.log(i.id)
+    // props.ingredientes.map(i => {
+    //   console.log(i.id)
+    // })
+    ingredients.filter(z=>{
+       if ((z === id) === true) {
+        console.log(z)
+
+       }
+
+        console.log(z)
+
     })
-    
 
   }
   
