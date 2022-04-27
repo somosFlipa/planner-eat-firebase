@@ -34,9 +34,6 @@ function Card(props) {
     })
     
 
-  
-    
-    
   }
   
   
