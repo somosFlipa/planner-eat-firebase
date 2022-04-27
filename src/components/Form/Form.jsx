@@ -5,9 +5,9 @@ const Form = () =>{
     <div>
          <form className='FormContainer'>
           <label>Email</label>
-          <input type="email"/>
+          <input type="email" placeholder='Email'/>
           <label>Password</label>
-          <input type="text" />
+          <input type="text" placeholder='Password'/>
         </form>
     </div>
   )

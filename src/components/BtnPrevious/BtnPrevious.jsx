@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+//import './BtnPrevious.css'
 
 const BtnPrevious = (prop) =>{
 
@@ -7,7 +8,7 @@ const BtnPrevious = (prop) =>{
     return (
         <>
 
-            <Link to={prop.to}>Anterior</Link>
+            <Link className="btn-previous" to={prop.to}>Anterior</Link>
         </>
 
     )
