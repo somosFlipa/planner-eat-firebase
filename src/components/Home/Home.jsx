@@ -30,8 +30,7 @@ const Home = () => {
         <BtnNext to='/Welcome'/>
       </div>
 
-     
-     
+
     </div>
 
   );
