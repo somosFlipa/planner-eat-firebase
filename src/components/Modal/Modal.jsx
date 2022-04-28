@@ -1,35 +1,34 @@
-import React from 'react';
-import './Modal.css';
-
+import React, { useEffect, useState } from "react";
+import "./Modal.css";
 
 function Modal({ estadoModal, setEstadoModal, description, nombre }) {
-    // console.log(description)
-    // console.log(nombre)
-    return (
-        <>
-            {estadoModal &&
-                <div className='modal'>
-                    <div className='containerModal'>
-                        <button onClick={()=>{setEstadoModal(false)}}>X</button>
-                        <h2>{nombre}</h2>
-                        <h3>Ingrediente:</h3>
-                        {
-                            description.map(i => {
-                                // console.log(i)
-                                i.map(z => {
-                                    return(
-                                        <li>{z.datos.name}</li>
-                                    )
-                                    // console.log(z.datos.name)
-                                })
-                                
-                            })
-                        }
-                    </div>
-                </div>
-            }
-        </>
-    )
+  const [ingredients, setIngredients] = useState([]);
+  useEffect(() => {
+    description.map((i) => {
+      setIngredients(i.datos);
+    });
+  }, []);
+  // console.log(nombre)
+  return (
+    <>
+      {estadoModal && (
+        <div className="modal">
+          <div className="containerModal">
+            <button
+              onClick={() => {
+                setEstadoModal(false);
+              }}
+            >
+              X
+            </button>
+            <h2>{nombre}</h2>
+            <h3>Ingrediente:</h3>
+            <p>{ingredients.name}</p>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
 
-export default Modal
+export default Modal;
