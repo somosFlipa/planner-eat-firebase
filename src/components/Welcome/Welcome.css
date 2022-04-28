@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.WelcomeDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-h2-h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #63E5DF;
+
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+    border-bottom-style: groove;
+
+    text-align: center;
+
+    height: 200px;
+}
+
+.welcome-h2-h3 h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.welcome-h2-h3 h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.welcome-img-p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.welcome-img-p p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+
+    border-style: groove;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 4px 4px 10px #7f807f;
+
+    width: 240px;
+    height: 63px;
+}
+
+.welcome-img-p img{
+    width: 77px;
+    height: 77px;
+    margin-right: 5px;
+}
+
+.box-btn-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20px;
+}

@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import './btnNext.css'
 
 const BtnNext = (prop) =>{
 
   return (
     <>
-      <Link to={prop.to}>Siguiente</Link>
+      <Link className="btn-next" to={prop.to}>Siguiente</Link>
     </>
   )
 }

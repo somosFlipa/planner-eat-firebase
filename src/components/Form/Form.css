@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 .FormContainer{
 display: flex;
 flex-direction: column;
 
+}
+
+.FormContainer input{
+    background-color: #63E5DF;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 328px;
+    height: 30px;
+    padding: 1px;
+    border-style: groove;
+    border-width: 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.FormContainer input::placeholder{
+    color: #000;
 }
