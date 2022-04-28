@@ -23,7 +23,7 @@ const Welcome = () => {
       </div>
       <div className='welcome-img-p'>
         <img src={taco1} alt="Taco" />
-        <p>Listo! Ya tienes armado tu planner :")" {":)"}</p>
+        <p>Listo! Ya tienes armado tu planner {":)"}</p>
       </div>
       <div className='box-btn-next'>
         <BtnNext to="/CookingRecipe"/>
