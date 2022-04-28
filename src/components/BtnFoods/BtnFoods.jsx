@@ -15,8 +15,7 @@ function BtnFoods({recipe}) {
 
     // fuencion para los botones
     
-    function btnFood (food) {
-
+    async function btnFood (food) {
         recipe.map((i) => {
             i.Comida.filter(z => {
                 if ((z === food) === true) {
@@ -30,11 +29,9 @@ function BtnFoods({recipe}) {
                         }
                 }
             })
-        })
+        }) 
+        
     }
-    // console.log("comida: ",recipe[2].Ingredients[0]._key.path.segments[6])
-    // ListItems
-
 
     return (
         <>

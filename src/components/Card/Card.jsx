@@ -2,10 +2,14 @@ import React,{useEffect, useState} from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
+import Modal from '../Modal/Modal';
+
 
 function Card(props) {
 
   const [ingredients, setIngredients] = useState([]);
+  const [description , setDescription] = useState([]);
+  const [estadoModal , setEstadoModal] = useState(false);
   const listRecipe = [];
 
   useEffect(() => {
@@ -14,65 +18,44 @@ function Card(props) {
         const data = await getDocs(collection(db, "Ingredients"));
         data.docs.map((i) => {
           listRecipe.push({"datos": i.data(),"id":i.id});
-          // console.log("i: ", i.id)
         });
         setIngredients(listRecipe);
     };
     obtenerDatos();
+
   }, []);
-  // console.log(ingredients)
-  // console.log(props.ingredientes)
-  // if (idCategory) {
-  //   q = query(collection(db, "productos"), where('categoryId', '==', idCategory));
-  // }
-  // if (id) {
-  //   const q = query(collection(db, "Ingresients"), where('Ingresients', '==', id));
-  //   console.log(q)
-  // }
-  
-  function btn (id) {
 
-    // console.log(props.ingredientes)
-    // props.ingredientes.map(i => {
-    //   console.log(i.id)
-    // })
-    ingredients.filter(z=>{
-       if ((z === id) === true) {
-        console.log(z)
 
-       }
+  function btn () {
+    setEstadoModal(true)
 
-        console.log(z)
+    let data = []
+    let items = undefined
+    const e = props.ingredientes.map(i => {
+      items = ingredients.filter(f => {
+        return f.id === i.id
 
+      })
+      data.push(items)
+      
     })
+    setDescription(data)
+    
+    
 
   }
-  
-  
-  
+
   return (
     <>
         <p>Nombre: {props.nombre}</p>
         <p>Tiempo: {props.tiempo}</p>
         <p>Dificultad: {props.dificultad}</p>
-        <button onClick={()=>{btn('Ingredientes')}}>Ver más</button>
+        <button onClick={()=>{btn()}}>Ver más</button>
+        
+        <Modal estadoModal={estadoModal} setEstadoModal={setEstadoModal} description={description} nombre={props.nombre}/>
+        
     </>
   )
 }
 
 export default Card
-// console.log(props.ingredientes[0]._key.path.segments[6] === ingredients[0].id)
-    // console.log(ingredients[0].id)  
-    //  console.log(props.ingredientes)
-
-//          if ((z === id) === true) {
-    //            console.log(i.id)
-    // //           listRecipe.filter(s => s.foodTime === food)
-    // //             if (!listRecipe.includes(i.Nombre)) { 
-    // //               listRecipe.push({FoodTime: food, Nombre:i.Nombre,
-    // //                     Dificultad: i.Dificultad, Tiempo: i.TiempoCoccion + i.TiempoPreparacion,
-    // //                     Ingredientes: i.Ingredients
-    // //                 })
-    // //                 setIngredients(listRecipe)
-    // //                 }
-    //          }

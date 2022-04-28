@@ -19,14 +19,26 @@ const CookingRecipe = () => {
     };
     obtenerDatos();
   }, []);
+
+  // console.log(recipe.length)
+
+  if(recipe.length > 0){
+    return (
+      <>
+        <h2>Seleccioná los platos que quieres en tu menú.</h2>
+        <BtnFoods recipe={recipe}/>
+      </>
+    );
+  }else{
+    return(
+      <>
+        <p>Cargando...</p>
+        <BtnFoods recipe={0}/>
+      </>
+    )
+  }
   
   
-  return (
-    <>
-      <h2>Seleccioná los platos que quieres en tu menú.</h2>
-      <BtnFoods recipe={recipe}/>
-    </>
-  );
 };
 
 export default CookingRecipe;
