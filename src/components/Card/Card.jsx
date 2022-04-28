@@ -6,6 +6,7 @@ import db from "../../firebase/dbConfig";
 function Card(props) {
 
   const [ingredients, setIngredients] = useState([]);
+  const [description , setDescription] = useState([]);
   const listRecipe = [];
 
   useEffect(() => {
@@ -19,51 +20,33 @@ function Card(props) {
         setIngredients(listRecipe);
     };
     obtenerDatos();
+
   }, []);
 
-  // console.log(props.ingredientes)
-// if (idCategory) {
-//   q = query(collection(db, "productos"), where('categoryId', '==', idCategory));
-// }
-  
-  function btn (id) {
+  function btn () {
+    let h = []
+    let g = undefined
+    const e = props.ingredientes.map(i => {
+      // console.log(i)
+      g = ingredients.filter(f => {
+        return f.id === i.id
 
-    // console.log(props.ingredientes)
-    props.ingredientes.map(i => {
-      console.log(i.id)
+      })
+      h.push(g)
+      
     })
-    
-
-  
-    
+    setDescription(h)
     
   }
-  
-  
-  
+
   return (
     <>
         <p>Nombre: {props.nombre}</p>
         <p>Tiempo: {props.tiempo}</p>
         <p>Dificultad: {props.dificultad}</p>
-        <button onClick={()=>{btn('Ingredientes')}}>Ver más</button>
+        <button onClick={()=>{btn()}}>Ver más</button>
     </>
   )
 }
 
 export default Card
-// console.log(props.ingredientes[0]._key.path.segments[6] === ingredients[0].id)
-    // console.log(ingredients[0].id)  
-    //  console.log(props.ingredientes)
-
-//          if ((z === id) === true) {
-    //            console.log(i.id)
-    // //           listRecipe.filter(s => s.foodTime === food)
-    // //             if (!listRecipe.includes(i.Nombre)) { 
-    // //               listRecipe.push({FoodTime: food, Nombre:i.Nombre,
-    // //                     Dificultad: i.Dificultad, Tiempo: i.TiempoCoccion + i.TiempoPreparacion,
-    // //                     Ingredientes: i.Ingredients
-    // //                 })
-    // //                 setIngredients(listRecipe)
-    // //                 }
-    //          }
