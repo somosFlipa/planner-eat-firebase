@@ -32,9 +32,6 @@ function BtnFoods({recipe}) {
         }) 
         
     }
-    // console.log("comida: ",recipe[2].Ingredients[0]._key.path.segments[6])
-    // ListItems
-    
 
     return (
         <>
