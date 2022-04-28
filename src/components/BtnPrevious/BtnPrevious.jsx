@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import './BtnPrevious.css'
+import './BtnPrevious.css'
 
 const BtnPrevious = (prop) =>{
 
