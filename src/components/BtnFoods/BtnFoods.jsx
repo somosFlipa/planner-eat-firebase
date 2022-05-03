@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
-import breakfast from "../../assets/Desayunos.svg";
+import breakfast from "../../assets/Desayunos.png";
 import lunch from "../../assets/Almuerzos.jpg";
-import afternoon from "../../assets/Meriendas.svg";
-import dinner from "../../assets/Cenas.svg";
+import afternoon from "../../assets/Meriendas.jpg";
+import dinner from "../../assets/Cenas.jpg";
 
 import Card from "../Card/Card";
 import BtnPrevious from "../BtnPrevious/BtnPrevious";
+//import BtnNext from "../btnNext/btnNext";
+
+import "./BtnFoods.css"
 
 function BtnFoods({ recipe }) {
   let arrayFilter = [];
@@ -49,7 +52,7 @@ function BtnFoods({ recipe }) {
               btnFood("DESAYUNO");
             }}
           >
-            <img src={breakfast} alt="" />
+            <img className="img-comidas-hover" src={breakfast} alt="" />
           </button>
           <button
             id="lunch"
@@ -57,7 +60,7 @@ function BtnFoods({ recipe }) {
               btnFood("ALMUERZO");
             }}
           >
-            <img src={lunch} alt="" />
+            <img className="img-comidas-hover" src={lunch} alt="" />
           </button>
           <button
             id="afternoon"
@@ -65,7 +68,7 @@ function BtnFoods({ recipe }) {
               btnFood("MERIENDA");
             }}
           >
-            <img src={afternoon} alt="" />
+            <img className="img-comidas-hover" src={afternoon} alt="" />
           </button>
           <button
             id="dinner"
@@ -73,7 +76,7 @@ function BtnFoods({ recipe }) {
               btnFood("CENA");
             }}
           >
-            <img src={dinner} alt="" />
+            <img className="img-comidas-hover" src={dinner} alt="" />
           </button>
         </>
       }

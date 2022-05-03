@@ -4,6 +4,8 @@ import db from "../../firebase/dbConfig";
 
 import Modal from "../Modal/Modal";
 
+import "./Card.css"
+
 function Card(props) {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState([]);
@@ -41,16 +43,18 @@ function Card(props) {
   });
   return (
     <>
-      <p>Nombre: {props.nombre}</p>
-      <p>Tiempo: {props.tiempo}</p>
-      <p>Dificultad: {props.dificultad}</p>
-      <button
-        onClick={() => {
-          btn();
-        }}
-      >
-        Ver más
-      </button>
+      <div className="cont-props">
+        <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
+        <p className="prop-tiempos">{/*Tiempo:*/} {props.tiempo}</p>
+        <p className="prop-dificultades">{/*Dificultad:*/} {props.dificultad}</p>
+        <button className="btn-vermas-props"
+          onClick={() => {
+            btn();
+          }}
+        >
+          Ver más
+        </button>
+      </div>
 
       <Modal
         estadoModal={estadoModal}

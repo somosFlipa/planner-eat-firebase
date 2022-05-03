@@ -1,6 +1,6 @@
 import React from "react";
 import Form from '../Form/Form';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import "./Home.css";
 import BtnNext from '../btnNext/btnNext'
 
