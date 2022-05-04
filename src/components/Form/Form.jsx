@@ -7,7 +7,7 @@ const Form = () =>{
           <label>Email</label>
           <input type="email" placeholder='Email'/>
           <label>Password</label>
-          <input type="text" placeholder='Password'/>
+          <input type="password" placeholder='Password'/>
         </form>
     </div>
   )

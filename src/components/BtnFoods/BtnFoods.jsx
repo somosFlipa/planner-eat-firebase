@@ -7,13 +7,15 @@ import dinner from "../../assets/Cenas.jpg";
 
 import Card from "../Card/Card";
 import BtnPrevious from "../BtnPrevious/BtnPrevious";
-//import BtnNext from "../btnNext/btnNext";
 
-import "./BtnFoods.css"
+import "./BtnFoods.css";
+import  OpinionModal from '../OpinionModal/OpinionModal'
+
 
 
 function BtnFoods({ recipe }) {
     const [comida, setComida] = useState([]);
+    const [opinionModal, setOpinionModal] = useState(false);
     let arrayFilter= [];
 
   // fuencion para los botones
@@ -39,13 +41,19 @@ function BtnFoods({ recipe }) {
       });
     }
 
+    // Modal de opinion
+    function btnOpinion () {
+      setOpinionModal(true)
+
+    }
+
   return (
     <>
       <p>Comensales: </p>
 
       {
         // comida.length < 1 ?
-        //   btnFood1("DESAYUNO") :
+        //   btnFood("DESAYUNO") :
 
         <>
           <button
@@ -97,7 +105,9 @@ function BtnFoods({ recipe }) {
       })}
       <div>
         <BtnPrevious to="/Welcome" />
+        <button onClick={btnOpinion}>Siguiente</button>
       </div>
+      <OpinionModal opinionModal={opinionModal} setOpinionModal={setOpinionModal}/>
     </>
   );
 }
