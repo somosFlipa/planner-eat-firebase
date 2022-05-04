@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
 import Modal from "../Modal/Modal";
@@ -8,6 +8,7 @@ function Card(props) {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState([]);
   const [estadoModal, setEstadoModal] = useState(false);
+
   const listRecipe = [];
 
   useEffect(() => {
@@ -18,8 +19,28 @@ function Card(props) {
       });
       setIngredients(listRecipe);
     };
-    obtenerDatos();
+    obtenerDatos()
   }, []);
+  // console.log(description.map(dato=>(dato.datos)))
+
+  // useEffect(() => {
+  //   const listRecipe = [];
+
+  //   if(listRecipe.length === 0){
+  //   const obtenerDatos = async () => {
+  //     const data = await getDocs(collection(db, "Ingredients"));
+  //     data.docs.map((i) => {
+  //       listRecipe.push({ datos: i.data(), id: i.id });
+  //     });
+  //     setIngredients(listRecipe);
+  //   };
+  //   obtenerDatos()
+  // }else{
+  //     console.log("datos extraidos")
+  //   }
+  //   // console.log(listRecipe)
+  // }, [ingredients]);
+  
 
   function btn() {
     setEstadoModal(true);
@@ -34,11 +55,7 @@ function Card(props) {
     });
     setDescription(data);
   }
-  console.log({
-    description: description,
-    estadoModal: estadoModal,
-    props: props.nombre,
-  });
+  
   return (
     <>
       <p>Nombre: {props.nombre}</p>

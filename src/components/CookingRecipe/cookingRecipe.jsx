@@ -6,21 +6,25 @@ import BtnFoods from "../BtnFoods/BtnFoods";
 
 const CookingRecipe = () => {
   const [recipe, setRecipe] = useState([]);
-  const listRecipe = [];
+  
 
   useEffect(() => {
-    const obtenerDatos = async () => {
-      const data = await getDocs(collection(db, "cookingRecipe"));
-      data.docs.map((i) => {
-        listRecipe.push(i.data());
-        // console.log(i.data())
-      });
-      setRecipe(listRecipe);
-    };
-    obtenerDatos();
-  }, []);
+    const listRecipe = [];
+    if(recipe.length === 0){
+      const obtenerDatos = async () => {
+        const data = await getDocs(collection(db, "cookingRecipe"));
+        data.docs.map((i) => {
+          listRecipe.push(i.data());
+        });
+        setRecipe(listRecipe);
+      };
+      obtenerDatos();
+  }else{
+    console.log("datos extraidos")
+  }
+  }, [recipe]);
 
-  // console.log(recipe.length)
+  // console.log(recipe)
 
   if(recipe.length > 0){
     return (

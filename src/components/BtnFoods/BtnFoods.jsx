@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 
 import breakfast from "../../assets/Desayunos.svg";
 import lunch from "../../assets/Almuerzos.jpg";
@@ -8,31 +8,33 @@ import dinner from "../../assets/Cenas.svg";
 import Card from "../Card/Card";
 import BtnPrevious from "../BtnPrevious/BtnPrevious";
 
+
 function BtnFoods({ recipe }) {
-  let arrayFilter = [];
-  const [comida, setComida] = useState([]);
+    const [comida, setComida] = useState([]);
+    let arrayFilter= [];
 
   // fuencion para los botones
-
-  async function btnFood(food) {
-    recipe.map((i) => {
-      i.Comida.filter((z) => {
-        if ((z === food) === true) {
-          arrayFilter.filter((s) => s.foodTime === food);
-          if (!arrayFilter.includes(i.Nombre)) {
-            arrayFilter.push({
-              FoodTime: food,
-              Nombre: i.Nombre,
-              Dificultad: i.Dificultad,
-              Tiempo: i.TiempoCoccion + i.TiempoPreparacion,
-              Ingredientes: i.Ingredients,
-            });
-            setComida(arrayFilter);
+    async function btnFood(food) {
+      recipe.map((i) => {
+        // console.log(i)
+        i.Comida.filter((z) => {
+          // console.log(z === undefined)
+          if ((z === food) === true) {
+            arrayFilter.filter((s) => s.foodTime === food);
+            if (!arrayFilter.includes(i.Nombre)) {
+              arrayFilter.push({
+                FoodTime: food,
+                Nombre: i.Nombre,
+                Dificultad: i.Dificultad,
+                Tiempo: i.TiempoCoccion + i.TiempoPreparacion,
+                Ingredientes: i.Ingredients,
+              });
+              setComida(arrayFilter);
+            }
           }
-        }
+        });
       });
-    });
-  }
+    }
 
   return (
     <>
@@ -40,7 +42,7 @@ function BtnFoods({ recipe }) {
 
       {
         // comida.length < 1 ?
-        //   btnFood("DESAYUNO") :
+        //   btnFood1("DESAYUNO") :
 
         <>
           <button
@@ -77,6 +79,7 @@ function BtnFoods({ recipe }) {
           </button>
         </>
       }
+
       {comida.map((c) => {
         return (
           <>
@@ -97,3 +100,34 @@ function BtnFoods({ recipe }) {
 }
 
 export default BtnFoods;
+
+
+ 
+
+      // const resetaComida = collection(db, "cookingRecipe")
+      // const desayuno = query(resetaComida, where("Comida","array-contains","DESAYUNO"))
+      // // const cena = query(resetaComida, where("Comida","array-contains","CENA"))
+      // const querySnapshot = await getDocs(desayuno);
+      // querySnapshot.forEach((doc) => {
+      //   // setcategoDeayuno(doc.data());
+      //   categoDeayuno.push(doc.data())
+        
+      // });
+      // console.log("desayuno", categoDeayuno)
+
+
+      
+    // async function btnFood(food) {
+    //   const resetaComida = collection(db, "cookingRecipe")
+    //   // const desayuno = query(resetaComida, where("Comida","array-contains","DESAYUNO"))
+    //   const cena = query(resetaComida, where("Comida","array-contains","CENA"))
+    //   const querySnapshot = await getDocs(cena);
+    //   querySnapshot.forEach((doc) => {
+    //     // setcategoCena(doc.data());
+    //     categoCena.push(doc.data())
+    //     // console.log("cena", doc.data())
+    //   });
+    //   console.log("cena", categoCena)
+    // }
+    
+    // console.log("desayuno", categoDeayuno.Nombre)

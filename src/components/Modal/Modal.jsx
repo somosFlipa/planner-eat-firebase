@@ -8,7 +8,9 @@ function Modal({ estadoModal, setEstadoModal, description, nombre }) {
       setIngredients(i.datos);
     });
   }, []);
-  // console.log(nombre)
+  const item = (description.map(dato=>(dato.datos)))
+  // const nameItem = (item.map((name)=>(name.name)))
+  // console.log(nameItem)
   return (
     <>
       {estadoModal && (
@@ -23,7 +25,9 @@ function Modal({ estadoModal, setEstadoModal, description, nombre }) {
             </button>
             <h2>{nombre}</h2>
             <h3>Ingrediente:</h3>
-            <p>{ingredients.name}</p>
+            {
+              item.map(li =>(<li>{li.name}</li>))
+            }
           </div>
         </div>
       )}
@@ -32,3 +36,5 @@ function Modal({ estadoModal, setEstadoModal, description, nombre }) {
 }
 
 export default Modal;
+
+
