@@ -10,7 +10,7 @@ function Modal({ estadoModal, setEstadoModal, description, nombre }) {
   }, []);
   const item = (description.map(dato=>(dato.datos)))
   // const nameItem = (item.map((name)=>(name.name)))
-  // console.log(nameItem)
+  
   return (
     <>
       {estadoModal && (
