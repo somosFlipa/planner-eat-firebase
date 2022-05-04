@@ -8,7 +8,7 @@
 
     color: #000;
     
-    border-color: #000;
+    border-color: #63e5df;
     border-style: groove;
     border-radius: 5px;
     border-width: 1px;
@@ -20,7 +20,5 @@
     justify-content: center;
     align-items: center;
 
-    margin-bottom: -59px;
-    margin-top: 52px;
-
+    margin-left: 20px;
 }
