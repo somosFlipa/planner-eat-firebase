@@ -77,6 +77,8 @@ function Card(props) {
         estadoModal={estadoModal}
         setEstadoModal={setEstadoModal}
         description={description}
+        tiempo={props.tiempo}
+        dificultad={props.dificultad}
         nombre={props.nombre}
       />
     </>

@@ -21,7 +21,6 @@ function BtnFoods({ recipe }) {
   // fuencion para los botones
     async function btnFood(food) {
       recipe.map((i) => {
-        
         i.Comida.filter((z) => {
           // console.log(z === undefined)
           if ((z === food) === true) {
