@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
 
-function Modal({ estadoModal, setEstadoModal, description, nombre }) {
+import BowlFrutas from "../../assets/bowlfrutas.png"
+
+function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, nombre }) {
   const [ingredients, setIngredients] = useState([]);
   useEffect(() => {
     description.map((i) => {
@@ -16,18 +18,23 @@ function Modal({ estadoModal, setEstadoModal, description, nombre }) {
       {estadoModal && (
         <div className="modal">
           <div className="containerModal">
-            <button
+            <button className="btn-x-modal"
               onClick={() => {
                 setEstadoModal(false);
               }}
             >
               X
             </button>
-            <h2>{nombre}</h2>
-            <h3>Ingrediente:</h3>
-            {
-              item.map(li =>(<li>{li.name}</li>))
-            }
+            <h2 className="h2-modal" >{nombre}</h2>
+            <h3 className="h3-modal" >Ingrediente:</h3>
+            <p className="tiempo-modal">{tiempo}</p>
+            <p className="dificultad-modal">{dificultad}</p>
+            <img className="img-modal" src={BowlFrutas} alt=""/>
+            <div className="li-map-modal">
+              {
+                item.map(li =>(<li>{li.name}</li>))
+              }
+            </div>
           </div>
         </div>
       )}

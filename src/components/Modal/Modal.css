@@ -1,14 +1,14 @@
 .modal{
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     position: fixed;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, .5);
-    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .containerModal{
@@ -19,4 +19,69 @@
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
     padding: 20px;
+}
+
+.btn-x-modal{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    padding: 1px;
+    color: #fff;
+    background-color: #FF7062;
+    border-color: #FF7063;
+    position: relative;
+    left: 280px;
+}
+
+.h2-modal{
+    color: #63E5DF;
+    font-size: 14px;
+    border-bottom-style: groove;
+    border-color: #63E5DF;
+    display: inline;
+    position: relative;
+    bottom: -31px;
+    right: 25px;
+}
+
+.h3-modal{
+    font-size: 12px;
+    position: relative;
+    top: 185px;
+    right: 5px;
+}
+
+.li-map-modal{
+    display: inline;
+    position: relative;
+    top: 35px;
+    font-size: 10px;
+}
+
+.img-modal{
+    position: relative;
+    top: 0px;
+    right: 24px;
+    width: 84vw;
+}
+
+.tiempo-modal{
+    display: inline;
+    position: relative;
+    bottom: 38px;
+    left: 10px;
+    font-size: 10px;
+}
+
+.dificultad-modal{
+    display: inline;
+    position: relative;
+    bottom: 38px;
+    left: 60px;
+    font-size: 12px;
+    color: #3DD29D;
+    background-color: rgb(61 210 157 / 21%);
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
 }
