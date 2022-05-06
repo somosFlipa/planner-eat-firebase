@@ -10,6 +10,7 @@ import BtnPrevious from "../BtnPrevious/BtnPrevious";
 
 import "./BtnFoods.css";
 import  OpinionModal from '../OpinionModal/OpinionModal'
+import { Link } from "react-router-dom";
 
 
 
@@ -43,7 +44,34 @@ function BtnFoods({ recipe }) {
     // Modal de opinion
     function btnOpinion () {
       setOpinionModal(true)
+    }
 
+    // Paginacion (entre desayuno, almuerzo, merienda y cena)
+    function paginacionPrevious(comida) {
+      if (comida.length === 11) {
+        return(btnFood("DESAYUNO"))
+      }
+      if (comida.length === 7) {
+        return(btnFood("ALMUERZO"))
+      }
+      if (comida.length === 16) {
+        return btnFood("MERIENDA")
+      }
+    }
+
+    function paginacionNex(comida) {
+      if (comida.length === 0) {
+        return(btnFood("DESAYUNO"))
+      }
+      if (comida.length === 8) {
+        return(btnFood("ALMUERZO"))
+      }
+      if (comida.length === 11) {
+        return btnFood("MERIENDA")
+      }
+      if (comida.length === 7) {
+        return btnFood("CENA")
+      }
     }
 
   return (
@@ -53,7 +81,6 @@ function BtnFoods({ recipe }) {
       {
         // comida.length < 1 ?
         //   btnFood("DESAYUNO") :
-
         <>
           <button
             id="breakfast"
@@ -90,21 +117,35 @@ function BtnFoods({ recipe }) {
         </>
       }
 
-      {comida.map((c) => {
-        return (
-          <>
-            <Card
-              nombre={c.Nombre}
-              tiempo={c.Tiempo}
-              dificultad={c.Dificultad}
-              ingredientes={c.Ingredientes}
-            />
-          </>
-        );
-      })}
+      {
+        // comida.length === 0 ?
+        //   btnFood("DESAYUNO") :
+        comida.map((c) => {
+          return (
+            <>
+              <Card
+                nombre={c.Nombre}
+                tiempo={c.Tiempo}
+                dificultad={c.Dificultad}
+                ingredientes={c.Ingredientes}
+              />
+            </>
+          );
+        })
+      }
       <div>
-        <BtnPrevious to="/Welcome" />
-        <button onClick={btnOpinion}>Siguiente</button>
+        {
+          comida.length === 0 || comida.length === 8 ?
+          <BtnPrevious to="/Welcome" /> :
+          <button onClick={ () => paginacionPrevious(comida)}>Anterior</button>
+        }
+        {
+          comida.map(FoodTime => (FoodTime.FoodTime)).length === 16  ?
+          <button onClick={btnOpinion}>FINALIZAR</button> :
+          <button onClick={ () => paginacionNex(comida)}>Siguiente</button> 
+          
+        }
+        
       </div>
       <OpinionModal opinionModal={opinionModal} setOpinionModal={setOpinionModal}/>
     </>
@@ -113,33 +154,3 @@ function BtnFoods({ recipe }) {
 
 export default BtnFoods;
 
-
- 
-
-      // const resetaComida = collection(db, "cookingRecipe")
-      // const desayuno = query(resetaComida, where("Comida","array-contains","DESAYUNO"))
-      // // const cena = query(resetaComida, where("Comida","array-contains","CENA"))
-      // const querySnapshot = await getDocs(desayuno);
-      // querySnapshot.forEach((doc) => {
-      //   // setcategoDeayuno(doc.data());
-      //   categoDeayuno.push(doc.data())
-        
-      // });
-      // console.log("desayuno", categoDeayuno)
-
-
-      
-    // async function btnFood(food) {
-    //   const resetaComida = collection(db, "cookingRecipe")
-    //   // const desayuno = query(resetaComida, where("Comida","array-contains","DESAYUNO"))
-    //   const cena = query(resetaComida, where("Comida","array-contains","CENA"))
-    //   const querySnapshot = await getDocs(cena);
-    //   querySnapshot.forEach((doc) => {
-    //     // setcategoCena(doc.data());
-    //     categoCena.push(doc.data())
-    //     // console.log("cena", doc.data())
-    //   });
-    //   console.log("cena", categoCena)
-    // }
-    
-    // console.log("desayuno", categoDeayuno.Nombre)

@@ -23,27 +23,7 @@ function Card(props) {
     };
     obtenerDatos()
   }, []);
-  // console.log(description.map(dato=>(dato.datos)))
-
-  // useEffect(() => {
-  //   const listRecipe = [];
-
-  //   if(listRecipe.length === 0){
-  //   const obtenerDatos = async () => {
-  //     const data = await getDocs(collection(db, "Ingredients"));
-  //     data.docs.map((i) => {
-  //       listRecipe.push({ datos: i.data(), id: i.id });
-  //     });
-  //     setIngredients(listRecipe);
-  //   };
-  //   obtenerDatos()
-  // }else{
-  //     console.log("datos extraidos")
-  //   }
-  //   // console.log(listRecipe)
-  // }, [ingredients]);
   
-
   function btn() {
     setEstadoModal(true);
 
