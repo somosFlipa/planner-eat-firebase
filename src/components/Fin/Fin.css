@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.flex-fondo-fin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 90px;
+}
+
+.logo-fin img{
+    margin-bottom: 30px;
+}
+
+.flex-fondo-fin div{
+    text-align: center;
+}
+
+.flex-fondo-fin div h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.flex-fondo-fin div p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.fondofruta{
+    background-image: url(../../assets/imgfrutasfin.png);
+    background-repeat: round;
+    position: relative;
+    top: 125px;
+    width: 414px;
+    height: 278px;
+}
+
+.fondofruta img{
+    width: 414px;
+}

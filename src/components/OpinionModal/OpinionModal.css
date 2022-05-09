@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .divModal{
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     position: fixed;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, .5);
-    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,4 +20,58 @@
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
     padding: 20px;
+}
+
+.modalContainer button{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    padding: 1px;
+    color: #fff;
+    background-color: #FF7062;
+    border-color: #FF7063;
+    position: relative;
+    left: 280px;
+}
+
+.modalContainer h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.modalContainer textarea{
+    width: 270px;
+    height: 330px;
+    margin-top: 20px;
+    resize: none;
+    padding: 13px;
+}
+
+.btn-enviar{
+
+    border-color: #000;
+    border-style: groove;
+    border-radius: 5px;
+    border-width: 1px;
+
+    width: 153px;
+    height: 36px;
+    
+    margin-top: 10px;
+    margin-left: 143px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #63E5DF;
+}
+
+.btn-enviar a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000;
 }

@@ -17,9 +17,11 @@ function OpinionModal({opinionModal, setOpinionModal}) {
                 X
                 </button>
                 <h3>¿Quéres dejarnos un comentario?</h3>
-                <textarea id="w3review" name="w3review" >
+                <textarea id="w3review" name="w3review" placeholder='Escribí Aquí por ej: No me gusta el tomate' >
                 </textarea>
-                <Link to="/Fin">Enviar</Link>
+                <div className='btn-enviar'>
+                    <Link to="/Fin">Enviar</Link>
+                </div>
             </div>
             </div>
         )
