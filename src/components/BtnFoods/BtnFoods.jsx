@@ -10,9 +10,6 @@ import BtnPrevious from "../BtnPrevious/BtnPrevious";
 
 import "./BtnFoods.css";
 import  OpinionModal from '../OpinionModal/OpinionModal'
-import { Link } from "react-router-dom";
-
-
 
 function BtnFoods({ recipe }) {
     const [comida, setComida] = useState([]);
@@ -21,8 +18,8 @@ function BtnFoods({ recipe }) {
 
   // fuencion para los botones
     async function btnFood(food) {
-      recipe.map((i) => {
-        i.Comida.filter((z) => {
+      recipe && recipe.map((i) => {
+        i.Comida && i.Comida.filter((z) => {
           // console.log(z === undefined)
           if ((z === food) === true) {
             arrayFilter.filter((s) => s.foodTime === food);
@@ -33,6 +30,7 @@ function BtnFoods({ recipe }) {
                 Dificultad: i.Dificultad,
                 Tiempo: i.TiempoCoccion + i.TiempoPreparacion,
                 Ingredientes: i.Ingredients,
+                Url: i.Url
               });
               setComida(arrayFilter);
             }
@@ -40,6 +38,11 @@ function BtnFoods({ recipe }) {
         });
       });
     }
+
+    useEffect(()=>{
+      btnFood()
+      setComida(arrayFilter)
+    },[])
 
     // Modal de opinion
     function btnOpinion () {
@@ -124,10 +127,12 @@ function BtnFoods({ recipe }) {
           return (
             <>
               <Card
+                key={c}
                 nombre={c.Nombre}
                 tiempo={c.Tiempo}
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
+                url={c.Url}
               />
             </>
           );

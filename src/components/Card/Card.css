@@ -48,3 +48,9 @@
     bottom: 40px;
     left: 290px;
 }
+
+.prop-imgen{
+    width:75px;
+    height: 60px;
+    float: left;
+}

@@ -3,7 +3,7 @@ import "./Modal.css";
 
 import BowlFrutas from "../../assets/bowlfrutas.png"
 
-function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, nombre }) {
+function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, nombre, url }) {
   const [ingredients, setIngredients] = useState([]);
   useEffect(() => {
     description.map((i) => {
@@ -29,7 +29,7 @@ function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, n
             <h3 className="h3-modal" >Ingrediente:</h3>
             <p className="tiempo-modal">{tiempo}</p>
             <p className="dificultad-modal">{dificultad}</p>
-            <img className="img-modal" src={BowlFrutas} alt=""/>
+            <img className="img-modal" src={url} alt=""/>
             <div className="li-map-modal">
               {
                 item.map(li =>(<li>{li.name}</li>))

@@ -41,9 +41,11 @@ function Card(props) {
   return (
     <>
       <div className="cont-props">
+        <img  className="prop-imgen" src={props.url}/>
         <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
         <p className="prop-tiempos">{/*Tiempo:*/} {props.tiempo}</p>
         <p className="prop-dificultades">{/*Dificultad:*/} {props.dificultad}</p>
+        
         <button className="btn-vermas-props"
           onClick={() => {
             btn();
@@ -60,6 +62,7 @@ function Card(props) {
         tiempo={props.tiempo}
         dificultad={props.dificultad}
         nombre={props.nombre}
+        url={props.url}
       />
     </>
   );
