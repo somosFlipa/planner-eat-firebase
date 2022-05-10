@@ -51,14 +51,14 @@ function BtnFoods({ recipe }) {
 
     // Paginacion (entre desayuno, almuerzo, merienda y cena)
     function paginacionPrevious(comida) {
-      if (comida.length === 11) {
+      if (comida.length === 12) {
         return(btnFood("DESAYUNO"))
       }
-      if (comida.length === 7) {
+      if (comida.length === 18) {
         return(btnFood("ALMUERZO"))
       }
-      if (comida.length === 16) {
-        return btnFood("MERIENDA")
+      if (comida.length === 24) {
+        return (btnFood("MERIENDA"))
       }
     }
 
@@ -66,13 +66,13 @@ function BtnFoods({ recipe }) {
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }
-      if (comida.length === 8) {
+      if (comida.length === 11) {
         return(btnFood("ALMUERZO"))
       }
-      if (comida.length === 11) {
+      if (comida.length === 12) {
         return btnFood("MERIENDA")
       }
-      if (comida.length === 7) {
+      if (comida.length === 18) {
         return btnFood("CENA")
       }
     }
@@ -140,12 +140,12 @@ function BtnFoods({ recipe }) {
       }
       <div>
         {
-          comida.length === 0 || comida.length === 8 ?
+          comida.length === 0 || comida.length === 11 ?
           <BtnPrevious to="/Welcome" /> :
           <button onClick={ () => paginacionPrevious(comida)}>Anterior</button>
         }
         {
-          comida.map(FoodTime => (FoodTime.FoodTime)).length === 16  ?
+          comida.length === 24 ?
           <button onClick={btnOpinion}>FINALIZAR</button> :
           <button onClick={ () => paginacionNex(comida)}>Siguiente</button> 
           
