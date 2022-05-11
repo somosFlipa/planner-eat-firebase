@@ -1,0 +1,20 @@
+.contador{
+    display: flex;
+    
+}
+
+.contador p{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contador button{
+    padding: 1px 2px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    border-radius: 5px;
+    font-size: 1em;
+
+}
+

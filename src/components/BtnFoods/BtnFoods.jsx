@@ -11,6 +11,8 @@ import BtnPrevious from "../BtnPrevious/BtnPrevious";
 import "./BtnFoods.css";
 import  OpinionModal from '../OpinionModal/OpinionModal'
 
+import ItemCouts from '../ItemCouts/ItemCouts'
+
 function BtnFoods({ recipe }) {
     const [comida, setComida] = useState([]);
     const [opinionModal, setOpinionModal] = useState(false);
@@ -80,7 +82,7 @@ function BtnFoods({ recipe }) {
   return (
     <>
       <p>Comensales: </p>
-
+      <ItemCouts stock={4} initial={1} />
       {
         // comida.length < 1 ?
         //   btnFood("DESAYUNO") :

@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
 import Modal from "../Modal/Modal";
-
+import ItemCouts from '../ItemCouts/ItemCouts';
 import "./Card.css"
 
 function Card(props) {
@@ -46,6 +46,8 @@ function Card(props) {
         <p className="prop-tiempos">{/*Tiempo:*/} {props.tiempo}</p>
         <p className="prop-dificultades">{/*Dificultad:*/} {props.dificultad}</p>
         
+        <ItemCouts stock={7} initial={1} />
+
         <button className="btn-vermas-props"
           onClick={() => {
             btn();
