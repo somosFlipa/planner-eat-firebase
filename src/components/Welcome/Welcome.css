@@ -19,7 +19,7 @@
 
     text-align: center;
 
-    height: 200px;
+    height: 145px;
 }
 
 .welcome-h2-h3 h2{
@@ -39,7 +39,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 45px;
 }
 
 .welcome-img-p p{
@@ -67,7 +67,6 @@
 .welcome-img-p img{
     width: 77px;
     height: 77px;
-    margin-right: 5px;
 }
 
 .box-btn-next{

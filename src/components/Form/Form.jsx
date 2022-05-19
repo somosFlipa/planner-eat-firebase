@@ -4,10 +4,10 @@ const Form = () =>{
   return (
     <div>
          <form className='FormContainer'>
-          <label>Email</label>
-          <input type="email" placeholder='Email'/>
-          <label>Password</label>
-          <input type="password" placeholder='Password'/>
+          
+          <input type="text" placeholder='Nombre Y Apellido*'/>
+          
+          <input type="email" placeholder='Email*'/>
         </form>
     </div>
   )

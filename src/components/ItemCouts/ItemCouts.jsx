@@ -7,13 +7,13 @@ function ItemCouts({ stock, initial }) {
 
     return (
         <div className="contador">
-            <button onClick={() => {
+            <button className="btn-menos" onClick={() => {
                 if (counter > initial) {
                     setCounter(counter - 1);
                 }
                 }}> - </button>
             <p>{counter}</p>
-            <button onClick={() => {
+            <button className="btn-mas" onClick={() => {
                     if (counter < stock) {
                     setCounter(counter + 1);
                 }
