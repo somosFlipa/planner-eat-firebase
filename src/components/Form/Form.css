@@ -23,6 +23,7 @@ flex-direction: column;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    margin-top: 20px;
 }
 
 .FormContainer input::placeholder{

@@ -9,6 +9,8 @@ import ItemCouts from '../ItemCouts/ItemCouts';
 import "./Card.css";
 
 
+import clock from "../../assets/ep_alarm-clock.png"
+
 function Card(props) {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState([]);
@@ -53,14 +55,20 @@ function Card(props) {
   return (
     <>
       <div className="cont-props">
+<<<<<<< HEAD
         <button onClick={guardarReceta}>
           <img className="prop-imgen" src={props.url}/>
         </button>
+=======
+        <img  className="prop-imgen" src={props.url} alt="" />
+>>>>>>> manu
         <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
-        <p className="prop-tiempos">{/*Tiempo:*/} {props.tiempo}</p>
-        <p className="prop-dificultades">{/*Dificultad:*/} {props.dificultad}</p>
+        <p className="prop-tiempos">{/*Tiempo:*/} <img className="img-clock" src={clock} alt="" /> {props.tiempo}</p>
+        <p className="prop-dificultades">{/*Dificultad:*/} <p className="punto-dificultad">.</p>   {props.dificultad}</p>
         
-        <ItemCouts stock={7} initial={1} />
+        <div className="itemcount-cards">
+          <ItemCouts stock={7} initial={1} />
+        </div>
 
         <button className="btn-vermas-props"
           onClick={() => {

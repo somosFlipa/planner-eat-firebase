@@ -164,12 +164,12 @@ function BtnFoods({ recipe }) {
         {
           comida.length === 0 || comida.length === 11 ?
           <BtnPrevious to="/Welcome" /> :
-          <button onClick={ () => paginacionPrevious(comida)}>Anterior</button>
+          <button className="btn-anterior-comida" onClick={ () => paginacionPrevious(comida)}>Anterior</button>
         }
         {
           comida.length === 24 ?
-          <button onClick={btnOpinion}>FINALIZAR</button> :
-          <button onClick={ () => paginacionNex(comida)}>Siguiente</button> 
+          <button className="btn-finalizar-comida"onClick={btnOpinion}>FINALIZAR</button> :
+          <button id="btn-siguiente-comida"onClick={ () => paginacionNex(comida)}>Siguiente</button> 
           
         }
         

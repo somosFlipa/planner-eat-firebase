@@ -2,6 +2,7 @@
 
 .btn-previous{
     text-decoration: none;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -13,10 +14,10 @@
     border-radius: 5px;
     border-width: 1px;
 
-    width: 153px;
+    width: 157px;
     height: 36px;
 
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 

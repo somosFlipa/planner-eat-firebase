@@ -10,13 +10,14 @@ function ItemCouts({ stock, initial, addTo }) {
 
     return (
         <div className="contador">
-            <button onClick={() => {
+            <button className="btn-menos" onClick={() => {
                 if (counter > initial) {
                     setCounter(counter - 1);
                 }
                 }}> - </button>
+
             <p>{counter}{addTo}</p>
-            <button onClick={() => { 
+            <button className="btn-mas" onClick={() => { 
                     if (counter < stock) {
                     setCounter(counter + 1);
                 }

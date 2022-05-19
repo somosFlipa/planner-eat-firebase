@@ -44,3 +44,13 @@ text-align: center;
 margin: 0.5vh;
 }
 
+.logo-home{
+    width: 62px;
+    height: 62px;
+    margin-bottom: 10px;
+}
+
+.logo-home img{
+    width: 62px;
+    height: 62px;
+}
