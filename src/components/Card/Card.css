@@ -118,15 +118,6 @@ div:nth-child(19) > .btn-vermas-props{
     left: 63px;
 }
 
-<<<<<<< HEAD
-.prop-imgen{
-    width: 75px;
-    height: 60px;
-    float: left;
-
-
-}
-
 .prop-imgen:hover{
     box-shadow: 1px 1px 10px 3px #63e5df;
 
@@ -134,28 +125,4 @@ div:nth-child(19) > .btn-vermas-props{
     top: 5px;
 
     border-radius: 5px;
-=======
-/*itemcount*/
-div:nth-child(19) > div > div{
-    position: relative;
-    bottom: 0px;
-    left: -10px;
-}
-
-/*TACOS DE FREJOL -- CENA -- */
-div:nth-child(24) > .btn-vermas-props{
-    width: 57px;
-    background: none;
-    border: none;
-    position: relative;
-    bottom: 33px;
-    left: 63px;
-}
-
-/*itemcount*/
-div:nth-child(24) > div > div{
-    position: relative;
-    bottom: 0px;
-    left: -10px;
->>>>>>> manu
 }

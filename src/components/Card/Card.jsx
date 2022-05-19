@@ -55,13 +55,9 @@ function Card(props) {
   return (
     <>
       <div className="cont-props">
-<<<<<<< HEAD
         <button onClick={guardarReceta}>
-          <img className="prop-imgen" src={props.url}/>
-        </button>
-=======
-        <img  className="prop-imgen" src={props.url} alt="" />
->>>>>>> manu
+          <img className="prop-imgen" src={props.url} alt=""/>
+        </button>*
         <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
         <p className="prop-tiempos">{/*Tiempo:*/} <img className="img-clock" src={clock} alt="" /> {props.tiempo}</p>
         <p className="prop-dificultades">{/*Dificultad:*/} <p className="punto-dificultad">.</p>   {props.dificultad}</p>
