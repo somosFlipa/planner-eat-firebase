@@ -1,6 +1,8 @@
 import React from 'react';
-import './Form.css'
+import './Form.css';
+
 const Form = () =>{
+  
   return (
     <div>
          <form className='FormContainer'>

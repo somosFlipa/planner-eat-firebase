@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
+// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx"
+
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
 import Modal from "../Modal/Modal";
 import ItemCouts from '../ItemCouts/ItemCouts';
-import "./Card.css"
+import "./Card.css";
+
 
 function Card(props) {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState([]);
-  const [estadoModal, setEstadoModal] = useState(false);
+  const [estadoModal, setEstadoModal] = useState(false); 
 
+  // const data = useContext(RepiceContextProvider)
+  
   const listRecipe = [];
 
   useEffect(() => {
@@ -37,11 +42,20 @@ function Card(props) {
     });
     setDescription(data);
   }
+
   
+  function guardarReceta() {
+    console.log("agregar")
+    const data = props.addTo(props.nombre);
+    console.log(data)
+  }
+
   return (
     <>
       <div className="cont-props">
-        <img  className="prop-imgen" src={props.url}/>
+        <button onClick={guardarReceta}>
+          <img className="prop-imgen" src={props.url}/>
+        </button>
         <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
         <p className="prop-tiempos">{/*Tiempo:*/} {props.tiempo}</p>
         <p className="prop-dificultades">{/*Dificultad:*/} {props.dificultad}</p>

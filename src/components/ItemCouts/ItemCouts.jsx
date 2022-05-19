@@ -1,9 +1,12 @@
 import { React, useState } from "react";
 import './ItemCouts.css';
+// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx"
 
-function ItemCouts({ stock, initial }) {
+
+function ItemCouts({ stock, initial, addTo }) {
 
     const [counter, setCounter] = useState(initial);
+
 
     return (
         <div className="contador">
@@ -12,8 +15,8 @@ function ItemCouts({ stock, initial }) {
                     setCounter(counter - 1);
                 }
                 }}> - </button>
-            <p>{counter}</p>
-            <button onClick={() => {
+            <p>{counter}{addTo}</p>
+            <button onClick={() => { 
                     if (counter < stock) {
                     setCounter(counter + 1);
                 }

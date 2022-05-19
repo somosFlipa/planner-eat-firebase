@@ -1,4 +1,5 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import {RepiceContextProvider} from "../../Context/RecipeContext.jsx"
 
 import breakfast from "../../assets/Desayunos.png";
 import lunch from "../../assets/Almuerzos.jpg";
@@ -9,13 +10,31 @@ import Card from "../Card/Card";
 import BtnPrevious from "../BtnPrevious/BtnPrevious";
 
 import "./BtnFoods.css";
-import  OpinionModal from '../OpinionModal/OpinionModal'
-
+import  OpinionModal from '../OpinionModal/OpinionModal';
 import ItemCouts from '../ItemCouts/ItemCouts'
 
 function BtnFoods({ recipe }) {
+  const [guardar, setguardar]= useState([])
+
+  const addTo =(recipe, cuenta)=> {
+      let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
+      if (found === undefined) {
+          setguardar([
+              ...guardar,
+              {
+                  id: recipe,
+                  cuentaRecipe: cuenta
+                  
+              }]);
+      }else {
+        found.cuentaRecipe += cuenta;
+    } 
+  }
+  console.log(guardar)
+
     const [comida, setComida] = useState([]);
     const [opinionModal, setOpinionModal] = useState(false);
+
     let arrayFilter= [];
 
   // fuencion para los botones
@@ -82,7 +101,7 @@ function BtnFoods({ recipe }) {
   return (
     <>
       <p>Comensales: </p>
-      <ItemCouts stock={4} initial={1} />
+      <ItemCouts stock={4} initial={1} addTo={addTo} />
       {
         // comida.length < 1 ?
         //   btnFood("DESAYUNO") :
@@ -135,6 +154,7 @@ function BtnFoods({ recipe }) {
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
                 url={c.Url}
+                addTo={addTo}
               />
             </>
           );
