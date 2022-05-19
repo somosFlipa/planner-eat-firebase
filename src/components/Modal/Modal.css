@@ -40,29 +40,30 @@
     border-color: #63E5DF;
     display: inline;
     position: relative;
-    bottom: -31px;
+    bottom: -20px;
     right: 25px;
 }
 
 .h3-modal{
     font-size: 12px;
     position: relative;
-    top: 185px;
+    top: 192px;
     right: 5px;
 }
 
 .li-map-modal{
     display: inline;
     position: relative;
-    top: 35px;
+    top: 10px;
     font-size: 10px;
 }
 
 .img-modal{
     position: relative;
-    top: 0px;
-    right: 24px;
-    width: 84vw;
+    top: -13px;
+    right: 20px;
+    width: 340px;
+    height: 165px;
 }
 
 .tiempo-modal{

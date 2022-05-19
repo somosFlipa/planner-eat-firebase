@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
 
-
 function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, nombre, url }) {
   const [ingredients, setIngredients] = useState([]);
   useEffect(() => {
