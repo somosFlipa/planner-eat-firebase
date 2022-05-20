@@ -1,6 +1,6 @@
 import React from "react";
 import Form from '../Form/Form';
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import BtnNext from '../btnNext/btnNext'
 import logo from '../../assets/Logo 2021-1.png'
@@ -31,7 +31,8 @@ const Home = () => {
         <p>Bienvenido a tu planificador </p>
         <p>PlannerEat</p>
         <Form/>
-        <BtnNext to='/Welcome'/>
+        <Link className="btn-next" to={'/Welcome'}>Comenzar</Link>
+        {/*<BtnNext to='/Welcome'/>*/}
       </div>
 
 

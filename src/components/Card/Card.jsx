@@ -55,9 +55,18 @@ function Card(props) {
   return (
     <>
       <div className="cont-props">
-        <button onClick={guardarReceta}>
-          <img className="prop-imgen" src={props.url} alt=""/>
-        </button>*
+        
+        <label class="option_item">
+            <input type="checkbox" class="checkbox" onClick={guardarReceta}/>
+            <div class="option_inner">
+            <div class="tickmark">
+              <div className="tickmarktilde" ></div>
+            </div>
+            <img className="prop-imgen" src={props.url} alt=""/>
+            {/*<button className="boton-guardar-menu" ></button>*/}
+          </div>
+        </label>
+
         <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
         <p className="prop-tiempos">{/*Tiempo:*/} <img className="img-clock" src={clock} alt="" /> {props.tiempo}</p>
         <p className="prop-dificultades">{/*Dificultad:*/} <p className="punto-dificultad">.</p>   {props.dificultad}</p>
