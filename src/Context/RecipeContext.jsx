@@ -18,6 +18,17 @@ export const RepiceContextProvider = ({children}) => {
                 }]);
         } 
     }
+    const borrar =(ingredients)=> {
+        let found = guardar.remove(ingredients => ingredients.idMenu === ingredients.id);
+        if (found === true) {
+            setguardar([
+                ...guardar,
+                {
+                    id: ingredients,
+
+                }]);
+        } 
+    }
     console.log(guardar)
     
 

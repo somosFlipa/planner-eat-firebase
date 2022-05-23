@@ -16,8 +16,6 @@ function Card(props) {
   const [description, setDescription] = useState([]);
   const [estadoModal, setEstadoModal] = useState(false); 
 
-  // const data = useContext(RepiceContextProvider)
-  
   const listRecipe = [];
 
   useEffect(() => {
@@ -46,10 +44,13 @@ function Card(props) {
   }
 
   
-  function guardarReceta() {
-    console.log("agregar")
-    const data = props.addTo(props.nombre);
-    console.log(data)
+  function guardarReceta(e) {
+    if(e.target.checked === true){
+      const data = props.addTo(props.nombre)
+    }else{
+        const dataBorrar = props.borrar(props.nombre)
+    }
+    
   }
 
   return (
@@ -57,7 +58,7 @@ function Card(props) {
       <div className="cont-props">
         
         <label class="option_item">
-            <input type="checkbox" class="checkbox" onClick={guardarReceta}/>
+            <input type="checkbox" class="checkbox" onChange={(e)=> guardarReceta(e)} />
             <div class="option_inner">
             <div class="tickmark">
               <div className="tickmarktilde" ></div>
