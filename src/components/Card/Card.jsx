@@ -47,7 +47,8 @@ function Card(props) {
   function guardarReceta(e) {
     if(e.target.checked === true){
       const data = props.addTo(props.nombre)
-    }else{
+    }
+    if(e.target.checked === false){
         const dataBorrar = props.borrar(props.nombre)
     }
     

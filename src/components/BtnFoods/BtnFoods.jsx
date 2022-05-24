@@ -17,12 +17,23 @@ function BtnFoods({ recipe }) {
   const [guardar, setguardar]= useState([])
   
   // (el nombre el array). findIndex y que si id === true (o a 1) haga un .filter( i => i.id !== id)
-  const borrar =(recipe, cuenta, e)=> {
-    // const borro = (element) => element === recipe.Nombre;
-    recipe.filter(menu => menu.nombre === recipe.Nombre )
+  const borrar =(id)=> {
+      const borra = guardar.findIndex(item => item.id === id);
+      if (guardar[borra].id === 1) {
+          setguardar(guardar.filter(i => i.id !== id))
+      } else {
+          setguardar(guardar.map(p => p.id === id ? {...p, id: p.id - 1} : p));
+      }
 
-    // let borra = guardar.findIndex(recipe.idMenu === recipe.id)
-    // borra.filter( i => i.recipe !== recipe)
+    // const borro = (element) => element === recipe.Nombre;
+    // const borra = guardar.filter(recipe => recipe.id === id )
+    // setguardar([
+      
+    //   {
+    //     id: borra
+    //   }
+    
+    // ])
     
   }
 
@@ -33,13 +44,9 @@ function BtnFoods({ recipe }) {
               ...guardar,
               {
                   id: recipe,
-                  cuentaRecipe: cuenta
                   
               }]);
-      }else {
-        found.cuentaRecipe += cuenta;
-    } 
-    console.log(found)
+      }
   }
   console.log(guardar)
 
