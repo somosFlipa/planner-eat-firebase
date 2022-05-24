@@ -16,7 +16,6 @@ import ItemCouts from '../ItemCouts/ItemCouts'
 function BtnFoods({ recipe }) {
   const [guardar, setguardar]= useState([])
   
-  // (el nombre el array). findIndex y que si id === true (o a 1) haga un .filter( i => i.id !== id)
   const borrar =(id)=> {
       const borra = guardar.findIndex(item => item.id === id);
       if (guardar[borra].id === 1) {
@@ -24,16 +23,6 @@ function BtnFoods({ recipe }) {
       } else {
           setguardar(guardar.map(p => p.id === id ? {...p, id: p.id - 1} : p));
       }
-
-    // const borro = (element) => element === recipe.Nombre;
-    // const borra = guardar.filter(recipe => recipe.id === id )
-    // setguardar([
-      
-    //   {
-    //     id: borra
-    //   }
-    
-    // ])
     
   }
 
@@ -81,6 +70,7 @@ function BtnFoods({ recipe }) {
     useEffect(()=>{
       btnFood()
       setComida(arrayFilter)
+      
     },[])
 
     // Modal de opinion
