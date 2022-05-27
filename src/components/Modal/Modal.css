@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .modal{
     width: 100vw;
     height: 120vh;
@@ -12,14 +14,13 @@
 }
 
 .containerModal{
-    width: 300px;
+    width: 285px;
     min-height: 350px;
     background: #fff;
     position: relative;
     bottom: 60px;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
-    padding: 20px;
 }
 
 .btn-x-modal{
@@ -31,40 +32,52 @@
     background-color: #FF7062;
     border-color: #FF7063;
     position: relative;
-    left: 280px;
+    left: 255px;
+    top: 10px;
 }
 
 .h2-modal{
+
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
     color: #63E5DF;
-    font-size: 14px;
+    
     border-bottom-style: groove;
     border-color: #63E5DF;
     display: table;
     position: relative;
     bottom: -20px;
-    right: 10px;
+    right: -10px;
 }
 
 .h3-modal{
-    font-size: 12px;
+   
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
     position: relative;
-    top: 211px;
-    right: 5px;
+    top: 145px;
+    right: -20px;
 }
 
 .li-map-modal{
     display: inline;
     position: relative;
-    top: 10px;
-    font-size: 10px;
+    top: 5px;
+    right: -20px;
+    font-size: 8px;
 }
 
 .img-modal{
     position: relative;
-    top: -13px;
-    right: 20px;
-    width: 340px;
-    height: 165px;
+    top: -25px;
+    right: 0px;
+    width: 285px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .tiempo-modal{
@@ -72,15 +85,15 @@
     position: relative;
     bottom: 70px;
     left: 10px;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .dificultad-modal{
     display: inline;
     position: relative;
     bottom: 69px;
-    left: 60px;
-    font-size: 12px;
+    left: 30px;
+    font-size: 7px;
     color: #3DD29D;
     background-color: rgb(61 210 157 / 21%);
     width: 40px;
@@ -88,9 +101,17 @@
     border-radius: 5px;
 }
 
+.punto-dificultad{
+    font-size: 8px;
+}
+
+#root > div.modal > div > p.tiempo-modal > img{
+    width: 10px;
+    height: 10px;
+}
+
 /* Casos especiales donde la comida mueve los demas elemntos */
 
 /*TACOS DE FREJOL -- ALMUERZO -- */
-
 
 /* Tiempo */

@@ -37,5 +37,42 @@ code {
   font-weight: 400;
 }
 
+#root{
+  padding: 0;
+}
+
+@media all and (min-width: 360px) {
+  #root{
+    padding: 0px;
+  }
+
+  #root > div.contador{
+    top: 133px;
+    right: 18px;
+  }
+}
+
+@media all and (min-width: 375px) {
+  #root{
+    padding: 5px;
+  }
+
+  #root > div.contador{
+    top: 139px;
+    right: 26px;
+  }
+}
+
+@media all and (min-width: 414px) {
+  #root{
+    padding: 20px;
+  }
+
+  #root > div.contador{
+    top: 153px;
+    right: 50px;
+  }
+}
+
 
 

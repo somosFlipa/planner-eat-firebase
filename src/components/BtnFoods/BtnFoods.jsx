@@ -133,6 +133,7 @@ function BtnFoods({ recipe }) {
         // comida.length < 1 ?
         //   btnFood("DESAYUNO") :
         <>
+
           <button
             id="breakfast"
             className="btnActualizar"
@@ -193,7 +194,7 @@ function BtnFoods({ recipe }) {
           );
         })
       }
-      <div>
+      <div className="btns-div">
         {
           comida.length === 0 || comida.length === 11 ?
           <BtnPrevious to="/Welcome" /> :
