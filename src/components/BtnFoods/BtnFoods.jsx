@@ -26,7 +26,7 @@ function BtnFoods({ recipe }) {
     
   }
 
-  const addTo =(recipe, cuenta, e)=> {
+  const addTo =(recipe)=> {
       let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
       if (found === undefined) {
           setguardar([
@@ -65,6 +65,12 @@ function BtnFoods({ recipe }) {
           }
         });
       });
+      
+      // actualizacion del tilde por paaginación
+      
+      document.getElementById("checkbox").checked = 0
+      
+      
     }
 
     useEffect(()=>{
@@ -89,9 +95,12 @@ function BtnFoods({ recipe }) {
       if (comida.length === 24) {
         return (btnFood("MERIENDA"))
       }
+
+      
     }
 
     function paginacionNex(comida) {
+      
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }
@@ -104,8 +113,18 @@ function BtnFoods({ recipe }) {
       if (comida.length === 18) {
         return btnFood("CENA")
       }
+
     }
 
+    function name() {
+      document.querySelector("#btn-siguiente-comida").addEventListener("click", () => {
+        document.querySelectorAll(".checkbox").checked = 0
+        // alert("siguente")
+      })
+    }
+  
+
+  //  console.log(document.querySelector("#btn-siguiente-comida"))
   return (
     <>
       <p>Comensales: </p>
@@ -116,6 +135,7 @@ function BtnFoods({ recipe }) {
         <>
           <button
             id="breakfast"
+            className="btnActualizar"
             onClick={() => {
               btnFood("DESAYUNO");
             }}
@@ -123,6 +143,7 @@ function BtnFoods({ recipe }) {
             <img className="img-comidas-hover" src={breakfast} alt="" />
           </button>
           <button
+            className="btnActualizar"
             id="lunch"
             onClick={() => {
               btnFood("ALMUERZO");
@@ -131,6 +152,7 @@ function BtnFoods({ recipe }) {
             <img className="img-comidas-hover" src={lunch} alt="" />
           </button>
           <button
+            className="btnActualizar"
             id="afternoon"
             onClick={() => {
               btnFood("MERIENDA");
@@ -139,6 +161,7 @@ function BtnFoods({ recipe }) {
             <img className="img-comidas-hover" src={afternoon} alt="" />
           </button>
           <button
+            className="btnActualizar"
             id="dinner"
             onClick={() => {
               btnFood("CENA");
@@ -164,6 +187,7 @@ function BtnFoods({ recipe }) {
                 url={c.Url}
                 addTo={addTo}
                 borrar={borrar}
+                name={name}
               />
             </>
           );
