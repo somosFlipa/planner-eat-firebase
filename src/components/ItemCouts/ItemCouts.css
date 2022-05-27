@@ -55,8 +55,7 @@
     align-items: center;
 
     position: absolute;
-    top: 131px;
-    right: 17px;
+    
 }
 
 #root > div.contador > button.btn-mas{
@@ -67,12 +66,4 @@
 #root > div.contador > button.btn-menos{
     position: relative;
     bottom: 0px;
-}
-
-@media all and (min-width:414px){
-    #root > div.contador{
-        position: absolute;
-        top: 131px;
-        right: 70px;
-    }
 }

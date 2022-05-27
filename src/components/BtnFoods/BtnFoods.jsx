@@ -106,38 +106,40 @@ function BtnFoods({ recipe }) {
         // comida.length < 1 ?
         //   btnFood("DESAYUNO") :
         <>
-          <button
-            id="breakfast"
-            onClick={() => {
-              btnFood("DESAYUNO");
-            }}
-          >
-            <img className="img-comidas-hover" src={breakfast} alt="" />
-          </button>
-          <button
-            id="lunch"
-            onClick={() => {
-              btnFood("ALMUERZO");
-            }}
-          >
-            <img className="img-comidas-hover" src={lunch} alt="" />
-          </button>
-          <button
-            id="afternoon"
-            onClick={() => {
-              btnFood("MERIENDA");
-            }}
-          >
-            <img className="img-comidas-hover" src={afternoon} alt="" />
-          </button>
-          <button
-            id="dinner"
-            onClick={() => {
-              btnFood("CENA");
-            }}
-          >
-            <img className="img-comidas-hover" src={dinner} alt="" />
-          </button>
+          <div>
+            <button
+              id="breakfast"
+              onClick={() => {
+                btnFood("DESAYUNO");
+              }}
+            >
+              <img className="img-comidas-hover" src={breakfast} alt="" />
+            </button>
+            <button
+              id="lunch"
+              onClick={() => {
+                btnFood("ALMUERZO");
+              }}
+            >
+              <img className="img-comidas-hover" src={lunch} alt="" />
+            </button>
+            <button
+              id="afternoon"
+              onClick={() => {
+                btnFood("MERIENDA");
+              }}
+            >
+              <img className="img-comidas-hover" src={afternoon} alt="" />
+            </button>
+            <button
+              id="dinner"
+              onClick={() => {
+                btnFood("CENA");
+              }}
+            >
+              <img className="img-comidas-hover" src={dinner} alt="" />
+            </button>
+          </div>
         </>
       }
 
@@ -160,7 +162,7 @@ function BtnFoods({ recipe }) {
           );
         })
       }
-      <div>
+      <div className="btns-div">
         {
           comida.length === 0 || comida.length === 11 ?
           <BtnPrevious to="/Welcome" /> :

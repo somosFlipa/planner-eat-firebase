@@ -6,6 +6,25 @@
     justify-content: center;
 }
 
+@media all and (min-width: 360px){
+    .WelcomeDiv{
+        margin: 0px;
+    }
+}
+
+@media all and (min-width: 375px){
+    .WelcomeDiv{
+        margin: -5px;
+    }
+}
+
+
+@media all and (min-width: 414px){
+    .WelcomeDiv{
+        margin: -20px;
+    }
+}
+
 .welcome-h2-h3{
     display: flex;
     flex-direction: column;
