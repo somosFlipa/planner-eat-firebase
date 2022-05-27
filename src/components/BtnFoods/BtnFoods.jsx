@@ -15,8 +15,18 @@ import ItemCouts from '../ItemCouts/ItemCouts'
 
 function BtnFoods({ recipe }) {
   const [guardar, setguardar]= useState([])
+  
+  // (el nombre el array). findIndex y que si id === true (o a 1) haga un .filter( i => i.id !== id)
+  const borrar =(recipe, cuenta, e)=> {
+    // const borro = (element) => element === recipe.Nombre;
+    recipe.filter(menu => menu.nombre === recipe.Nombre )
 
-  const addTo =(recipe, cuenta)=> {
+    // let borra = guardar.findIndex(recipe.idMenu === recipe.id)
+    // borra.filter( i => i.recipe !== recipe)
+    
+  }
+
+  const addTo =(recipe, cuenta, e)=> {
       let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
       if (found === undefined) {
           setguardar([
@@ -29,6 +39,7 @@ function BtnFoods({ recipe }) {
       }else {
         found.cuentaRecipe += cuenta;
     } 
+    console.log(found)
   }
   console.log(guardar)
 
@@ -157,6 +168,7 @@ function BtnFoods({ recipe }) {
                 ingredientes={c.Ingredientes}
                 url={c.Url}
                 addTo={addTo}
+                borrar={borrar}
               />
             </>
           );
