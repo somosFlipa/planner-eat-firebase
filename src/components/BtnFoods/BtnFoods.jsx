@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import {RepiceContextProvider} from "../../Context/RecipeContext.jsx"
+// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx";
 
 import breakfast from "../../assets/Desayunos.png";
 import lunch from "../../assets/Almuerzos.jpg";
@@ -14,35 +14,13 @@ import  OpinionModal from '../OpinionModal/OpinionModal';
 import ItemCouts from '../ItemCouts/ItemCouts'
 
 function BtnFoods({ recipe }) {
-  const [guardar, setguardar]= useState([])
-  
-  const borrar =(id)=> {
-      const borra = guardar.findIndex(item => item.id === id);
-      if (guardar[borra].id === 1) {
-          setguardar(guardar.filter(i => i.id !== id))
-      } else {
-          setguardar(guardar.map(p => p.id === id ? {...p, id: p.id - 1} : p));
-      }
-    
-  }
 
-  const addTo =(recipe)=> {
-      let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
-      if (found === undefined) {
-          setguardar([
-              ...guardar,
-              {
-                  id: recipe,
-                  
-              }]);
-      }
-  }
-  console.log(guardar)
+  // const {addToComensales} = useContext(RepiceContextProvider)
 
-    const [comida, setComida] = useState([]);
-    const [opinionModal, setOpinionModal] = useState(false);
+  const [comida, setComida] = useState([]);
+  const [opinionModal, setOpinionModal] = useState(false);
 
-    let arrayFilter= [];
+  let arrayFilter= [];
 
   // fuencion para los botones
     async function btnFood(food) {
@@ -68,8 +46,7 @@ function BtnFoods({ recipe }) {
       
       // actualizacion del tilde por paaginación
       
-      document.getElementById("checkbox").checked = 0
-      
+      // document.getElementById("checkbox").checked = 0
       
     }
 
@@ -96,7 +73,6 @@ function BtnFoods({ recipe }) {
         return (btnFood("MERIENDA"))
       }
 
-      
     }
 
     function paginacionNex(comida) {
@@ -122,16 +98,14 @@ function BtnFoods({ recipe }) {
         // alert("siguente")
       })
     }
-  
 
-  //  console.log(document.querySelector("#btn-siguiente-comida"))
   return (
     <>
       <p>Comensales: </p>
-      <ItemCouts stock={4} initial={1} addTo={addTo} />
+      <ItemCouts stock={4} initial={1}  />
       {
-        // comida.length < 1 ?
-        //   btnFood("DESAYUNO") :
+        comida.length < 1 ?
+          btnFood("DESAYUNO") :
         <>
 
           <button
@@ -186,8 +160,6 @@ function BtnFoods({ recipe }) {
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
                 url={c.Url}
-                addTo={addTo}
-                borrar={borrar}
                 name={name}
               />
             </>
