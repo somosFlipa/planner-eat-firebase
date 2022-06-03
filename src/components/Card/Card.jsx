@@ -68,21 +68,25 @@ function Card(props) {
           </div>
         </label>
 
-        <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
-        <p className="prop-tiempos">{/*Tiempo:*/} <img className="img-clock" src={clock} alt="" /> {props.tiempo}</p>
-        <p className="prop-dificultades">{/*Dificultad:*/} <p className="punto-dificultad">.</p>   {props.dificultad}</p>
-        
-        <div className="itemcount-cards">
-          <ItemCouts stock={7} initial={1} />
+        <div className="grupo-eti1">
+          <p className="prop-nombres">{/*Nombre:*/} {props.nombre}</p>
+          <p className="prop-tiempos">{/*Tiempo:*/} <img className="img-clock" src={clock} alt="" /> {props.tiempo}</p>
+          <p className="prop-dificultades">{/*Dificultad:*/} <p className="punto-dificultad">.</p>   {props.dificultad}</p>
         </div>
-
-        <button className="btn-vermas-props"
-          onClick={() => {
-            btn();
-          }}
-        >
-          Ver más
-        </button>
+        
+        <div className="grupo-eti2">
+          <div className="itemcount-cards">
+            <ItemCouts stock={7} initial={1} />
+          </div>
+          
+          <button className="btn-vermas-props"
+            onClick={() => {
+              btn();
+            }}
+          >
+            Ver más
+          </button>
+        </div>
       </div>
 
       <Modal

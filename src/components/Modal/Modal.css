@@ -24,32 +24,48 @@
 }
 
 .btn-x-modal{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 30px;
     padding: 1px;
     color: #fff;
+
+    border: none;
     background-color: #FF7062;
-    border-color: #FF7063;
+
     position: relative;
     left: 255px;
     top: 10px;
+
+    font-size: 10px;
 }
 
 .h2-modal{
 
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 
     color: #63E5DF;
-    
+
+    border: 1px;
     border-bottom-style: groove;
     border-color: #63E5DF;
-    display: table;
+    display: contents;
     position: relative;
     bottom: -20px;
     right: -10px;
+}
+
+.div-fuera-h2{
+    width: 256px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    top: 20px;
+    left: 12px;
+    z-index: 2;
 }
 
 .h3-modal{
@@ -64,34 +80,45 @@
 }
 
 .li-map-modal{
-    display: inline;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 240px;
+    height: 100px;
+
     position: relative;
-    top: 5px;
+    top: 15px;
     right: -20px;
+
     font-size: 8px;
 }
 
 .img-modal{
     position: relative;
-    top: -25px;
+    top: -15px;
     right: 0px;
     width: 285px;
     height: 100px;
     object-fit: cover;
+
+    box-shadow: 0px 3px 5px 0px #8d8b8bc4;
 }
 
 .tiempo-modal{
     display: inline;
     position: relative;
-    bottom: 70px;
+    bottom: 50px;
     left: 10px;
     font-size: 8px;
 }
 
+
+
 .dificultad-modal{
     display: inline;
     position: relative;
-    bottom: 69px;
+    bottom: 50px;
     left: 30px;
     font-size: 7px;
     color: #3DD29D;
@@ -106,8 +133,9 @@
 }
 
 #root > div.modal > div > p.tiempo-modal > img{
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 13px;
+    margin-right: 3px;
 }
 
 /* Casos especiales donde la comida mueve los demas elemntos */

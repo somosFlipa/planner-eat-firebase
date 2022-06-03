@@ -2,11 +2,15 @@ import React from "react";
 import Form from '../Form/Form';
 import { Link } from "react-router-dom";
 import "./Home.css";
-import BtnNext from '../btnNext/btnNext'
+//import BtnNext from '../btnNext/btnNext'
 import logo from '../../assets/Logo 2021-1.png'
+import logodestop from "../../assets/Logo.png"
+
+import desktop from "../../assets/Social-media-pana-1.png"
 
 const Home = () => {
   return (
+    <>
   
     <div className="Home" >
       <div className="HomeText">
@@ -34,10 +38,30 @@ const Home = () => {
         <Link className="btn-next" to={'/Welcome'}>Comenzar</Link>
         {/*<BtnNext to='/Welcome'/>*/}
       </div>
-
-
     </div>
 
+    <div className="top-desktop">
+      <div className='logo-desktop'>
+        <img src={logodestop} alt="" />
+      </div>
+    </div>
+
+    <div className="pantalla-desktop">
+      <div className="texto-desktop">
+        <h2>Planner Eat</h2>
+        <p>No podemos mostrarte el formulario de Planner <br/> Eat desde la versión web, ya que se encuentra <br/> optimizado para mobile. Por favor ingresá desde <br/> tu celular para acceder al contenido. </p>
+      </div>
+
+      <div className="img-desktop">
+        <img src={desktop} alt="AVISO, pagina solo aceptada para dispositivos MOBILE!"/>
+      </div>
+    </div>
+
+    <div className="footer-desktop">
+      <div> </div>
+    </div>
+
+    </>
   );
 };
 

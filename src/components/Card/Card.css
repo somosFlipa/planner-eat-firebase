@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 .cont-props{
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
 
     width: 327px;
     height: 70px;
@@ -16,14 +17,48 @@
     -o-border-radius: 5px;
 }
 
-.prop-nombres{
+.grupo-eti1{
+    display: inline;
+    position: relative;
+    bottom: 6px;
+}
+
+.grupo-eti2{
+    display: inline-flex;
+    position: relative;
+    top: 25px;
+    left: -90px;
+}
+
+
+
+/* Grupos que tienen titulos largos y se rompen */
+
+/* --------------- GRUPO 2 ---------------------*/
+
+/*   DESAYUNO   */
+
+/* boton ver mas */
+
+
+/*   ALMUERZO */
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.grupo-eti1 .prop-nombres{
     font-size: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 
     position: relative;
-    top: 20px;
+    top: 18px;
     left: 15px;
+
+    width: 145px;
 }
 
 .prop-tiempos{
@@ -35,19 +70,19 @@
 
     position: relative;
     left: 15px;
-    top: 0px
+    top: 9px
 }    
 
 .prop-dificultades{
     display: inline;
 
     position: relative;
-    top: 1px;
+    top: 8px;
     left: 30px;
 
-    font-size: 10px;
+    font-size: 7px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
 
     color: #3DD29D;
     background-color: rgb(61 210 157 / 21%);
@@ -68,8 +103,8 @@
     border: none;
 
     position: relative;
-    bottom: 30px;
-    left: 83px;
+    bottom: 10px;
+    left: 93px;
 
     font-size: 10px;
     font-weight: 500;
@@ -87,13 +122,13 @@
     display: inline;
     position: relative;
     bottom: -5px;
-    left: 130px;
+    left: 140px;
 }
 .punto-dificultad{
     display: inline;
-    font-size: 30px;
+    font-size: 20px;
     position: relative;
-    bottom: 3px;
+    bottom: 1px;
 }
 
 .img-clock{
@@ -115,13 +150,13 @@
     background: none;
     border: none;
     position: relative;
-    bottom: 33px;
-    left: 63px;
+    bottom: 21px;
+    left: 76px;
 }
 
 #root > div:nth-child(21) > .itemcount-cards{
-    bottom: -5px;
-    left: 123px;
+    bottom: -16px;
+    left: 137px;
 }
 
 #root > div:nth-child(21) > p.prop-nombres{
@@ -133,7 +168,7 @@
 }
 
 #root > div:nth-child(16) > .itemcount-cards{
-    left: 123px;
+    left: 132px;
 }
 
 /* pan pita */
@@ -172,6 +207,8 @@
     height: 70px;
     border-radius: 5px;
     position: relative;
+
+    box-shadow: 1px 1px 5px 2px #b1b1b19c;
 }
 
 .checkbox:checked ~ .option_inner{

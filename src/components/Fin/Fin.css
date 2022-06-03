@@ -25,7 +25,17 @@
 
 
 
-.div-fin-h2-p-p .p-div-info{
+.div-fin-h2-p-p .p-div-info-12{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 35px;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+
+.div-fin-h2-p-p .p-div-info-14{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;

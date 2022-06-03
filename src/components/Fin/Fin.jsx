@@ -13,8 +13,8 @@ function Fin() {
                 </div>
                 <div className='div-fin-h2-p-p'>
                     <h2>¡Muchas gracias!</h2>
-                    <p className='p-div-info'>Ya te conocemos mucho mejor {":)"} </p>
-                    <p className='p-div-info'>En breve vas a recibir en tu correo la información relevante, Lista de compras y las recetas <br/ >completas para que puedas armar tu menú.</p>
+                    <p className='p-div-info-14'>Ya te conocemos mucho mejor {":)"} </p>
+                    <p className='p-div-info-12'>En breve vas a recibir en tu correo la información relevante, Lista de compras y las recetas <br/ >completas para que puedas armar tu menú.</p>
                 </div>
                
             </div> 
