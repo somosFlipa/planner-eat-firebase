@@ -46,10 +46,10 @@ function Card(props) {
     setDescription(data);
   }
 
-
-
   function guardarReceta(e) {
-    // console.log(props.nombre)
+    console.log(document.querySelectorAll(".checkbox")[0].checked)
+    
+    document.querySelectorAll(".checkbox")
     // document.querySelectorAll(".checkbox").checked
     if(e.target.checked === true){
       const data = addTo(props.nombre)
@@ -60,6 +60,8 @@ function Card(props) {
         props.name()
     }
 
+    e.target.click()
+
   }
 
   return (
@@ -67,7 +69,7 @@ function Card(props) {
       <div className="cont-props">
         
         <label class="option_item">
-            <input type="checkbox" class="checkbox" id="checkbox" onChange={(e)=>{guardarReceta(e)}} />
+            <input type="checkbox" class="checkbox"  onChange={(e)=>{guardarReceta(e)}} />
             <div class="option_inner">
             <div class="tickmark">
               <div className="tickmarktilde" ></div>
