@@ -5,13 +5,13 @@ import clock from "../../assets/ep_alarm-clock.png"
 
 function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, nombre, url }) {
   const [ingredients, setIngredients] = useState([]);
+  
   useEffect(() => {
     description.map((i) => {
       setIngredients(i.datos);
     });
   }, []);
   const item = (description.map(dato=>(dato.datos)))
-  // const nameItem = (item.map((name)=>(name.name)))
   
   return (
     <>

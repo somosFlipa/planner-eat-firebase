@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import {RepiceContextProvider} from "../../Context/RecipeContext.jsx"
+// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx";
 
 import breakfast from "../../assets/Desayunos.png";
 import lunch from "../../assets/Almuerzos.jpg";
@@ -14,39 +14,13 @@ import  OpinionModal from '../OpinionModal/OpinionModal';
 import ItemCouts from '../ItemCouts/ItemCouts'
 
 function BtnFoods({ recipe }) {
-  const [guardar, setguardar]= useState([])
-  
-  // (el nombre el array). findIndex y que si id === true (o a 1) haga un .filter( i => i.id !== id)
-  const borrar =(recipe, cuenta, e)=> {
-    // const borro = (element) => element === recipe.Nombre;
-    recipe.filter(menu => menu.nombre === recipe.Nombre )
 
-    // let borra = guardar.findIndex(recipe.idMenu === recipe.id)
-    // borra.filter( i => i.recipe !== recipe)
-    
-  }
+  // const {addToComensales} = useContext(RepiceContextProvider)
 
-  const addTo =(recipe, cuenta, e)=> {
-      let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
-      if (found === undefined) {
-          setguardar([
-              ...guardar,
-              {
-                  id: recipe,
-                  cuentaRecipe: cuenta
-                  
-              }]);
-      }else {
-        found.cuentaRecipe += cuenta;
-    } 
-    console.log(found)
-  }
-  console.log(guardar)
+  const [comida, setComida] = useState([]);
+  const [opinionModal, setOpinionModal] = useState(false);
 
-    const [comida, setComida] = useState([]);
-    const [opinionModal, setOpinionModal] = useState(false);
-
-    let arrayFilter= [];
+  let arrayFilter= [];
 
   // fuencion para los botones
     async function btnFood(food) {
@@ -69,11 +43,17 @@ function BtnFoods({ recipe }) {
           }
         });
       });
+      
+      // actualizacion del tilde por paaginación
+      
+      // document.getElementById("checkbox").checked = 0
+      
     }
 
     useEffect(()=>{
       btnFood()
       setComida(arrayFilter)
+      
     },[])
 
     // Modal de opinion
@@ -92,9 +72,11 @@ function BtnFoods({ recipe }) {
       if (comida.length === 24) {
         return (btnFood("MERIENDA"))
       }
+
     }
 
     function paginacionNex(comida) {
+      
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }
@@ -107,50 +89,61 @@ function BtnFoods({ recipe }) {
       if (comida.length === 18) {
         return btnFood("CENA")
       }
+
+    }
+
+    function name() {
+      document.querySelector("#btn-siguiente-comida").addEventListener("click", () => {
+        document.querySelectorAll(".checkbox").checked = 0
+        // alert("siguente")
+      })
     }
 
   return (
     <>
       <p>Comensales: </p>
-      <ItemCouts stock={4} initial={1} addTo={addTo} />
+      <ItemCouts stock={4} initial={1}  />
       {
-        // comida.length < 1 ?
-        //   btnFood("DESAYUNO") :
+        comida.length < 1 ?
+          btnFood("DESAYUNO") :
         <>
-          <div>
-            <button
-              id="breakfast"
-              onClick={() => {
-                btnFood("DESAYUNO");
-              }}
-            >
-              <img className="img-comidas-hover" src={breakfast} alt="" />
-            </button>
-            <button
-              id="lunch"
-              onClick={() => {
-                btnFood("ALMUERZO");
-              }}
-            >
-              <img className="img-comidas-hover" src={lunch} alt="" />
-            </button>
-            <button
-              id="afternoon"
-              onClick={() => {
-                btnFood("MERIENDA");
-              }}
-            >
-              <img className="img-comidas-hover" src={afternoon} alt="" />
-            </button>
-            <button
-              id="dinner"
-              onClick={() => {
-                btnFood("CENA");
-              }}
-            >
-              <img className="img-comidas-hover" src={dinner} alt="" />
-            </button>
-          </div>
+
+          <button
+            id="breakfast"
+            className="btnActualizar"
+            onClick={() => {
+              btnFood("DESAYUNO");
+            }}
+          >
+            <img className="img-comidas-hover" src={breakfast} alt="" />
+          </button>
+          <button
+            className="btnActualizar"
+            id="lunch"
+            onClick={() => {
+              btnFood("ALMUERZO");
+            }}
+          >
+            <img className="img-comidas-hover" src={lunch} alt="" />
+          </button>
+          <button
+            className="btnActualizar"
+            id="afternoon"
+            onClick={() => {
+              btnFood("MERIENDA");
+            }}
+          >
+            <img className="img-comidas-hover" src={afternoon} alt="" />
+          </button>
+          <button
+            className="btnActualizar"
+            id="dinner"
+            onClick={() => {
+              btnFood("CENA");
+            }}
+          >
+            <img className="img-comidas-hover" src={dinner} alt="" />
+          </button>
         </>
       }
 
@@ -167,8 +160,7 @@ function BtnFoods({ recipe }) {
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
                 url={c.Url}
-                addTo={addTo}
-                borrar={borrar}
+                name={name}
               />
             </>
           );

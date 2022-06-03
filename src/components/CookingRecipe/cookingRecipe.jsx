@@ -37,7 +37,7 @@ const CookingRecipe = () => {
     return(
       <>
         <p>Cargando...</p>
-        <BtnFoods recipe={0}/>
+        {/* <BtnFoods recipe={0}/> */}
       </>
     )
   }

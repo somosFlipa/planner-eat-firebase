@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useContext } from "react";
-// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx"
+import {RepiceContext} from "../../Context/RecipeContext.jsx"
 
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
@@ -16,6 +16,8 @@ function Card(props) {
   const [description, setDescription] = useState([]);
   const [estadoModal, setEstadoModal] = useState(false); 
 
+  const {addTo,borrar, guardar} = useContext(RepiceContext)
+
   const listRecipe = [];
 
   useEffect(() => {
@@ -27,6 +29,7 @@ function Card(props) {
       setIngredients(listRecipe);
     };
     obtenerDatos()
+    
   }, []);
   
   function btn() {
@@ -43,14 +46,22 @@ function Card(props) {
     setDescription(data);
   }
 
-  
   function guardarReceta(e) {
-    if(e.target.checked === true){
-      const data = props.addTo(props.nombre)
-    }else{
-        const dataBorrar = props.borrar(props.nombre)
-    }
+    console.log(document.querySelectorAll(".checkbox")[0].checked)
     
+    document.querySelectorAll(".checkbox")
+    // document.querySelectorAll(".checkbox").checked
+    if(e.target.checked === true){
+      const data = addTo(props.nombre)
+      
+    }
+    if(e.target.checked === false){
+        const dataBorrar = borrar(props.nombre)
+        props.name()
+    }
+
+    e.target.click()
+
   }
 
   return (
@@ -58,7 +69,7 @@ function Card(props) {
       <div className="cont-props">
         
         <label class="option_item">
-            <input type="checkbox" class="checkbox" onChange={(e)=> guardarReceta(e)} />
+            <input type="checkbox" class="checkbox"  onChange={(e)=>{guardarReceta(e)}} />
             <div class="option_inner">
             <div class="tickmark">
               <div className="tickmarktilde" ></div>

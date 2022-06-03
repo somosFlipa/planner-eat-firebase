@@ -35,7 +35,7 @@ const Home = () => {
         <p>Bienvenido a tu planificador </p>
         <p>PlannerEat</p>
         <Form/>
-        <Link className="btn-next" to={'/Welcome'}>Comenzar</Link>
+        {/* <Link className="btn-next" to={'/Welcome'}>Comenzar</Link> */}
         {/*<BtnNext to='/Welcome'/>*/}
       </div>
     </div>
