@@ -68,9 +68,9 @@ export const RepiceContextProvider = ({children}) => {
         setDatos(datos)
     },[guardar,guardarMensaje,datos])
 
-    console.log("recetas",guardar)
-    console.log("mensaje",guardarMensaje)
-    console.log("nombre",datos)
+    // console.log("recetas",guardar)
+    // console.log("mensaje",guardarMensaje)
+    // console.log("nombre",datos)
 
     return (
         <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje, guardar, guardarMensaje, datos}}>

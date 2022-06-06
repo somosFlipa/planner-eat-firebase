@@ -92,12 +92,12 @@ function BtnFoods({ recipe }) {
 
     }
 
-    function name() {
-      document.querySelector("#btn-siguiente-comida").addEventListener("click", () => {
-        document.querySelectorAll(".checkbox").checked = 0
-        // alert("siguente")
-      })
-    }
+    // function name() {
+    //   document.querySelector("#btn-siguiente-comida").addEventListener("click", () => {
+    //     document.querySelectorAll(".checkbox").checked = 0
+    //     alert("siguente")
+    //   })
+    // }
 
   return (
     <>
@@ -160,7 +160,7 @@ function BtnFoods({ recipe }) {
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
                 url={c.Url}
-                name={name}
+                // name={name}
               />
             </>
           );
