@@ -1,0 +1,71 @@
+.contador{
+    width: 55px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    border: 1px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px 1px #c4c4c4;
+    
+}
+
+.contador p{
+    font-size: 10px;
+    position: relative;
+    top: 0px;
+}
+
+#root > div > div > .contador p{
+    font-size: 10px;
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+
+.contador button{
+    padding: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    font-size: 10px;
+}
+
+#root > div > div > div > button.btn-menos{
+    position: relative;
+    bottom: 1px;
+    left: 5px;
+}
+
+#root > div > div > div > button.btn-mas{
+    position: relative;
+    top: 0px;
+    left: 5px;
+}
+
+#root > div.contador{
+    width: 55px;
+    height: 19.02px;
+
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    
+}
+
+#root > div.contador > button.btn-mas{
+    position: relative;
+    top: 1px;
+}
+
+#root > div.contador > button.btn-menos{
+    position: relative;
+    bottom: 0px;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.flex-fondo-fin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 70px;
+}
+
+.logo-fin img{
+    margin-bottom: 30px;
+}
+
+.flex-fondo-fin div{
+    text-align: center;
+}
+
+.div-fin-h2-p-p h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+.div-fin-h2-p-p .p-div-info-12{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 35px;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+
+.div-fin-h2-p-p .p-div-info-14{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 35px;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+
+.fondofruta{
+    background-image: url(../../assets/imgfrutasfin.png);
+    background-repeat: round;
+    position: relative;
+    top: 93px;
+    width: 360px;
+    height: 278px;
+}
+
+.fondofruta img{
+    width: 360px;
+}
+
+/*@media all and (min-width: 360px){
+    #root > div{
+        margin: 0px;
+    }
+}*/
+
+@media all and (min-width: 375px){
+    .margin-pag-fin{
+        margin: -5px;
+    }
+
+    .fondofruta{
+        top: 128px;
+        width: 375px;
+    }
+    
+    .fondofruta img{
+        width: 375px;
+        height: 278px;
+    }
+}
+
+@media all and (min-width: 414px){
+    .margin-pag-fin{
+        margin: -20px;
+    }
+
+    .fondofruta{
+        top: 124px;
+        width: 414px;
+        height: 360px;
+    }
+    
+    .fondofruta img{
+        width: 414px;
+        height: 362px;
+    }
+}

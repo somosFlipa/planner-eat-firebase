@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.cont-props{
+    display: inline-flex;
+    flex-direction: row;
+
+    width: 327px;
+    height: 70px;
+    margin: 15px 20px 5px 20px;
+    
+    box-shadow: 1px 1px 5px 0px #7c7b7b;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.grupo-eti1{
+    display: inline;
+    position: relative;
+    bottom: 6px;
+}
+
+.grupo-eti2{
+    display: inline-flex;
+    position: relative;
+    top: 25px;
+    left: -90px;
+}
+
+
+
+/* Grupos que tienen titulos largos y se rompen */
+
+/* --------------- GRUPO 2 ---------------------*/
+
+/*   DESAYUNO   */
+
+/* boton ver mas */
+
+
+/*   ALMUERZO */
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.grupo-eti1 .prop-nombres{
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+    position: relative;
+    top: 18px;
+    left: 15px;
+
+    width: 145px;
+}
+
+.prop-tiempos{
+    display: inline;
+
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+
+    position: relative;
+    left: 15px;
+    top: 9px
+}    
+
+.prop-dificultades{
+    display: inline;
+
+    position: relative;
+    top: 8px;
+    left: 30px;
+
+    font-size: 7px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    color: #3DD29D;
+    background-color: rgb(61 210 157 / 21%);
+    text-align: center;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn-vermas-props{
+    width: 37px;
+    height: 11px;
+
+    background: none;
+    border: none;
+
+    position: relative;
+    bottom: 10px;
+    left: 93px;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.prop-imgen{
+    width: 70px;
+    height: 70px;
+    float: left;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.itemcount-cards{
+    display: inline;
+    position: relative;
+    bottom: -5px;
+    left: 140px;
+}
+.punto-dificultad{
+    display: inline;
+    font-size: 20px;
+    position: relative;
+    bottom: 1px;
+}
+
+.img-clock{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 3px;
+}
+
+/* Casos especiales donde la comida mueve los demas elemntos */
+
+/*TACOS DE FREJOL -- ALMUERZO -- */
+#root > div:nth-child(16) > p.prop-nombres{
+    font-size: 9px;
+}
+
+#root > div:nth-child(16) > .btn-vermas-props{
+    width: 57px;
+    background: none;
+    border: none;
+    position: relative;
+    bottom: 21px;
+    left: 76px;
+}
+
+#root > div:nth-child(21) > .itemcount-cards{
+    bottom: -16px;
+    left: 137px;
+}
+
+#root > div:nth-child(21) > p.prop-nombres{
+    font-size: 9.5px;
+}
+
+#root > div:nth-child(24) > p.prop-nombres{
+    font-size: 9.5px;
+}
+
+#root > div:nth-child(16) > .itemcount-cards{
+    left: 132px;
+}
+
+/* pan pita */
+
+#root > div:nth-child(17) > p.prop-nombres{
+    font-size: 9.5px;
+}
+
+#root > div:nth-child(12) > p.prop-nombres{
+    font-size: 9.5px;
+}
+
+#root > div:nth-child(15) > p.prop-nombres{
+    font-size: 9.5px;
+}
+
+.boton-guardar-menu{
+    width: 70px;
+    height: 70px;
+    display: contents;
+}
+
+
+/* CHECK MENUS */
+
+.checkbox {
+    opacity: 0;
+    display: contents;
+    position: relative;
+    z-index: 1;
+}
+
+.option_inner {
+    margin-bottom: -70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    position: relative;
+
+    box-shadow: 1px 1px 5px 2px #b1b1b19c;
+}
+
+.checkbox:checked ~ .option_inner{
+    box-shadow: 1px 1px 10px 3px #63e5df;
+}
+
+.tickmark {
+    position: absolute;
+    border: 35px solid #00000063;
+    display: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tickmarktilde{
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    border: 12px solid #63e5de;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.tickmarktilde:before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -7px;
+    width: 10px;
+    height: 2px;
+    border: 3px solid #3DD29D;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+}
+
+.checkbox:checked ~ .option_inner .tickmark {
+    display: block;
+}
+
+
+
+/* BOTONES DE ABAJO */
+
+#root > div:nth-child(19), #root > div:nth-child(20), #root > div:nth-child(26), #root > div:nth-child(32){
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+}

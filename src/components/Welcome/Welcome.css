@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.WelcomeDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media all and (min-width: 360px){
+    .WelcomeDiv{
+        margin: 0px;
+    }
+}
+
+@media all and (min-width: 375px){
+    .WelcomeDiv{
+        margin: -5px;
+    }
+}
+
+
+@media all and (min-width: 414px){
+    .WelcomeDiv{
+        margin: -20px;
+    }
+}
+
+.welcome-h2-h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    height: 145px;
+}
+
+.ellipse{
+    position: absolute;
+}
+
+@media all and (min-width:375px){
+    .ellipse{
+        width: 375px;
+    }
+}
+
+@media all and (min-width:414px){
+    .ellipse{
+        width: 100%;
+    }
+}
+
+.welcome-h2-h3 h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+
+    z-index: 1;
+}
+
+.welcome-h2-h3 h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+
+    z-index: 1;
+}
+
+.welcome-img-p{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.welcome-img-p p{
+    display: flex;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+
+    
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 5px 4px #7f807f;
+
+    width: 220px;
+    height: 65px;
+    padding: 10px;
+}
+
+.welcome-img-p .card-p-chica{
+    display: flex;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+
+    
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 5px 4px #7f807f;
+
+    width: 220px;
+    height: 43px;
+    padding: 10px;
+}
+
+.welcome-img-p img{
+    width: 77px;
+    height: 77px;
+    z-index: 2;
+
+    margin-right: 10px;
+}
+
+.welcome-img-p .planner-foto{
+    width: 66px;
+    height: 66px;
+
+    margin-right: 15px;
+}
+
+.welcome-img-p .hombre-foto{
+    width: 47px;
+    height: 75px;
+
+    position: absolute;
+    top: 180px;
+    left: 40px;
+
+    margin-right: 10px;
+}
+
+@media all and (min-width: 414px){
+    .welcome-img-p .hombre-foto{
+        left: 65px;
+    }
+}
+
+.welcome-img-p .taco1-foto{
+    width: 58px;
+    height: 58px;
+
+    margin-right: 30px;
+
+    position: relative;
+    top: 15px;
+}
+
+.box-btn-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -3px;
+}
