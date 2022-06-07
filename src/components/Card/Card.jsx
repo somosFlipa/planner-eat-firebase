@@ -11,12 +11,13 @@ import "./Card.css";
 
 import clock from "../../assets/ep_alarm-clock.png"
 
+
 function Card(props) {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState([]);
   const [estadoModal, setEstadoModal] = useState(false); 
 
-  const {addTo,borrar, guardar} = useContext(RepiceContext)
+  const {addTo,borrar, checkbox} = useContext(RepiceContext)
 
   const listRecipe = [];
 
@@ -49,31 +50,31 @@ function Card(props) {
  
 
   function guardarReceta(e) {
-  
-    // let checks = document.querySelectorAll('.checkbox');
-    // let boton =  document.getElementById('boton');
-  
-    // boton.addEventListener('click', function(){
-    //   console.log("click...")
-    // })
+    
+    // const chech = document.querySelectorAll(".checkbox")
+    
+    //   // console.log(chech.forEach(e =>{return e.checked}))
+    //   // console.log(chech)
 
-    // console.log(document.querySelectorAll(".checkbox")[0].checked)
+    //   for (let i = 0; i < chech.length; i++) {
+    //     const check =  document.querySelectorAll(".checkbox")[i].checked
+    //     if(check === true){
+    //       console.log( document.querySelectorAll(".checkbox")[i].checked  = false)
+    //     }
+        
+    //   }
 
-    // document.querySelectorAll(".checkbox")[0].checked.addEventListener("click", () => {
-    //   document.querySelectorAll(".checkbox").checked = 0
-    //   alert("siguente")
-    // })
-  
-
+    // checkbox()
 
     if(e.target.checked === true){
       const data = addTo(props.nombre)
+      
     }
     if(e.target.checked === false){
         const dataBorrar = borrar(props.nombre)
         // props.name()
     }
-
+    
   }
 
   return (

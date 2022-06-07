@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx";
+import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
 import breakfast from "../../assets/Desayunos.png";
 import lunch from "../../assets/Almuerzos.jpg";
@@ -15,7 +15,7 @@ import ItemCouts from '../ItemCouts/ItemCouts'
 
 function BtnFoods({ recipe }) {
 
-  // const {addToComensales} = useContext(RepiceContextProvider)
+  const {checkbox} = useContext(RepiceContext)
 
   const [comida, setComida] = useState([]);
   const [opinionModal, setOpinionModal] = useState(false);
@@ -24,6 +24,7 @@ function BtnFoods({ recipe }) {
 
   // fuencion para los botones
     async function btnFood(food) {
+      checkbox(food)
       recipe && recipe.map((i) => {
         i.Comida && i.Comida.filter((z) => {
           // console.log(z === undefined)
@@ -44,9 +45,6 @@ function BtnFoods({ recipe }) {
         });
       });
       
-      // actualizacion del tilde por paaginación
-      
-      // document.getElementById("checkbox").checked = 0
       
     }
 
@@ -63,6 +61,7 @@ function BtnFoods({ recipe }) {
 
     // Paginacion (entre desayuno, almuerzo, merienda y cena)
     function paginacionPrevious(comida) {
+      checkbox(comida)
       if (comida.length === 12) {
         return(btnFood("DESAYUNO"))
       }
@@ -76,7 +75,7 @@ function BtnFoods({ recipe }) {
     }
 
     function paginacionNex(comida) {
-      
+      checkbox(comida)
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }
@@ -91,13 +90,6 @@ function BtnFoods({ recipe }) {
       }
 
     }
-
-    // function name() {
-    //   document.querySelector("#btn-siguiente-comida").addEventListener("click", () => {
-    //     document.querySelectorAll(".checkbox").checked = 0
-    //     alert("siguente")
-    //   })
-    // }
 
   return (
     <>

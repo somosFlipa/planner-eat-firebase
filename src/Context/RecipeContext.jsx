@@ -72,8 +72,44 @@ export const RepiceContextProvider = ({children}) => {
     // console.log("mensaje",guardarMensaje)
     // console.log("nombre",datos)
 
+    const desayuno = []
+    const almuerzo = []
+
+    function checkbox(parametro) {
+        
+        const chech = document.querySelectorAll(".checkbox")
+        for (let i = 0; i < chech.length; i++) {
+
+            const check =  document.querySelectorAll(".checkbox")[i].checked
+            if(check === true){
+                document.querySelectorAll(".checkbox")[i].checked  = false
+                console.log( parametro.toLowerCase())
+                if(parametro === "ALMUERZO"){
+                    desayuno.push(i)
+                    
+                    console.log('click...')
+
+                }
+
+                
+            }
+        
+        }
+        if (parametro === "DESAYUNO") {
+            console.log(parametro)
+            desayuno.map(e =>{
+                document.querySelectorAll('.checkbox')[e].checked = true
+            })
+        }
+        
+        
+        
+    }
+    
+    
+
     return (
-        <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje, guardar, guardarMensaje, datos}}>
+        <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox, guardar, guardarMensaje, datos}}>
             {children}
         </RepiceContext.Provider>
     )
