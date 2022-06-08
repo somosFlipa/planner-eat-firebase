@@ -29,7 +29,9 @@ const Form = () =>{
           <input type="text" name="user_name" onChange={(e) => handleChange(e)} placeholder='Nombre Y Apellido*'/>
           
           <input type="email" name="user_email" onChange={(e) => handleChange(e)} placeholder='Email*'/>
-          <Link className="btn-next" to={'/Welcome'} onClick={guardar}>Comenzar</Link>
+          <div className='btn-comenzar'>
+            <Link className="btn-next-comenzar" to={'/Welcome'} onClick={guardar}>Comenzar</Link>
+          </div>
         </form>
     </div>
   )

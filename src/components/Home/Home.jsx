@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 //import BtnNext from '../btnNext/btnNext'
 import logo from '../../assets/Logo 2021-1.png'
-import logodestop from "../../assets/Logo.png"
+import logodesktop from "../../assets/Logo.png"
 
 import desktop from "../../assets/Social-media-pana-1.png"
 
@@ -42,7 +42,7 @@ const Home = () => {
 
     <div className="top-desktop">
       <div className='logo-desktop'>
-        <img src={logodestop} alt="" />
+        <img src={logodesktop} alt="" />
       </div>
     </div>
 

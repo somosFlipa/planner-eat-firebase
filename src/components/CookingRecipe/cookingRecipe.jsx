@@ -3,6 +3,8 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 import BtnFoods from "../BtnFoods/BtnFoods";
 
+import Spinner from "../Spinner/Spinner";
+
 
 const CookingRecipe = () => {
   const [recipe, setRecipe] = useState([]);
@@ -36,8 +38,9 @@ const CookingRecipe = () => {
   }else{
     return(
       <>
-        <p>Cargando...</p>
+        {/*<p>Cargando...</p>*/}
         {/* <BtnFoods recipe={0}/> */}
+        <Spinner/>
       </>
     )
   }
