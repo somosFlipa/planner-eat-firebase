@@ -61,7 +61,7 @@ function BtnFoods({ recipe }) {
 
     // Paginacion (entre desayuno, almuerzo, merienda y cena)
     function paginacionPrevious(comida) {
-      checkbox(comida)
+      // checkbox(comida)
       if (comida.length === 12) {
         return(btnFood("DESAYUNO"))
       }
@@ -75,7 +75,7 @@ function BtnFoods({ recipe }) {
     }
 
     function paginacionNex(comida) {
-      checkbox(comida)
+      // checkbox(comida)
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }

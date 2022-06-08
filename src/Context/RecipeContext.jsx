@@ -72,37 +72,69 @@ export const RepiceContextProvider = ({children}) => {
     // console.log("mensaje",guardarMensaje)
     // console.log("nombre",datos)
 
+    // ----------------- CHECKBOX--------------------------------------------
+
     const desayuno = []
     const almuerzo = []
+    const merienda = []
+    const cena = []
 
     function checkbox(parametro) {
-        
         const chech = document.querySelectorAll(".checkbox")
-        for (let i = 0; i < chech.length; i++) {
 
+        for (let i = 0; i < chech.length; i++) {
             const check =  document.querySelectorAll(".checkbox")[i].checked
+            
             if(check === true){
                 document.querySelectorAll(".checkbox")[i].checked  = false
-                console.log( parametro.toLowerCase())
-                if(parametro === "ALMUERZO"){
+                // console.log( parametro.toLowerCase())
+                if(parametro !== "DESAYUNO"){
                     desayuno.push(i)
                     
-                    console.log('click...')
+                }
+                else if(parametro !== "ALMUERZO"){
+                    almuerzo.push(i)
+                    
+                }
+                if(parametro !== "MERIENDA"){
+                    merienda.push(i)
+                    
 
                 }
-
-                
+                if(parametro !== "CENA"){
+                    cena.push(i)
+                    
+                }
+                console.log(parametro)
             }
-        
+
         }
         if (parametro === "DESAYUNO") {
-            console.log(parametro)
+            // console.log(desayuno)
             desayuno.map(e =>{
                 document.querySelectorAll('.checkbox')[e].checked = true
             })
         }
-        
-        
+        else if (parametro === "ALMUERZO") {
+            // console.log(almuerzo)
+            almuerzo.map(e =>{
+                document.querySelectorAll('.checkbox')[e].checked = true
+            })
+        }
+        else if (parametro === "MERIENDA") {
+            console.log(merienda)
+            merienda.map(e =>{
+                document.querySelectorAll('.checkbox')[e].checked = true
+            })
+        }
+        else if (parametro === "CENA") {
+            console.log(cena)
+            cena.map(e =>{
+                document.querySelectorAll('.checkbox')[e].checked = true
+            })
+        }
+        console.log("array desayuno",desayuno)
+        console.log("array almuerzo",almuerzo)
         
     }
     
