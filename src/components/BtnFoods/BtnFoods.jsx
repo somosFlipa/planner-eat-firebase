@@ -61,31 +61,33 @@ function BtnFoods({ recipe }) {
 
     // Paginacion (entre desayuno, almuerzo, merienda y cena)
     function paginacionPrevious(comida) {
-      checkbox(comida)
-      if (comida.length === 12) {
+      // checkbox(comida)
+      console.log(comida.length)
+      if (comida.length === 1) {
         return(btnFood("DESAYUNO"))
       }
-      if (comida.length === 18) {
+      if (comida.length === 4) {
         return(btnFood("ALMUERZO"))
       }
-      if (comida.length === 24) {
+      if (comida.length === 3) {
         return (btnFood("MERIENDA"))
       }
 
     }
 
     function paginacionNex(comida) {
-      checkbox(comida)
+      // checkbox(comida)
+      
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }
-      if (comida.length === 11) {
+      if (comida.length === 2) {
         return(btnFood("ALMUERZO"))
       }
-      if (comida.length === 12) {
+      if (comida.length === 1) {
         return btnFood("MERIENDA")
       }
-      if (comida.length === 18) {
+      if (comida.length === 4) {
         return btnFood("CENA")
       }
 
@@ -160,12 +162,12 @@ function BtnFoods({ recipe }) {
       }
       <div className="btns-div">
         {
-          comida.length === 0 || comida.length === 11 ?
+          comida.length === 0 || comida.length === 2?
           <BtnPrevious to="/Welcome" /> :
           <button className="btn-anterior-comida" onClick={ () => paginacionPrevious(comida)}>Anterior</button>
         }
         {
-          comida.length === 24 ?
+          comida.length === 3 ?
           <button className="btn-finalizar-comida"onClick={btnOpinion}>FINALIZAR</button> :
           <button id="btn-siguiente-comida"onClick={ () => paginacionNex(comida)}>Siguiente</button> 
           
