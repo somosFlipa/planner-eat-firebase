@@ -5,6 +5,8 @@ import BtnFoods from "../BtnFoods/BtnFoods";
 import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
 
+import Spinner from "../Spinner/Spinner";
+
 
 const CookingRecipe = () => {
   // const [recipe, setRecipe] = useState([]);
@@ -38,8 +40,9 @@ const CookingRecipe = () => {
   }else{
     return(
       <>
-        <p>Cargando...</p>
+        {/*<p>Cargando...</p>*/}
         {/* <BtnFoods recipe={0}/> */}
+        <Spinner/>
       </>
     )
   }
