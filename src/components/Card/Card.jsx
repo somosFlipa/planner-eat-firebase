@@ -17,11 +17,12 @@ function Card(props) {
   const [description, setDescription] = useState([]);
   const [estadoModal, setEstadoModal] = useState(false); 
 
-  const {addTo,borrar, checkbox} = useContext(RepiceContext)
+  const {addTo,borrar} = useContext(RepiceContext)
 
-  const listRecipe = [];
+  
 
   useEffect(() => {
+    const listRecipe = [];
     const obtenerDatos = async () => {
       const data = await getDocs(collection(db, "Ingredients"));
       data.docs.map((i) => {
@@ -33,6 +34,21 @@ function Card(props) {
     
   }, []);
   
+//   const userRef = firebase.database().ref('users');
+// userRef.on('value', (snapshot) => {
+//   let newUserState = [];
+//   snapshot.forEach(data => {
+//     const dataVal = data.val()
+//     newUsersState.push({
+//       id: data.key,
+//       name: dataVal.name,
+//       account: dataVal.account
+//     })
+//   })
+// })
+
+
+
   function btn() {
     setEstadoModal(true);
 
@@ -46,25 +62,12 @@ function Card(props) {
     });
     setDescription(data);
   }
+  
+  // console.log(description)
+  // console.log(ingredients)
 
- 
 
   function guardarReceta(e) {
-    
-    // const chech = document.querySelectorAll(".checkbox")
-    
-    //   // console.log(chech.forEach(e =>{return e.checked}))
-    //   // console.log(chech)
-
-    //   for (let i = 0; i < chech.length; i++) {
-    //     const check =  document.querySelectorAll(".checkbox")[i].checked
-    //     if(check === true){
-    //       console.log( document.querySelectorAll(".checkbox")[i].checked  = false)
-    //     }
-        
-    //   }
-
-    // checkbox()
 
     if(e.target.checked === true){
       const data = addTo(props.nombre)
@@ -72,7 +75,7 @@ function Card(props) {
     }
     if(e.target.checked === false){
         const dataBorrar = borrar(props.nombre)
-        // props.name()
+        
     }
     
   }

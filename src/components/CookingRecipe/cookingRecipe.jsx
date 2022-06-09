@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 import BtnFoods from "../BtnFoods/BtnFoods";
+import {RepiceContext} from "../../Context/RecipeContext.jsx";
+
 
 
 const CookingRecipe = () => {
-  const [recipe, setRecipe] = useState([]);
-  
+  // const [recipe, setRecipe] = useState([]);
 
+  const {recipe,setRecipe} = useContext(RepiceContext)
+
+  console.log(recipe)
   useEffect(() => {
     const listRecipe = [];
+    
     if(recipe.length === 0){
       const obtenerDatos = async () => {
         const data = await getDocs(collection(db, "cookingRecipe"));
@@ -19,18 +24,15 @@ const CookingRecipe = () => {
         setRecipe(listRecipe);
       };
       obtenerDatos();
-  }else{
-    console.log("datos extraidos")
   }
   }, [recipe]);
 
-  // console.log(recipe)
-
+  
   if(recipe.length > 0){
     return (
       <>
         <h2>Seleccioná los platos que quieres en tu menú.</h2>
-        <BtnFoods recipe={recipe}/>
+        <BtnFoods />
       </>
     );
   }else{
