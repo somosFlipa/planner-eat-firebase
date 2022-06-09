@@ -13,21 +13,23 @@ import "./BtnFoods.css";
 import  OpinionModal from '../OpinionModal/OpinionModal';
 import ItemCouts from '../ItemCouts/ItemCouts'
 
-function BtnFoods({ recipe }) {
-
-  const {checkbox} = useContext(RepiceContext)
+function BtnFoods() {
+  
+  const {checkbox,recipe} = useContext(RepiceContext)
 
   const [comida, setComida] = useState([]);
   const [opinionModal, setOpinionModal] = useState(false);
 
   let arrayFilter= [];
 
+  console.log(recipe)
+
   // fuencion para los botones
-    async function btnFood(food) {
+    function btnFood(food) {
       checkbox(food)
+      
       recipe && recipe.map((i) => {
         i.Comida && i.Comida.filter((z) => {
-          // console.log(z === undefined)
           if ((z === food) === true) {
             arrayFilter.filter((s) => s.foodTime === food);
             if (!arrayFilter.includes(i.Nombre)) {
@@ -40,6 +42,7 @@ function BtnFoods({ recipe }) {
                 Url: i.Url
               });
               setComida(arrayFilter);
+              
             }
           }
         });
@@ -47,8 +50,10 @@ function BtnFoods({ recipe }) {
       
       
     }
+    
 
     useEffect(()=>{
+      
       btnFood()
       setComida(arrayFilter)
       

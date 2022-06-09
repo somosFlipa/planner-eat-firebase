@@ -4,6 +4,8 @@ export const RepiceContext = createContext({});
 
 export const RepiceContextProvider = ({children}) => {
 
+    const [recipe, setRecipe] = useState([]);
+
     const [guardar, setguardar]= useState([])
     const [datos, setDatos] = useState([])
     const [guardarMensaje, setguardarMendaje]= useState([])
@@ -66,7 +68,9 @@ export const RepiceContextProvider = ({children}) => {
         setguardar(guardar)
         setguardarMendaje(guardarMensaje)
         setDatos(datos)
-    },[guardar,guardarMensaje,datos])
+
+        setRecipe(recipe)
+    },[guardar,guardarMensaje,datos,recipe])
 
     // console.log("recetas",guardar)
     // console.log("mensaje",guardarMensaje)
@@ -74,42 +78,35 @@ export const RepiceContextProvider = ({children}) => {
 
     const desayuno = []
     const almuerzo = []
+    const merienda = []
+    const cena = []
 
     function checkbox(parametro) {
-        
         const chech = document.querySelectorAll(".checkbox")
+        // console.log(parametro)
         for (let i = 0; i < chech.length; i++) {
-
             const check =  document.querySelectorAll(".checkbox")[i].checked
+            
             if(check === true){
                 document.querySelectorAll(".checkbox")[i].checked  = false
-                console.log( parametro.toLowerCase())
-                if(parametro === "ALMUERZO"){
-                    desayuno.push(i)
-                    
-                    console.log('click...')
-
-                }
-
+                // console.log( parametro.toLowerCase())
                 
+                
+                // console.log(parametro)
             }
-        
-        }
-        if (parametro === "DESAYUNO") {
-            console.log(parametro)
-            desayuno.map(e =>{
-                document.querySelectorAll('.checkbox')[e].checked = true
-            })
+
         }
         
         
+        // console.log("array desayuno",desayuno)
+        // console.log("array almuerzo",almuerzo)
         
     }
     
-    
 
     return (
-        <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox, guardar, guardarMensaje, datos}}>
+        <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox,
+                                        guardar, guardarMensaje, datos,setRecipe , recipe}}>
             {children}
         </RepiceContext.Provider>
     )
