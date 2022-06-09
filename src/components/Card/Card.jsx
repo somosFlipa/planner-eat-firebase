@@ -33,20 +33,6 @@ function Card(props) {
     obtenerDatos()
     
   }, []);
-  
-//   const userRef = firebase.database().ref('users');
-// userRef.on('value', (snapshot) => {
-//   let newUserState = [];
-//   snapshot.forEach(data => {
-//     const dataVal = data.val()
-//     newUsersState.push({
-//       id: data.key,
-//       name: dataVal.name,
-//       account: dataVal.account
-//     })
-//   })
-// })
-
 
 
   function btn() {
@@ -62,10 +48,6 @@ function Card(props) {
     });
     setDescription(data);
   }
-  
-  // console.log(description)
-  // console.log(ingredients)
-
 
   function guardarReceta(e) {
 

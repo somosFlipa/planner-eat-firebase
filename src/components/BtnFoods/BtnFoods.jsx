@@ -22,7 +22,7 @@ function BtnFoods() {
 
   
 
-  console.log(recipe)
+  // console.log(recipe)
 
   // fuencion para los botones
     function btnFood(food) {

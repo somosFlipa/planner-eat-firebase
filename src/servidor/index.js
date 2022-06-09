@@ -15,6 +15,7 @@ app.post('/api/form', (req,res)=>{
     // console.log(data[1][0].mensaje)
     // console.log(data[2][0].user_name)
     // console.log(data[2][0].user_email)
+    console.log(data[3])
 
     let smtpTranport = nodemailer.createTransport({
         service:'gmail',
@@ -37,7 +38,7 @@ app.post('/api/form', (req,res)=>{
         
     })
 
-    console.log(recetas)
+    // console.log(recetas)
 
     let mailOptions={
         
@@ -48,10 +49,14 @@ app.post('/api/form', (req,res)=>{
         <h3>informacion</h3>
         <p>Enviado por: ${data[2][0].user_email}</p>
         <br></br>
+        <p>Comendales: ${data[3]}</p>
+        <br></br>
         <p>Menu elegido: </p>
         <p>${recetas}</p>
         <br></br>
         <p>Mensaje: ${data[1][0].mensaje}</p>
+        
+        
 
         `
     }

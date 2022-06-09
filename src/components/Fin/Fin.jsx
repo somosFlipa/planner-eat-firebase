@@ -7,14 +7,15 @@ import {RepiceContext} from "../../Context/RecipeContext.jsx";
     
 function Fin() {
 
-    const { guardar, guardarMensaje, datos} = useContext(RepiceContext)
+    const { guardar, guardarMensaje, datos, comensales } = useContext(RepiceContext)
 
     function sendEmail() {
         console.log("nombre",datos,
                     "recetas",guardar, 
-                    "mensaje",guardarMensaje)
+                    "mensaje",guardarMensaje,
+                    "comensales", comensales)
         
-        let data = [guardar, guardarMensaje, datos]
+        let data = [guardar, guardarMensaje, datos, comensales]
         const json = axios.post('http://localhost:8080/api/form',data)
         .then(res=>{
             console.log(res)

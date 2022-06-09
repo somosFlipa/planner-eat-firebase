@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 import BtnFoods from "../BtnFoods/BtnFoods";
@@ -13,7 +13,7 @@ const CookingRecipe = () => {
 
   const {recipe,setRecipe} = useContext(RepiceContext)
 
-  console.log(recipe)
+  // console.log(recipe)
   useEffect(() => {
     const listRecipe = [];
     
