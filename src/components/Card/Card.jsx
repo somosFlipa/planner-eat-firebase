@@ -17,7 +17,7 @@ function Card(props) {
   const [description, setDescription] = useState([]);
   const [estadoModal, setEstadoModal] = useState(false); 
 
-  const {addTo,borrar, checkbox} = useContext(RepiceContext)
+  const {addTo,borrar} = useContext(RepiceContext)
 
   const listRecipe = [];
 
@@ -50,21 +50,6 @@ function Card(props) {
  
 
   function guardarReceta(e) {
-    
-    // const chech = document.querySelectorAll(".checkbox")
-    
-    //   // console.log(chech.forEach(e =>{return e.checked}))
-    //   // console.log(chech)
-
-    //   for (let i = 0; i < chech.length; i++) {
-    //     const check =  document.querySelectorAll(".checkbox")[i].checked
-    //     if(check === true){
-    //       console.log( document.querySelectorAll(".checkbox")[i].checked  = false)
-    //     }
-        
-    //   }
-
-    // checkbox()
 
     if(e.target.checked === true){
       const data = addTo(props.nombre)

@@ -11,7 +11,7 @@ import BtnPrevious from "../BtnPrevious/BtnPrevious";
 
 import "./BtnFoods.css";
 import  OpinionModal from '../OpinionModal/OpinionModal';
-import ItemCouts from '../ItemCouts/ItemCouts'
+import ComensalesCount from "../ComensalesCount/ComensalesCount"
 
 function BtnFoods() {
   
@@ -22,7 +22,7 @@ function BtnFoods() {
 
   let arrayFilter= [];
 
-  console.log(recipe)
+  // console.log(recipe)
 
   // fuencion para los botones
     function btnFood(food) {
@@ -101,7 +101,7 @@ function BtnFoods() {
   return (
     <>
       <p>Comensales: </p>
-      <ItemCouts stock={4} initial={1}  />
+      <ComensalesCount stock={4} initial={1}  />
       {
         comida.length < 1 ?
           btnFood("DESAYUNO") :

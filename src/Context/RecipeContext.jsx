@@ -9,7 +9,10 @@ export const RepiceContextProvider = ({children}) => {
     const [guardar, setguardar]= useState([])
     const [datos, setDatos] = useState([])
     const [guardarMensaje, setguardarMendaje]= useState([])
-    // const [comensales, setComensales] = useState([])
+
+
+    const [comensales, setComensales] = useState([])
+    const [cantidad, setCantidad] = useState([])
 
 // ----Borra los datos del chebox---------------------------------------
     const borrar =(id)=> {
@@ -30,9 +33,14 @@ export const RepiceContextProvider = ({children}) => {
                 ...guardar,
                 {
                     id: recipe,
-                    
+                    cantidad:cantidad
                 }
+                
             ]);
+            setCantidad(
+                cantidad
+                
+            )
         }
     }
 
@@ -53,33 +61,42 @@ export const RepiceContextProvider = ({children}) => {
             {
                 mensaje
             }]);
-}
+    }
 
-// ---- detalle de comensales-----------------------------------------------------
-// const addToComensales =({comensal})=> {
-//     setComensales([
-//         ...comensales,
-//         {
-//             comensal
-//         }]);
-// }
+// ---- Agregar comensales-----------------------------------------------------
+    const addToComensales =(comensal)=> {
+        setComensales(
+            
+            comensal
+            );
+    }
+
+// ---- Agregar cantidad de resetas-----------------------------------------------------
+    const addToCantidad =(cantidad)=> {
+        setCantidad(
+            cantidad
+            
+        );
+    }
+
+
+
 
     useEffect(()=> {
         setguardar(guardar)
         setguardarMendaje(guardarMensaje)
         setDatos(datos)
-
+        setComensales(comensales)
         setRecipe(recipe)
-    },[guardar,guardarMensaje,datos,recipe])
+        setCantidad(cantidad)
+    },[guardar,guardarMensaje,datos,recipe,comensales,cantidad])
 
-    // console.log("recetas",guardar)
+    console.log("recetas",guardar )
     // console.log("mensaje",guardarMensaje)
     // console.log("nombre",datos)
+    // console.log("comensales", comensales)
+    // console.log("cantidad", cantidad)
 
-    const desayuno = []
-    const almuerzo = []
-    const merienda = []
-    const cena = []
 
     function checkbox(parametro) {
         const chech = document.querySelectorAll(".checkbox")
@@ -95,26 +112,16 @@ export const RepiceContextProvider = ({children}) => {
                 // console.log(parametro)
             }
 
-        }
-        
-        
-        // console.log("array desayuno",desayuno)
-        // console.log("array almuerzo",almuerzo)
-        
+        }    
     }
     
 
     return (
         <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox,
-                                        guardar, guardarMensaje, datos,setRecipe , recipe}}>
+                                        guardar, guardarMensaje, datos,setRecipe , recipe,
+                                        addToComensales, comensales,addToCantidad }}>
             {children}
         </RepiceContext.Provider>
     )
 }
-
-
-
-
-
-
 

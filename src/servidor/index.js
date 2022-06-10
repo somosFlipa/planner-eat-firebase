@@ -15,6 +15,7 @@ app.post('/api/form', (req,res)=>{
     // console.log(data[1][0].mensaje)
     // console.log(data[2][0].user_name)
     // console.log(data[2][0].user_email)
+    console.log(data[0])
 
     let smtpTranport = nodemailer.createTransport({
         service:'gmail',
@@ -31,7 +32,7 @@ app.post('/api/form', (req,res)=>{
 
     const recetas = data[0].map(menu =>{
         if (menu.id !== null) {
-            return `${menu.id} <br></br>`
+            return `${menu.id} , ${menu.cantidad} <br></br>`
         }
         
         
@@ -48,10 +49,14 @@ app.post('/api/form', (req,res)=>{
         <h3>informacion</h3>
         <p>Enviado por: ${data[2][0].user_email}</p>
         <br></br>
+        <p>Comendales: ${data[3]}</p>
+        <br></br>
         <p>Menu elegido: </p>
         <p>${recetas}</p>
         <br></br>
         <p>Mensaje: ${data[1][0].mensaje}</p>
+        
+        
 
         `
     }
@@ -72,3 +77,4 @@ app.post('/api/form', (req,res)=>{
 app.listen(8080, () => {
     console.log("servidor en 8080")
 });
+

@@ -1,12 +1,15 @@
 import  React, {useState, useContext} from "react";
 import './ItemCouts.css';
-// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx";
+import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
 function ItemCouts({ stock, initial}) {
 
     const [counter, setCounter] = useState(initial);
 
-    // console.log(counter)
+    const {addToCantidad} = useContext(RepiceContext)
+
+    addToCantidad(counter)
+
     return (
         <div className="contador">
             <button className="btn-menos" onClick={() => {
@@ -15,7 +18,7 @@ function ItemCouts({ stock, initial}) {
                 }
                 }}> - </button>
 
-            <p>{counter}</p>
+            <p id="contador">{counter}</p>
             <button className="btn-mas" onClick={() => { 
                     if (counter < stock) {
                     setCounter(counter + 1);
