@@ -12,6 +12,7 @@ export const RepiceContextProvider = ({children}) => {
 
 
     const [comensales, setComensales] = useState([])
+    // const [cantidad, setCantidad] = useState([])
 
 // ----Borra los datos del chebox---------------------------------------
     const borrar =(id)=> {
@@ -25,7 +26,7 @@ export const RepiceContextProvider = ({children}) => {
     }
 
 // ----Agrega los datos del chebox---------------------------------------
-    const addTo =(recipe)=> {
+    const addTo =(recipe,counter)=> {
         let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
         if (found === undefined) {
             setguardar([
@@ -55,15 +56,23 @@ export const RepiceContextProvider = ({children}) => {
             {
                 mensaje
             }]);
-}
+    }
 
-// ---- detalle de comensales-----------------------------------------------------
-const addToComensales =(comensal)=> {
-    setComensales(
-        
-        comensal
-        );
-}
+// ---- Agregar comensales-----------------------------------------------------
+    const addToComensales =(comensal)=> {
+        setComensales(
+            
+            comensal
+            );
+    }
+
+// ---- Agregar cantidad de resetas-----------------------------------------------------
+    // const addToCantidad =(cantidad)=> {
+    // setCantidad(
+    //     cantidad
+    // );
+    // }
+
 
     useEffect(()=> {
         setguardar(guardar)
@@ -73,10 +82,11 @@ const addToComensales =(comensal)=> {
         setRecipe(recipe)
     },[guardar,guardarMensaje,datos,recipe,comensales])
 
-    // console.log("recetas",guardar)
+    console.log("recetas",guardar)
     // console.log("mensaje",guardarMensaje)
     // console.log("nombre",datos)
-    console.log("comensales", comensales)
+    // console.log("comensales", comensales)
+    // console.log("cantidad", cantidad)
 
 
     function checkbox(parametro) {

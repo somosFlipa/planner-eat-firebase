@@ -9,19 +9,9 @@ function ComensalesCount({ stock, initial}) {
 
     const {addToComensales} = useContext(RepiceContext)
 
-    let contador = document.querySelectorAll("#contador")
-    
-    for (let i = 0; i < contador.length; i++) {
-        contador =  document.querySelectorAll("#contador")[i].textContent
-        contador++
-        --contador
-    }
-
-    // const contador = document.querySelectorAll("#contador")[0].textContent
     addToComensales(counter)
 
-    
-    console.log(counter)
+    // console.log(counter)
     
     return (
         <div className="contador-comensales">
