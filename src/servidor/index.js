@@ -49,7 +49,7 @@ app.post('/api/form', (req,res)=>{
         <h3>informacion</h3>
         <p>Enviado por: ${data[2][0].user_email}</p>
         <br></br>
-        <p>Comendales: ${data[3]}</p>
+        <p>Comensales: ${data[3]}</p>
         <br></br>
         <p>Menu elegido: </p>
         <p>${recetas}</p>
