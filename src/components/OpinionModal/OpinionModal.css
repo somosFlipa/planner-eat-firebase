@@ -24,8 +24,8 @@
 }
 
 .modalContainer button{
-    width: 15px;
-    height: 15px;
+    width: 17.17px;
+    height: 17.17px;
     border-radius: 30px;
     padding: 1px;
     color: #fff;
@@ -55,8 +55,7 @@
 
 .btn-enviar{
 
-    border-color: #000;
-    border-style: groove;
+    border-color: #63E5DF;
     border-radius: 5px;
     border-width: 1px;
 
@@ -64,7 +63,7 @@
     height: 36px;
     
     margin-top: 10px;
-    margin-left: 143px;
+    margin-left: 145px;
 
     display: flex;
     justify-content: center;

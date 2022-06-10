@@ -37,7 +37,7 @@
     left: 255px;
     top: 10px;
 
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .h2-modal{
@@ -51,10 +51,10 @@
     border: 1px;
     border-bottom-style: groove;
     border-color: #63E5DF;
-    display: contents;
+    display: initial;
     position: relative;
-    bottom: -20px;
-    right: -10px;
+    /*bottom: -20px;
+    right: -10px;*/
 }
 
 .div-fuera-h2{
