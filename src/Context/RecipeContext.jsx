@@ -12,7 +12,7 @@ export const RepiceContextProvider = ({children}) => {
 
 
     const [comensales, setComensales] = useState([])
-    // const [cantidad, setCantidad] = useState([])
+    const [cantidad, setCantidad] = useState([])
 
 // ----Borra los datos del chebox---------------------------------------
     const borrar =(id)=> {
@@ -26,16 +26,21 @@ export const RepiceContextProvider = ({children}) => {
     }
 
 // ----Agrega los datos del chebox---------------------------------------
-    const addTo =(recipe,counter)=> {
+    const addTo =(recipe)=> {
         let found = guardar.find((recipe) => recipe.idMenu === recipe.id);
         if (found === undefined) {
             setguardar([
                 ...guardar,
                 {
                     id: recipe,
-                    
+                    cantidad:cantidad
                 }
+                
             ]);
+            setCantidad(
+                cantidad
+                
+            )
         }
     }
 
@@ -67,11 +72,14 @@ export const RepiceContextProvider = ({children}) => {
     }
 
 // ---- Agregar cantidad de resetas-----------------------------------------------------
-    // const addToCantidad =(cantidad)=> {
-    // setCantidad(
-    //     cantidad
-    // );
-    // }
+    const addToCantidad =(cantidad)=> {
+        setCantidad(
+            cantidad
+            
+        );
+    }
+
+
 
 
     useEffect(()=> {
@@ -80,9 +88,10 @@ export const RepiceContextProvider = ({children}) => {
         setDatos(datos)
         setComensales(comensales)
         setRecipe(recipe)
-    },[guardar,guardarMensaje,datos,recipe,comensales])
+        setCantidad(cantidad)
+    },[guardar,guardarMensaje,datos,recipe,comensales,cantidad])
 
-    console.log("recetas",guardar)
+    console.log("recetas",guardar )
     // console.log("mensaje",guardarMensaje)
     // console.log("nombre",datos)
     // console.log("comensales", comensales)
@@ -110,15 +119,9 @@ export const RepiceContextProvider = ({children}) => {
     return (
         <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox,
                                         guardar, guardarMensaje, datos,setRecipe , recipe,
-                                        addToComensales, comensales }}>
+                                        addToComensales, comensales,addToCantidad }}>
             {children}
         </RepiceContext.Provider>
     )
 }
-
-
-
-
-
-
 

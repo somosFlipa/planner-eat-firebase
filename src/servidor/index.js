@@ -15,7 +15,7 @@ app.post('/api/form', (req,res)=>{
     // console.log(data[1][0].mensaje)
     // console.log(data[2][0].user_name)
     // console.log(data[2][0].user_email)
-    console.log(data[3])
+    console.log(data[0])
 
     let smtpTranport = nodemailer.createTransport({
         service:'gmail',
@@ -32,13 +32,13 @@ app.post('/api/form', (req,res)=>{
 
     const recetas = data[0].map(menu =>{
         if (menu.id !== null) {
-            return `${menu.id} <br></br>`
+            return `${menu.id} , ${menu.cantidad} <br></br>`
         }
         
         
     })
 
-    // console.log(recetas)
+    console.log(recetas)
 
     let mailOptions={
         

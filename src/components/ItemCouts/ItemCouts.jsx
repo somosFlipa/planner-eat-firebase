@@ -6,10 +6,10 @@ function ItemCouts({ stock, initial}) {
 
     const [counter, setCounter] = useState(initial);
 
-    // const {addTo} = useContext(RepiceContext)
+    const {addToCantidad} = useContext(RepiceContext)
 
-    // addTo(counter)
-    // console.log(counter)
+    addToCantidad(counter)
+
     return (
         <div className="contador">
             <button className="btn-menos" onClick={() => {
