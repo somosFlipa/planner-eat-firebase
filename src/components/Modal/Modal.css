@@ -118,14 +118,18 @@
 .dificultad-modal{
     display: inline;
     position: relative;
-    bottom: 50px;
+    bottom: 52px;
     left: 30px;
-    font-size: 7px;
+    font-size: 6px;
     color: #3DD29D;
     background-color: rgb(61 210 157 / 21%);
     width: 40px;
     text-align: center;
     border-radius: 5px;
+
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .punto-dificultad{
