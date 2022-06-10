@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-// import {RepiceContextProvider} from "../../Context/RecipeContext.jsx";
+import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
 import breakfast from "../../assets/Desayunos.png";
 import lunch from "../../assets/Almuerzos.jpg";
@@ -13,20 +13,24 @@ import "./BtnFoods.css";
 import  OpinionModal from '../OpinionModal/OpinionModal';
 import ComensalesCount from "../ComensalesCount/ComensalesCount"
 
-function BtnFoods({ recipe }) {
-
-  // const {addToComensales} = useContext(RepiceContextProvider)
+function BtnFoods() {
+  
+  const {checkbox,recipe} = useContext(RepiceContext)
 
   const [comida, setComida] = useState([]);
   const [opinionModal, setOpinionModal] = useState(false);
 
-  let arrayFilter= [];
+  
+
+  // console.log(recipe)
 
   // fuencion para los botones
-    async function btnFood(food) {
+    function btnFood(food) {
+      checkbox(food)
+      let arrayFilter= [];
       recipe && recipe.map((i) => {
         i.Comida && i.Comida.filter((z) => {
-          // console.log(z === undefined)
+
           if ((z === food) === true) {
             arrayFilter.filter((s) => s.foodTime === food);
             if (!arrayFilter.includes(i.Nombre)) {
@@ -39,20 +43,20 @@ function BtnFoods({ recipe }) {
                 Url: i.Url
               });
               setComida(arrayFilter);
+              
             }
           }
         });
       });
       
-      // actualizacion del tilde por paaginación
-      
-      // document.getElementById("checkbox").checked = 0
       
     }
+    
 
     useEffect(()=>{
+      
       btnFood()
-      setComida(arrayFilter)
+      // setComida(arrayFilter)
       
     },[])
 
@@ -63,6 +67,7 @@ function BtnFoods({ recipe }) {
 
     // Paginacion (entre desayuno, almuerzo, merienda y cena)
     function paginacionPrevious(comida) {
+      // checkbox(comida)
       if (comida.length === 12) {
         return(btnFood("DESAYUNO"))
       }
@@ -76,7 +81,7 @@ function BtnFoods({ recipe }) {
     }
 
     function paginacionNex(comida) {
-      
+      // checkbox(comida)
       if (comida.length === 0) {
         return(btnFood("DESAYUNO"))
       }
@@ -90,13 +95,6 @@ function BtnFoods({ recipe }) {
         return btnFood("CENA")
       }
 
-    }
-
-    function name() {
-      document.querySelector("#btn-siguiente-comida").addEventListener("click", () => {
-        document.querySelectorAll(".checkbox").checked = 0
-        // alert("siguente")
-      })
     }
 
   return (
@@ -160,7 +158,7 @@ function BtnFoods({ recipe }) {
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
                 url={c.Url}
-                name={name}
+                // name={name}
               />
             </>
           );
@@ -168,7 +166,7 @@ function BtnFoods({ recipe }) {
       }
       <div className="btns-div">
         {
-          comida.length === 0 || comida.length === 11 ?
+          comida.length === 0 || comida.length === 11?
           <BtnPrevious to="/Welcome" /> :
           <button className="btn-anterior-comida" onClick={ () => paginacionPrevious(comida)}>Anterior</button>
         }
