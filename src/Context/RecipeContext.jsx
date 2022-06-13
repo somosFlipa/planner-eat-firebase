@@ -91,7 +91,7 @@ export const RepiceContextProvider = ({children}) => {
         setCantidad(cantidad)
     },[guardar,guardarMensaje,datos,recipe,comensales,cantidad])
 
-    console.log("recetas",guardar )
+    // console.log("recetas",guardar )
     // console.log("mensaje",guardarMensaje)
     // console.log("nombre",datos)
     // console.log("comensales", comensales)
