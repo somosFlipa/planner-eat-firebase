@@ -10,8 +10,6 @@ function ComensalesCount({ stock, initial}) {
     const {addToComensales} = useContext(RepiceContext)
 
     addToComensales(counter)
-
-    // console.log(counter)
     
     return (
         <div className="contador-comensales">

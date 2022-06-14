@@ -9,11 +9,9 @@ import Spinner from "../Spinner/Spinner";
 
 
 const CookingRecipe = () => {
-  // const [recipe, setRecipe] = useState([]);
 
   const {recipe,setRecipe} = useContext(RepiceContext)
 
-  // console.log(recipe)
   useEffect(() => {
     const listRecipe = [];
     
@@ -40,8 +38,6 @@ const CookingRecipe = () => {
   }else{
     return(
       <>
-        {/*<p>Cargando...</p>*/}
-        {/* <BtnFoods recipe={0}/> */}
         <Spinner/>
       </>
     )

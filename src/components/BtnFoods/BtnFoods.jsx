@@ -20,9 +20,6 @@ function BtnFoods() {
   const [comida, setComida] = useState([]);
   const [opinionModal, setOpinionModal] = useState(false);
 
-  
-
-  // console.log(recipe)
 
   // fuencion para los botones
     function btnFood(food) {
@@ -56,7 +53,6 @@ function BtnFoods() {
     useEffect(()=>{
       
       btnFood()
-      // setComida(arrayFilter)
       
     },[])
 
@@ -158,7 +154,6 @@ function BtnFoods() {
                 dificultad={c.Dificultad}
                 ingredientes={c.Ingredientes}
                 url={c.Url}
-                // name={name}
               />
             </>
           );
