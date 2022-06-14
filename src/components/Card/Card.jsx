@@ -72,7 +72,6 @@ function Card(props) {
               <div className="tickmarktilde" ></div>
             </div>
             <img className="prop-imgen" src={props.url} alt=""/>
-            {/*<button className="boton-guardar-menu" ></button>*/}
           </div>
         </label>
 

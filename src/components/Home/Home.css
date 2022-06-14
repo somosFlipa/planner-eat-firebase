@@ -29,6 +29,23 @@ a:link, a:visited, a:active {
     }
 }
 
+@media (min-width: 380px){
+    .Home {
+        margin: -10px;
+    }
+}
+
+@media (min-width: 400px){
+    .Home {
+        margin: -20px;
+    }
+}
+
+@media (min-width: 412px){
+    .Home {
+        margin: -25px;
+    }
+}
 
 @media all and (min-width: 414px){
     .Home{
@@ -90,6 +107,80 @@ margin: 0.5vh;
 }
 
 @media all and (min-width: 1440px){
+
+    .Home{
+        display: none;
+    }
+
+    .pantalla-desktop{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 100%;
+        height: 65vh;
+
+        /*margin-top: 250px;*/
+    }
+
+    .texto-desktop h2{
+        font-size: 48px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+    .texto-desktop p{
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    .img-desktop{
+        width: 500px;
+        height: 500px;
+    }
+
+    .footer-desktop{
+        display: block;
+
+        width: 100%;
+        height: 89px;
+
+        background-color: #68D7E0;
+
+        position: relative;
+        left: -20px;
+        top: 40px;
+        
+        padding-right: 40px;
+    }
+
+    .top-desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 208px;
+
+        background-color: #68D7E0;
+
+        position: relative;
+        left: -20px;
+        top: -20px;
+
+        padding-right: 40px;
+    }
+
+    .logo-desktop{
+        width: 389px;
+        height: 126px;
+    }
+}
+
+@media all and (min-width: 1024px){
 
     .Home{
         display: none;

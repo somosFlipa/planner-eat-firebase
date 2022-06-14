@@ -91,25 +91,14 @@ export const RepiceContextProvider = ({children}) => {
         setCantidad(cantidad)
     },[guardar,guardarMensaje,datos,recipe,comensales,cantidad])
 
-    console.log("recetas",guardar )
-    // console.log("mensaje",guardarMensaje)
-    // console.log("nombre",datos)
-    // console.log("comensales", comensales)
-    // console.log("cantidad", cantidad)
-
-
     function checkbox(parametro) {
         const chech = document.querySelectorAll(".checkbox")
-        // console.log(parametro)
         for (let i = 0; i < chech.length; i++) {
             const check =  document.querySelectorAll(".checkbox")[i].checked
             
             if(check === true){
                 document.querySelectorAll(".checkbox")[i].checked  = false
-                // console.log( parametro.toLowerCase())
                 
-                
-                // console.log(parametro)
             }
 
         }    
