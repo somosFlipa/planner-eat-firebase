@@ -63,6 +63,39 @@ code {
   }
 }
 
+@media all and (min-width: 380px) {
+  #root{
+    padding: 10px;
+  }
+
+  #root > div.contador{
+    top: 153px;
+    right: 50px;
+  }
+}
+
+@media all and (min-width: 400px) {
+  #root{
+    padding: 20px;
+  }
+
+  #root > div.contador{
+    top: 153px;
+    right: 50px;
+  }
+}
+
+@media all and (min-width: 412px) {
+  #root{
+    padding: 25px;
+  }
+
+  #root > div.contador{
+    top: 153px;
+    right: 50px;
+  }
+}
+
 @media all and (min-width: 414px) {
   #root{
     padding: 20px;

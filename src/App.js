@@ -24,6 +24,3 @@ return(
 };
 
 export default App
-
-
-// serve -s build

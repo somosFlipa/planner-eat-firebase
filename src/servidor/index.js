@@ -12,9 +12,6 @@ app.post('/api/form', (req,res)=>{
     
     let data = req.body
     
-    // console.log(data[1][0].mensaje)
-    // console.log(data[2][0].user_name)
-    // console.log(data[2][0].user_email)
     console.log(data[0])
 
     let smtpTranport = nodemailer.createTransport({
@@ -69,8 +66,6 @@ app.post('/api/form', (req,res)=>{
             console.log("¡El correo electrónico ha sido enviado!   ")
         }
     })
-
-    // console.log("email enviado")
 
 })
 

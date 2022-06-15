@@ -18,6 +18,24 @@
     }
 }
 
+@media all and (min-width: 380px){
+    .WelcomeDiv{
+        margin: -10px;
+    }
+}
+
+@media all and (min-width: 400px){
+    .WelcomeDiv{
+        margin: -20px;
+    }
+}
+
+@media all and (min-width: 412px){
+    .WelcomeDiv{
+        margin: -25px;
+    }
+}
+
 
 @media all and (min-width: 414px){
     .WelcomeDiv{
@@ -35,6 +53,22 @@
     height: 145px;
 }
 
+@media all and (min-width: 400px) {
+    .welcome-h2-h3{
+        margin-bottom: 25px;
+    }
+
+
+}
+
+@media all and (min-width: 412px) {
+    .welcome-h2-h3{
+        margin-bottom: 30px;
+    }
+
+
+}
+
 @media all and (min-width: 414px) {
     .welcome-h2-h3{
         margin-bottom: 35px;
@@ -45,18 +79,7 @@
 
 .ellipse{
     position: absolute;
-}
-
-@media all and (min-width:375px){
-    .ellipse{
-        width: 375px;
-    }
-}
-
-@media all and (min-width:414px){
-    .ellipse{
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .welcome-h2-h3 h2{
@@ -149,6 +172,41 @@
     left: 40px;
 
     margin-right: 10px;
+}
+
+@media all and (min-width: 375px){
+    .welcome-img-p .hombre-foto{
+        top: 180px;
+        left: 51px;
+    }
+}
+
+@media all and (min-width: 380px){
+    .welcome-img-p .hombre-foto{
+        top: 180px;
+        left: 54px;
+    }
+}
+
+@media all and (min-width: 390px){
+    .welcome-img-p .hombre-foto{
+        top: 179px;
+        left: 59px;
+    }
+}
+
+@media all and (min-width: 400px){
+    .welcome-img-p .hombre-foto{
+        top: 205px;
+        left: 59px;
+    }
+}
+
+@media all and (min-width: 412px){
+    .welcome-img-p .hombre-foto{
+        top: 210px;
+        left: 65px;
+    }
 }
 
 @media all and (min-width: 414px){
