@@ -11,8 +11,6 @@ app.use(cors());
 app.post('/api/form', (req,res)=>{
     
     let data = req.body
-    
-    console.log(data[0])
 
     let smtpTranport = nodemailer.createTransport({
         service:'gmail',
@@ -34,8 +32,6 @@ app.post('/api/form', (req,res)=>{
         
         
     })
-
-    console.log(recetas)
 
     let mailOptions={
         
