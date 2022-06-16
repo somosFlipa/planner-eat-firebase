@@ -10,6 +10,21 @@ function ItemCouts({ stock, initial}) {
 
     addToCantidad(counter)
 
+    // console.log(document.querySelectorAll("#contador"))
+    // console.log( document.querySelectorAll("#contador")[0].innerText  === "2" )
+    // function reiniciar() {
+    //     const amount = document.querySelectorAll("#contador")
+    //     for (let i = 0; i < amount.length; i++) {
+    //         const restart =  document.querySelectorAll(".checkbox")[i].innerHTML
+            
+    //         if(restart !== "1"){
+    //             document.querySelectorAll("#contador")[i].innerHTML  = "1"
+                
+    //         }
+
+    //     } 
+    // }
+
     return (
         <div className="contador">
             <button className="btn-menos" onClick={() => {

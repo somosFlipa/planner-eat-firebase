@@ -15,7 +15,7 @@ import ComensalesCount from "../ComensalesCount/ComensalesCount"
 
 function BtnFoods() {
   
-  const {checkbox,recipe} = useContext(RepiceContext)
+  const {checkbox,recipe,reiniciar } = useContext(RepiceContext)
 
   const [comida, setComida] = useState([]);
   const [opinionModal, setOpinionModal] = useState(false);
@@ -24,6 +24,7 @@ function BtnFoods() {
   // fuencion para los botones
     function btnFood(food) {
       checkbox(food)
+      reiniciar(food)
       let arrayFilter= [];
       recipe && recipe.map((i) => {
         i.Comida && i.Comida.filter((z) => {
@@ -144,11 +145,11 @@ function BtnFoods() {
       {
         // comida.length === 0 ?
         //   btnFood("DESAYUNO") :
-        comida.map((c) => {
+        comida.map((c, key) => {
           return (
             <>
               <Card
-                key={c}
+                key={key.id}
                 nombre={c.Nombre}
                 tiempo={c.Tiempo}
                 dificultad={c.Dificultad}

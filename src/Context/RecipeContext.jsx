@@ -103,12 +103,25 @@ export const RepiceContextProvider = ({children}) => {
 
         }    
     }
+
+    function reiniciar() {
+        const amount = document.querySelectorAll("#contador")
+        for (let i = 0; i < amount.length; i++) {
+            const restart =  document.querySelectorAll(".checkbox")[i].innerHTML
+            
+            if(restart !== "1"){
+                document.querySelectorAll("#contador")[i].innerHTML  = "1"
+                
+            }
+
+        } 
+    }
     
 
     return (
         <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox,
                                         guardar, guardarMensaje, datos,setRecipe , recipe,
-                                        addToComensales, comensales,addToCantidad }}>
+                                        addToComensales, comensales,addToCantidad,reiniciar }}>
             {children}
         </RepiceContext.Provider>
     )

@@ -19,7 +19,7 @@ function ComensalesCount({ stock, initial}) {
                 }
             }}> - </button>
 
-            <p id="contador" >{ counter }</p>
+            <p  >{ counter }</p>
             
             <button className="btn-mas-comensales" onClick={() => { 
                     if (counter < stock) {
