@@ -5,14 +5,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 70px;
-}
-
-@media all and (min-width: 390px){
-    .flex-fondo-fin{
-        top: 148px;
-    }
+    margin-top: 60px;
+    margin-left: -5px;
+    padding: 20px;
+    height: 55vh;
 }
 
 .logo-fin img{
@@ -54,35 +50,17 @@
 .fondofruta{
     background-image: url(../../assets/imgfrutasfin.png);
     background-repeat: round;
-    position: relative;
-    top: 93px;
-    width: 360px;
-    height: 278px;
+    width: 100vw;
 }
 
 .fondofruta img{
-    width: 360px;
+    width: 100vw;
 }
 
-/*@media all and (min-width: 360px){
-    #root > div{
-        margin: 0px;
-    }
-}*/
 
 @media all and (min-width: 375px){
     .margin-pag-fin{
         margin: -5px;
-    }
-
-    .fondofruta{
-        top: 128px;
-        width: 375px;
-    }
-    
-    .fondofruta img{
-        width: 375px;
-        height: 278px;
     }
 }
 
@@ -90,33 +68,11 @@
     .margin-pag-fin{
         margin: -10px;
     }
-
-    .fondofruta{
-        top: 80px;
-        width: 380px;
-        height: 295px;
-    }
-    
-    .fondofruta img{
-        width: 380px;
-        height: 295px;
-    }
 }
 
 @media all and (min-width: 390px){
     .margin-pag-fin{
         margin: -10px;
-    }
-
-    .fondofruta{
-        top: 209px;
-        width: 390px;
-        height: 335px;
-    }
-    
-    .fondofruta img{
-        width: 390px;
-        height: 335px;
     }
 }
 
@@ -124,49 +80,16 @@
     .margin-pag-fin{
         margin: -20px;
     }
-
-    .fondofruta{
-        top: 124px;
-        width: 400px;
-        height: 360px;
-    }
-    
-    .fondofruta img{
-        width: 400px;
-        height: 362px;
-    }
 }
 
 @media all and (min-width: 412px){
     .margin-pag-fin{
         margin: -25px;
     }
-
-    .fondofruta{
-        top: 124px;
-        width: 412px;
-        height: 360px;
-    }
-    
-    .fondofruta img{
-        width: 412px;
-        height: 362px;
-    }
 }
 
 @media all and (min-width: 414px){
     .margin-pag-fin{
         margin: -20px;
-    }
-
-    .fondofruta{
-        top: 124px;
-        width: 414px;
-        height: 360px;
-    }
-    
-    .fondofruta img{
-        width: 414px;
-        height: 362px;
     }
 }
