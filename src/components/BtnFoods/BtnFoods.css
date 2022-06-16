@@ -98,4 +98,6 @@
 
 .btns-div{
     margin-top: 5px;
+    position: sticky;
+    bottom: 5px;
 }
