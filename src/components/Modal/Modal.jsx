@@ -11,6 +11,7 @@ function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, n
       setIngredients(i.datos);
     });
   }, []);
+  
   const item = (description.map(dato=>(dato.datos)))
   
   return (

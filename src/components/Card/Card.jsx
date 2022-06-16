@@ -11,7 +11,6 @@ import "./Card.css";
 
 import clock from "../../assets/ep_alarm-clock.png"
 
-
 function Card(props) {
   const [ingredients, setIngredients] = useState([]);
   const [description, setDescription] = useState([]);
