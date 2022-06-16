@@ -1,3 +1,4 @@
+import e from "cors";
 import { createContext, useEffect, useState } from "react";
 
 export const RepiceContext = createContext({});
@@ -116,7 +117,9 @@ export const RepiceContextProvider = ({children}) => {
 
         } 
     }
-    
+        /* MIRAR ACA */
+
+    console.log(datos);
 
     return (
         <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox,
