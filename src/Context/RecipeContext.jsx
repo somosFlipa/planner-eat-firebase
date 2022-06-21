@@ -119,7 +119,6 @@ export const RepiceContextProvider = ({children}) => {
     }
         /* MIRAR ACA */
 
-    console.log(datos);
 
     return (
         <RepiceContext.Provider value={{addTo, borrar, addToInfo,addToMendaje,checkbox,

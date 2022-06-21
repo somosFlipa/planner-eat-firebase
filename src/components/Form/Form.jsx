@@ -37,7 +37,7 @@ const Form = () =>{
         addToInfo(state);
         history('/Welcome')
       
-      }else console.log("coloca vien su nombre y email")
+      }else console.log("verifique bien su nombre y email")
 
   }
 
