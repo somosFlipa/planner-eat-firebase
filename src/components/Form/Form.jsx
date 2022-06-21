@@ -2,7 +2,6 @@ import React, {useState, useContext} from 'react';
 
 import './Form.css';
 
-// import { Link } from "react-router-dom";
 import {useNavigate } from "react-router-dom";
 
 
@@ -37,8 +36,8 @@ const Form = () =>{
       if ( Object.entries(state.user_name).length > 0 &&  Object.entries(state.user_email).length > 0 ) {
         addToInfo(state);
         history('/Welcome')
-        console.log("validar"  )
-      }else console.log("coloca")
+      
+      }else console.log("coloca vien su nombre y email")
 
   }
 
