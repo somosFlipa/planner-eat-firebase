@@ -2,9 +2,9 @@ import React, { useEffect, useState, useContext } from "react";
 import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
 import breakfast from "../../assets/Desayunos.png";
-import lunch from "../../assets/Almuerzos.jpg";
-import afternoon from "../../assets/Meriendas.jpg";
-import dinner from "../../assets/Cenas.jpg";
+import lunch from "../../assets/Almuerzos.png";
+import afternoon from "../../assets/Meriendas.png";
+import dinner from "../../assets/Cenas.png";
 
 import Card from "../Card/Card";
 import BtnPrevious from "../BtnPrevious/BtnPrevious";

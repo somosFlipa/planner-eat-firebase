@@ -37,7 +37,7 @@ function OpinionModal({opinionModal, setOpinionModal}) {
                 X
                 </button>
                 <h3>¿Quéres dejarnos un comentario?</h3>
-                <textarea id="w3review" placeholder='Escribí Aquí por ej: No me gusta el tomate' 
+                <textarea id="w3review" placeholder='Escribí Aquí por ej: Me encantaria que agreguen recetas veganas.' 
                 name="mensaje" onChange={(e) => handleChange(e)}>
                 </textarea>
                 <div className='btn-enviar'>

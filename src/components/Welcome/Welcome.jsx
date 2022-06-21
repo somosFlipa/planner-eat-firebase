@@ -27,7 +27,7 @@ const Welcome = () => {
       </div>
       <div className='welcome-img-p'>
         <img src={macaroon1} alt="Macaroon" />
-        <p className='card-p-chica'>Selecciona las que más te gusten y define el número de porciones.</p>
+        <p>Selecciona las que más te gusten, define el número de porciones y en cada receta puedes seleccionar cuantas veces a la semana la quieres comer.</p>
       </div>
       <div className='welcome-img-p'>
         <img className='planner-foto' src={planner} alt="planner" />

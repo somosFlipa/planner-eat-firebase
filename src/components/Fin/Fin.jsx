@@ -34,7 +34,7 @@ function Fin() {
                     {sendEmail()}
                     <h2>¡Muchas gracias!</h2>
                     <p className='p-div-info-14'>Ya te conocemos mucho mejor {":)"} </p>
-                    <p className='p-div-info-12'>En breve vas a recibir en tu correo la información relevante, Lista de compras y las recetas <br/ >completas para que puedas armar tu menú.</p>
+                    <p className='p-div-info-12'>En breve vas a recibir un correo por parte de nuestro equipo con la lista de compras, recetas e información extra de los platos que seleccionaste. Para que juntos armemos tu menú semanal.</p>
                 </div>
 
             </div> 

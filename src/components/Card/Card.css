@@ -98,6 +98,13 @@
     -o-border-radius: 5px;
 }
 
+.porciones-cards{
+    display: inline;
+    position: relative;
+    font-size: 10px;
+    top: 12px;
+}
+
 .btn-vermas-props{
     width: 37px;
     height: 11px;
@@ -106,8 +113,8 @@
     border: none;
 
     position: relative;
-    bottom: 10px;
-    left: 93px;
+    bottom: -5px;
+    left: 150px;
 
     font-size: 10px;
     font-weight: 500;

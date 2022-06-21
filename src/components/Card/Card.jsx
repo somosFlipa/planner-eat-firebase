@@ -81,9 +81,9 @@ function Card(props) {
         </div>
         
         <div className="grupo-eti2">
-          <div className="itemcount-cards">
+          {/*<div className="itemcount-cards">
             <ItemCouts stock={7} initial={1} />
-          </div>
+          </div>*/}
           
           <button className="btn-vermas-props"
             onClick={() => {
@@ -92,6 +92,8 @@ function Card(props) {
           >
             Ver más
           </button>
+
+          {/*<p className="porciones-cards" >Porciones:</p>*/}
         </div>
       </div>
 
