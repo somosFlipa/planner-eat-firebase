@@ -14,54 +14,47 @@ const Form = () =>{
   const {addToInfo}= useContext(RepiceContext)
   const history = useNavigate()
 
-  // const [state, setState] = useState({});
-  const [nombre, setNombre] = useState({});
-  const [email, setEmail] = useState({});
+  const [state, setState] = useState({
+    user_name: "",
+    user_email:""
+  });
+
 
 
     function handleChange(e){
-      setNombre({
-            ...nombre,
-            [e.target.name] : e.target.value
-        })
-        setEmail({
-          ...email,
-          [e.target.name] : e.target.value
+
+      setState({
+        ...state,
+        [e.target.name] : e.target.value
+
       })
         
     }
 
-    
 
-    const login = (nombre,email) => {
-    
-    if ( Object.entries(email).length !== 0 && Object.entries(email).length !== 0) {
-      addToInfo(nombre,email);
-      history('/Welcome')
-      // console.log('valido')
-    }else console.log("coloca")
-    
-    }
-
-
-    // function guardar(e) {
-    //   e.preventDefault();
-    //   addToInfo(state);
-    //   // history('/Welcome')
-    // }
-
+    const login = (state) => {
   
+      if ( Object.entries(state.user_name).length > 0 &&  Object.entries(state.user_email).length > 0 ) {
+        addToInfo(state);
+        history('/Welcome')
+        console.log("validar"  )
+      }else console.log("coloca")
+
+  }
+
+
   return (
     <div>
         <form className='FormContainer' onSubmit={e =>{
           e.preventDefault();
-          login(nombre, email)
+          login(state)
+        
           
         }} >
           
-          <input type="text" name="user_name" onChange={(e) => handleChange(e)} placeholder='Nombre Y Apellido*' />
+          <input type="text" name="user_name" className='usuario' onChange={(e) => handleChange(e)} placeholder='Nombre Y Apellido*' />
           
-          <input type="email" name="user_email" onChange={(e) => handleChange(e)} placeholder='Email*' />
+          <input type="email" name="user_email" className='usuario2' onChange={(e) => handleChange(e)} placeholder='Email*' />
 
           <div className='btn-comenzar'>
 
