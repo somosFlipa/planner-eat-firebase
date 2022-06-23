@@ -61,7 +61,7 @@
 
     width: 157px;
     height: 36px;
-    margin-left: 12px;
+    margin-left: 14px;
 
     display: inline-flex;
     justify-content: center;
@@ -69,8 +69,6 @@
 
     background-color: #63E5DF;
 }
-
-
 
 .btn-finalizar-comida{
     text-decoration: none;
@@ -87,7 +85,7 @@
 
     width: 157px;
     height: 36px;
-    margin-left: 12px;
+    margin-left: 14px;
 
     display: inline-flex;
     justify-content: center;
