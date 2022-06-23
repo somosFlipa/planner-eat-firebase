@@ -5,9 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../firebase/dbConfig";
 
 import Modal from "../Modal/Modal";
-import ItemCouts from '../ItemCouts/ItemCouts';
 import "./Card.css";
-
 
 import clock from "../../assets/ep_alarm-clock.png"
 
@@ -64,10 +62,10 @@ function Card(props) {
   return (
     <>
       <div className="cont-props">
-        <label class="option_item">
-            <input type="checkbox" id="boton" class="checkbox" onChange={(e)=>{guardarReceta(e)}} />
-            <div class="option_inner">
-            <div class="tickmark">
+        <label className="option_item">
+            <input type="checkbox" id="boton" className="checkbox" onChange={(e)=>{guardarReceta(e)}} />
+            <div className="option_inner">
+            <div className="tickmark">
               <div className="tickmarktilde" ></div>
             </div>
             <img className="prop-imgen" src={props.url} alt=""/>
@@ -81,10 +79,6 @@ function Card(props) {
         </div>
         
         <div className="grupo-eti2">
-          {/*<div className="itemcount-cards">
-            <ItemCouts stock={7} initial={1} />
-          </div>*/}
-          
           <button className="btn-vermas-props"
             onClick={() => {
               btn();
@@ -92,8 +86,6 @@ function Card(props) {
           >
             Ver más
           </button>
-
-          {/*<p className="porciones-cards" >Porciones:</p>*/}
         </div>
       </div>
 

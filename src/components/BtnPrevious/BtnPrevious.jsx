@@ -7,7 +7,6 @@ const BtnPrevious = (prop) =>{
 
     return (
         <>
-
             <Link className="btn-previous" to={prop.to}>Anterior</Link>
         </>
 
