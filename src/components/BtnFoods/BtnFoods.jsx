@@ -162,7 +162,7 @@ function BtnFoods() {
               btnFood("CENA");
             }}
           >
-            <img className="img-comidas-hover" src={dinner} alt="" />
+            <img className="img-comidas-hover-arr" src={dinner} alt="" />
           </button>
         </>
       }
