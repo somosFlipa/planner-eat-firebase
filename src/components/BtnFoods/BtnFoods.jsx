@@ -89,10 +89,13 @@ function BtnFoods() {
 
     function paginacionNex(comida) {
       let breakfast = document.querySelector('#breakfast')
+      let sacar = document.querySelector('.agregarBoton')
+      sacar.classList.remove("agregarBoton")
+      
       let lunch = document.querySelector('#lunch')
       let afternoon = document.querySelector('#afternoon')
       let dinner =  document.querySelector('#dinner')
-
+      
       if (comida.length === 0) {
         breakfast.classList.add("agregarBoton")
         return(btnFood("DESAYUNO"))
@@ -132,7 +135,7 @@ function BtnFoods() {
               btnFood("DESAYUNO");
             }}
           >
-            <img className="img-comidas-hover" src={breakfast} alt="" />
+            <img className="img-comidas-hover agregarBoton" src={breakfast} alt="" />
           </button>
           <button
             className="btnActualizar"
