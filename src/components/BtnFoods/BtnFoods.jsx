@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
-import breakfast from "../../assets/Desayunos.png";
+import breakfast from "../../assets/Desayuno.png";
 import lunch from "../../assets/Almuerzos.png";
-import afternoon from "../../assets/Meriendas.png";
-import dinner from "../../assets/Cenas.png";
+import afternoon from "../../assets/Merienda.png";
+import dinner from "../../assets/Cena.png";
 
 import Card from "../Card/Card";
 import BtnPrevious from "../BtnPrevious/BtnPrevious";
@@ -162,7 +162,7 @@ function BtnFoods() {
               btnFood("CENA");
             }}
           >
-            <img className="img-comidas-hover-arr" src={dinner} alt="" />
+            <img className="img-comidas-hover" src={dinner} alt="" />
           </button>
         </>
       }

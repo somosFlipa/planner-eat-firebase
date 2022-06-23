@@ -232,3 +232,28 @@
     align-items: center;
     margin-left: -3px;
 }
+
+.numero-fondo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+    background-color: #F28773;
+
+    color: #fff;
+
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+
+    margin-right: 20px;
+}
