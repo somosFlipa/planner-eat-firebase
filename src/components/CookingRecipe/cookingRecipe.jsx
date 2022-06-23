@@ -4,9 +4,7 @@ import db from "../../firebase/dbConfig";
 import BtnFoods from "../BtnFoods/BtnFoods";
 import {RepiceContext} from "../../Context/RecipeContext.jsx";
 
-
 import Spinner from "../Spinner/Spinner";
-
 
 const CookingRecipe = () => {
 
@@ -42,8 +40,6 @@ const CookingRecipe = () => {
       </>
     )
   }
-  
-  
 };
 
 export default CookingRecipe;

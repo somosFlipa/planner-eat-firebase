@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Modal.css";
-
 import clock from "../../assets/ep_alarm-clock.png"
 
 function Modal({ estadoModal, setEstadoModal, description, tiempo, dificultad, nombre, url }) {

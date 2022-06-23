@@ -3,7 +3,6 @@ import Form from '../Form/Form';
 import "./Home.css";
 import logo from '../../assets/Logo 2021-1.png'
 import logodesktop from "../../assets/Logo.png"
-
 import desktop from "../../assets/Social-media-pana-1.png"
 
 const Home = () => {
