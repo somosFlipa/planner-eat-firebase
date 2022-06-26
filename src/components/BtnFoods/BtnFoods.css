@@ -14,6 +14,8 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+
+    box-shadow: 1px 1px 3px 0px #7c7b7b;
 }
 
 .img-comidas-hover:hover{
