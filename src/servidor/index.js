@@ -17,8 +17,9 @@ app.post('/api/form', (req,res)=>{
         port:25,
         secure: false,
         auth:{
-            user:'smanabel.93@gmail.com',
-            pass:'jmkvvgztbwzyeesx'
+            user:'plannereat.info@gmail.com',
+            pass:'oxabmgrvfxrmgdtl'
+        
         },
         tls: {
             rejectUnauthorized: false
@@ -35,8 +36,8 @@ app.post('/api/form', (req,res)=>{
 
     let mailOptions={
         
-        from: 'smanabel.93@gmail.com',
-        to:'smanabel.93@gmail.com',
+        from: 'plannereat.info@gmail.com',
+        to:'plannereat.info@gmail.com',
         subject:`Mensaje de ${data[2][0].user_name}`,
         html:`
         <h3>informacion</h3>
