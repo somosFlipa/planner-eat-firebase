@@ -29,29 +29,31 @@ function BtnFoods() {
     let lunch = document.querySelector('#lunch')
     let afternoon = document.querySelector('#afternoon')
     let dinner = document.querySelector('#dinner')
-
+  
     if (food === undefined ) {
       breakfast.classList.add("agregarBoton")
       lunch.classList.remove("agregarBoton")
       afternoon.classList.remove("agregarBoton")
       dinner.classList.remove("agregarBoton")
     }
-    if (food === "DESAYUNO" ) {
+
+    if (food === "DESAYUNO" || food === undefined) {
+      lunch.classList.remove("agregarBoton")
+      afternoon.classList.remove("agregarBoton")
+      dinner.classList.remove("agregarBoton")
       
-      // breakfast.classList.add("agregarBoton")
-      // lunch.classList.remove("agregarBoton")
-      // afternoon.classList.remove("agregarBoton")
-      // dinner.classList.remove("agregarBoton")
-      // console.log("desayuno")
     }
+
     if (food === "ALMUERZO") {
       breakfast.classList.remove("agregarBoton")
       afternoon.classList.remove("agregarBoton")
       dinner.classList.remove("agregarBoton")
     }
+
     if (food === "MERIENDA") {
       breakfast.classList.remove("agregarBoton")
       lunch.classList.remove("agregarBoton")
+      breakfast.classList.remove("agregarBoton")
       dinner.classList.remove("agregarBoton")
     }
     if (food === "CENA") {
@@ -59,13 +61,10 @@ function BtnFoods() {
     lunch.classList.remove("agregarBoton")
     afternoon.classList.remove("agregarBoton")
     }
-    // console.log(food)
   }
 
   // fuencion para los botones
     function btnFood(food) {
-
-      // removerBtn (food)
 
       checkbox(food)
       reiniciar(food)
@@ -88,7 +87,13 @@ function BtnFoods() {
           }
         });
       });
+      
+      setTimeout(() => {
+          removerBtn(food)
+      }, 100);
 
+      
+    
     }
 
     useEffect(()=>{
@@ -104,61 +109,91 @@ function BtnFoods() {
 
     // Paginacion (entre desayuno, almuerzo, merienda y cena)
     function paginacionPrevious(detalleComida) {
-      console.log(detalleComida)
       let desayuno = detalleComida.map(e => e  === "DESAYUNO" )
+      let almuerzo = detalleComida.map(e => e  === "ALMUERZO" )
+      let merienda = detalleComida.map(e => e  === "MERIENDA" )
+      let cena = detalleComida.map(e => e  === "CENA")
+
       let breakfast = document.querySelector('#breakfast')
       let lunch = document.querySelector('#lunch')
       let afternoon = document.querySelector('#afternoon')
       let dinner =  document.querySelector('#dinner')
-
-      console.log(desayuno[0])
 
       if (desayuno[0]) {
         history('/Welcome') 
       }
-      
-      // if (comida.length === 12) {
-      //   breakfast.classList.add("agregarBoton")
-      //   lunch.classList.remove("agregarBoton")
-      //   return(btnFood("DESAYUNO"))
-      // }
-      // if (comida.length === 18) {
-      //   lunch.classList.add("agregarBoton")
-      //   afternoon.classList.remove("agregarBoton")
-      //   return(btnFood("ALMUERZO"))
-      // }
-      // if (comida.length === 24) {
-      //   afternoon.classList.add("agregarBoton")
-      //   dinner.classList.remove("agregarBoton")
-      //   return (btnFood("MERIENDA"))
-      // }
+      if (almuerzo[0]) {
+        breakfast.classList.add("agregarBoton")
+        lunch.classList.remove("agregarBoton")
+        afternoon.classList.remove("agregarBoton")
+        dinner.classList.remove("agregarBoton")
+        return (btnFood("DESAYUNO"))
+        
+      }
+
+      if (merienda[0]) {
+        breakfast.classList.remove("agregarBoton")
+        lunch.classList.add("agregarBoton")
+        afternoon.classList.remove("agregarBoton")
+        dinner.classList.remove("agregarBoton")
+        return (btnFood("ALMUERZO"))
+        
+      }
+
+      if (cena[0]) {
+        breakfast.classList.remove("agregarBoton")
+        afternoon.classList.add("agregarBoton")
+        lunch.classList.remove("agregarBoton")
+        dinner.classList.remove("agregarBoton")
+        return (btnFood("MERIENDA"))
+        
+      }
 
     } 
 
-    function paginacionNex(comida) {
+    function paginacionNex(detalleComida) {
+      let desayuno = detalleComida.map(e => e  === "DESAYUNO" )
+      let almuerzo = detalleComida.map(e => e  === "ALMUERZO" )
+      let merienda = detalleComida.map(e => e  === "MERIENDA" )
+      let cena = detalleComida.map(e => e  === "CENA")
+
       let breakfast = document.querySelector('#breakfast')
       let lunch = document.querySelector('#lunch')
       let afternoon = document.querySelector('#afternoon')
       let dinner =  document.querySelector('#dinner')
 
-      if (comida.length === 0) {
-        breakfast.classList.add("agregarBoton")
-        return(btnFood("DESAYUNO"))
-      }
-      if (comida.length === 11) {
+      if (desayuno[0]) {
         breakfast.classList.remove("agregarBoton")
         lunch.classList.add("agregarBoton")
-        return(btnFood("ALMUERZO"))
+        afternoon.classList.remove("agregarBoton")
+        dinner.classList.remove("agregarBoton")
+        return (btnFood("ALMUERZO"))
       }
-      if (comida.length === 12) {
-        lunch.classList.remove("agregarBoton")
+
+      if (almuerzo[0]) {
+        breakfast.classList.remove("agregarBoton")
         afternoon.classList.add("agregarBoton")
-        return btnFood("MERIENDA")
+        lunch.classList.remove("agregarBoton")
+        dinner.classList.remove("agregarBoton")
+        return (btnFood("MERIENDA"))
+        
       }
-      if (comida.length === 18) {
+
+      if (merienda[0]) {
+        breakfast.classList.remove("agregarBoton")
+        lunch.classList.remove("agregarBoton")
         afternoon.classList.remove("agregarBoton")
         dinner.classList.add("agregarBoton")
-        return btnFood("CENA")
+        return (btnFood("CENA"))
+        
+      }
+
+      if (cena[0]) {
+        breakfast.classList.remove("agregarBoton")
+        afternoon.classList.remove("agregarBoton")
+        lunch.classList.remove("agregarBoton")
+        dinner.classList.add("agregarBoton")
+        
       }
 
     }
@@ -168,10 +203,6 @@ function BtnFoods() {
       return detalle.FoodTime
   
     })
-
-    // let especificarComida = detalleComida.map( e => e === "DESAYUNO")
-
-     console.log(detalleComida)
 
   return (
     <>
@@ -245,9 +276,9 @@ function BtnFoods() {
           <BtnPrevious to="/Welcome" /> 
         }
         {
-          comida.length === 24 ?
+          detalleComida[0] === "CENA" ?
           <button className="btn-finalizar-comida"onClick={btnOpinion}>FINALIZAR</button> :
-          <button id="btn-siguiente-comida"onClick={ () => paginacionNex(comida)}>Siguiente</button> 
+          <button id="btn-siguiente-comida"onClick={ () => paginacionNex(detalleComida)}>Siguiente</button> 
           
         }
         
