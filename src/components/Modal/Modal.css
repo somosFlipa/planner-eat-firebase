@@ -14,7 +14,7 @@
 }
 
 .containerModal{
-    width: 285px;
+    width: 284.96px;
     min-height: 350px;
     background: #fff;
     position: relative;
@@ -85,20 +85,20 @@
     flex-wrap: wrap;
 
     width: 240px;
-    height: 100px;
+    height: 130px;
 
     position: relative;
     top: 15px;
     right: -20px;
 
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .img-modal{
     position: relative;
     top: -15px;
     right: 0px;
-    width: 285px;
+    width: 284.96px;
     height: 100px;
     object-fit: cover;
 

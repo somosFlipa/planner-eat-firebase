@@ -7,7 +7,7 @@ import db from "../../firebase/dbConfig";
 import Modal from "../Modal/Modal";
 import "./Card.css";
 
-import clock from "../../assets/ep_alarm-clock.png"
+import clock from "../../assets/reloj.svg"
 
 function Card(props) {
   const [ingredients, setIngredients] = useState([]);
