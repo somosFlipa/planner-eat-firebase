@@ -8,6 +8,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
 
+//Settings
+app.set('port', process.env.PORT || 8080);
+
 app.post('/api/form', (req,res)=>{
     
     let data = req.body
@@ -66,6 +69,11 @@ app.post('/api/form', (req,res)=>{
 
 })
 
-app.listen(8080, () => {
-    console.log("servidor en 8080")
+// app.listen(8080, () => {
+//     console.log("servidor en 8080")
+// });
+
+//Serting the server
+app.listen(app.get('port'), () => {
+    console.log('Servidor en puerto', app.get('port'));
 });
