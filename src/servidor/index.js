@@ -52,12 +52,8 @@ app.post('/api/form', (req,res)=>{
         <p>${recetas}</p>
         <br></br>
         <p>Mensaje: ${data[1][0].mensaje}</p>
-        
-        
-
         `
     }
-    
 
     smtpTranport.sendMail(mailOptions, (err)=> {
         if(err){
@@ -68,10 +64,6 @@ app.post('/api/form', (req,res)=>{
     })
 
 })
-
-// app.listen(8080, () => {
-//     console.log("servidor en 8080")
-// });
 
 //Serting the server
 app.listen(app.get('port'), () => {

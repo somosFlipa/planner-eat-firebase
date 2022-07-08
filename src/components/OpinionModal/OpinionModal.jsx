@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './OpinionModal.css';
 import { RepiceContext } from "../../Context/RecipeContext.jsx";
 import emailjs from '@emailjs/browser';
@@ -18,15 +17,13 @@ function OpinionModal({ opinionModal, setOpinionModal }) {
             [e.target.name]: e.target.value
         })
     }
-    
-    // console.log(addToMendaje(state))
-   let arrayMensaje = guardarMensaje.map(e => e.mensaje)
-   console.log(arrayMensaje[0])
+
+    let arrayMensaje = guardarMensaje.map(e => e.mensaje)
+
     function saveMessagesave() {
         addToMendaje(state);
     }
 
-    // array de todas la recetas que selecciona el ususrio
     let arrayRecetas =  guardar.map(e=>(e.id))
 
 
@@ -67,12 +64,6 @@ function OpinionModal({ opinionModal, setOpinionModal }) {
                         <textarea id="w3review" placeholder='Escribí Aquí por ej: Me encantaria que agreguen recetas veganas.'
                             name="mensaje" onChange={(e) => handleChange(e)}>
                         </textarea>
-                        {/* <div className='btn-enviar'>
-                            <Link to="/Fin" onClick={()=>{
-                                saveMessagesave();
-                                }} >Enviar
-                            </Link>
-                         </div> */}
                         <div className='div-form'>
                             <h1 className='title-form'>Contact Us</h1>
 
