@@ -89,9 +89,9 @@ function OpinionModal({ opinionModal, setOpinionModal }) {
                             <input type="text" name='user_comensal' id="input-comensal"/>
                         </div>
 
-                            <button  onClick={()=>{
+                            <button id='btn-enviar' onClick={()=>{
                                 saveMessagesave();
-                            }}>Send</button>
+                            }}>Enviar</button>
 
 
                     </div>

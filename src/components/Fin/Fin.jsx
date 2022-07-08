@@ -2,9 +2,9 @@ import React,{useContext} from 'react';
 import logo from '../../assets/Logo 2021-1.png'
 import "./Fin.css"
 import fondofondo from "../../assets/Rectangle.png"
-import axios from 'axios';
+//import axios from 'axios';
 import {RepiceContext} from "../../Context/RecipeContext.jsx";
-import emailjs from '@emailjs/browser';
+//import emailjs from '@emailjs/browser';
     
 function Fin() {
 
