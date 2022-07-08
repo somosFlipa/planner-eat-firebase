@@ -24,7 +24,7 @@
 }
 
 .modalContainer button{
-    /* width: 17.17px; */
+    width: 17.17px;
     height: 17.17px;
     border-radius: 30px;
     padding: 1px;
@@ -34,7 +34,7 @@
     background-color: #FF7062;
 
     position: relative;
-    /* left: 280px; */
+    left: 280px;
 
     font-size: 10px;
 }
@@ -80,20 +80,6 @@
     color: #000;
 }
 
-.btnFrom{
-    border-color: #63E5DF;
-    border-radius: 5px;
-    border-width: 1px;
-
-    width: 153px;
-    height: 36px;
-    
-    margin-top: 10px;
-    margin-left: 145px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #63E5DF;
+.div-form{
+    display: none;
 }
